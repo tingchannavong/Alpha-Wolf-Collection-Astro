@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="alpha_style.css">
+    <title>Board Games</title>
+</head>
+<header>
+    <div class="flex-container">
+        <div><img src="logo.png" alt="Alpha Wolf" style="width:200px;height:90px;" class="logo"></div>
+        <div><nav>
+            <ul>
+                <li><a href="file:///Users/tingchannavong/Desktop/AWsite/homepage.html">Home</a></li>
+                <li><a href="file:///Users/tingchannavong/Desktop/AWsite/boardgames.html" style="border-bottom: 2px solid;">Board Games</a></li>
+                <li><a href="file:///Users/tingchannavong/Desktop/AWsite/about-us.html">About us</a></li>
+                <li><a href="file:///Users/tingchannavong/Desktop/AWsite/contact-us.html">Contact</a></li>
+            </ul>
+        </nav></div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search game...">
+        </div>
+        <div><a href="#" class="login-btn">Log in</a></div>
+    </div>
+</header>
+
+<body>
+    <section id="categories-section" class="container">
+        <div class="categories">
+            <h2>Categories</h2>
+            <p>There are many board game categories to choose from:</p>
+            <div class="grid-container">
+                <div class="category">
+                    <img src="/api/placeholder/30/30" alt="Strategy Icon" class="category-icon">
+                    <h3>Strategy Games</h3>
+                    <span>(5)</span>
+                 </div>
+                 <div class="category">
+                    <img src="/api/placeholder/30/30" alt="Strategy Icon" class="category-icon">
+                    <h3>Bluffing Games</h3>
+                    <span>(10)</span>
+                 </div>
+                 <div class="category">
+                    <img src="/api/placeholder/30/30" alt="Strategy Icon" class="category-icon">
+                    <h3>Cooperative Games</h3>
+                    <span>(4)</span>
+                 </div>
+                 <div class="category">
+                    <img src="/api/placeholder/30/30" alt="Strategy Icon" class="category-icon">
+                    <h3>Party Games</h3>
+                    <span>(6)</span>
+                 </div>
+                 <div class="category">
+                    <img src="/api/placeholder/30/30" alt="Strategy Icon" class="category-icon">
+                    <h3>Creative Games</h3>
+                    <span>(8)</span>
+                 </div>
+                 <div class="category">
+                    <img src="/api/placeholder/30/30" alt="Strategy Icon" class="category-icon">
+                    <h3>Beginner-Friendly</h3>
+                    <span>(2)</span>
+                 </div>
+                 <!-- Repeat the category div for other categories -->
+            </div>
+            <div class="see-more">
+                <!-- Link to categories page -->
+                <a href="#">See more</a>
+            </div>
+      	</div>
+    </section>
+
+	<section id="all-games-section" class="container">
+	    <h2>All Board Games</h2>
+	    <p>These are all the board games in Alpha Wolf's collection and their designated location. </p>
+	    <!-- Section for sort / filter functions -->
+	    <div class="sort-filter-container">
+	        <div class="sort">
+	            <label for="sort-select">Sort by:</label>
+	            <select id="sort-select">
+	                <option value="a-z">A-Z</option>
+	                <option value="z-a">Z-A</option>
+	            </select>
+	        </div>
+	        <div class="filter">
+	            <label for="category-select">Filter by Categories:</label>
+	            <select id="category-select">
+	                <option value="all">All Categories</option>
+	                <option value="strategy">Strategy Games</option>
+	                <option value="family">Family Games</option>
+	                <option value="party">Party Games</option>
+	                <!-- Add more categories as needed -->
+	            </select>
+	        </div>
+	        <div class="filter">
+	            <label for="category-select">Filter by Location:</label>
+	            <select id="category-select">
+	                <option value="MBL">Makerbox Laos</option>
+	                <option value="Stella">Stella</option>
+	                <option value="L6">Lak6</option>
+	                <option value="NN">Nongnieng</option>
+	                <!-- Add more categories as needed -->
+	            </select>
+	        </div>
+	    </div>
+	    <!-- Game list starts here -->
+	    <div class="grid-list">
+	        <!-- Game Item -->
+	        <div class="game-item">
+	            <img src="file:///Users/tingchannavong/Desktop/AWsite/img/powergrid.jpeg" alt="Power Grid" class="game-image">
+	            <div class="game-details">
+	                <h3 class="game-title">Power Grid</h3>
+	                <p class="game-description">
+	                A game where you assume the role of electricity provider and generate it to cities! However, as plants are purchased, newer, more efficient plants become available, so by merely purchasing, you're potentially allowing others access to superior equipment.
+
+					Additionally, players must acquire the raw materials (coal, oil, garbage, and uranium) needed to power said plants (except for the 'renewable' windfarm/ solar plants, which require no fuel), making it a constant struggle to upgrade your plants for maximum efficiency while still retaining enough wealth to quickly expand your network to get the cheapest routes.
+	            	</p>
+	                <p class="game-category">Category: Strategy Games</p>
+	                <p class="game-location">Location: Banmuang Village Xaysettha District, Vientiane</p>
+	            </div>
+	            <div class="game-meta">
+	            	<!-- To provide individual links to each game, this is just a demo link to the blueprint -->
+	                <a href="file:///Users/tingchannavong/Desktop/AWsite/game-details.html" class="game-read-more">Read more</a>
+	            </div>
+	        </div>
+	        <div class="game-item">
+	            <img src="forbidden island.jpeg" alt="Forbidden Island" class="game-image">
+	            <div class="game-details">
+	                <h3 class="game-title">Forbidden Island</h3>
+	                <p class="game-description">
+	                A game where you assume the role of electricity provider and generate it to cities! However, as plants are purchased, newer, more efficient plants become available, so by merely purchasing, you're potentially allowing others access to superior equipment.
+
+					Additionally, players must acquire the raw materials (coal, oil, garbage, and uranium) needed to power said plants (except for the 'renewable' windfarm/ solar plants, which require no fuel), making it a constant struggle to upgrade your plants for maximum efficiency while still retaining enough wealth to quickly expand your network to get the cheapest routes.
+	            	</p>
+	                <p class="game-category">Category: Cooperative Games</p>
+	                <p class="game-location">Location: Banmuang Village Xaysettha District, Vientiane</p>
+	            </div>
+	            <div class="game-meta">
+	                <a href="file:///Users/tingchannavong/Desktop/AWsite/game-details.html" class="game-read-more">Read more</a>
+	            </div>
+	        </div>
+	        <!-- Repeat this block for each game -->
+	    </div>
+
+	    <!-- Pagination Section -->
+	    <div class="pagination-section">
+	        <div class="show-results">
+	            <label for="show">Show:</label>
+	            <select id="show" name="show">
+	                <option value="10">10</option>
+	                <option value="20">20</option>
+	                <option value="30">30</option>
+	            </select>
+	        </div>
+	        <div class="pagination">
+	            <button class="pagination-btn-next"><</button>
+	            <button class="pagination-btn">1</button>
+	            <button class="pagination-btn">2</button>
+	            <button class="pagination-btn">3</button>
+	            <button class="pagination-btn">...</button>
+	            <button class="pagination-btn">10</button>
+	            <button class="pagination-btn-next">></button>
+	        </div>
+	    </div>
+	</section>
+</body>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-logo">
+        <img src="path-to-logo.png" alt="Alpha Wolves Logo">
+    </div>
+    <nav class="footer-nav">
+        <li><a href="file:///Users/tingchannavong/Desktop/AWsite/homepage.html">Home</a></li>
+        <li><a href="file:///Users/tingchannavong/Desktop/AWsite/boardgames.html">Board Games</a></li>
+        <li><a href="file:///Users/tingchannavong/Desktop/AWsite/about-us.html">About us</a></li>
+        <li><a href="file:///Users/tingchannavong/Desktop/AWsite/contact-us.html">Contact</a></li>
+    </nav>
+</footer>
+<div class="copyright-section">
+    <p class="copyright">© Copyright Happy Media. All Rights Reserved</p>
+</div>
+</html>
