@@ -5,6 +5,102 @@ body {
     background-color: #f7b01a; /*yellow*/
     color: #121f40; /*blue*/
 }
+.contact-container {
+    display: flex;
+    width: 100%;
+}
+/*Right side follow us sytle*/
+.follow-right-view {
+    width: 50%;
+    padding-left: 60px;
+}
+/* Row for social media */
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+.form-row h3{
+    width: 20%;
+    color: #601214;
+    padding-left: 5px;
+}
+.social-icon{
+    width: 50px;
+    height: 50px;
+}
+.social-link {
+    width: 50%;
+    text-align: left;
+    color: #feebbb;
+    padding: auto;
+    margin: auto;
+}
+.social-link:hover {
+    color: #0000EE;
+}
+
+.contact-left-view{
+    width: 50%;
+    padding-right: 20px;
+}
+/* Title */
+.feedback-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00204a;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+/* Form Layout */
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Input Fields */
+.input-field {
+    background-color: #fde7c6;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    font-family: "Arial";
+    font-size: 1rem;
+    color: #333;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Full-width fields */
+.full-width {
+    width: 100%;
+}
+
+/* Textarea Field */
+.textarea-field {
+    height: 150px;
+    resize: none;
+}
+
+/* Submit Button */
+.submit-button {
+    background-color: #00204a;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 106%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover {
+    background-color: #601214;
+    color: white;
+}
+/*Game details style section*/
 .image-flex-container {
     display: flex;
     width: 45%;
@@ -50,8 +146,97 @@ body {
     margin: 0;
     padding: 0;
     background-color: #601214; /*brown*/
-    color: #feebbb;
 }
+.how-to-play h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #feebbb;
+}
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.carousel-images {
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+}
+
+.carousel img {
+  width: 100%;
+  display: none;
+}
+
+.carousel img.active {
+  display: block;
+}
+
+.prev-box {
+    width: 10%;
+    margin-left: 0;
+    left: 0;
+}
+
+.next-box {
+    width: 10%;
+    right: 0;
+    margin-right: 0;
+}
+
+button.prev, button.next {
+  background-color: #00204a;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 2em;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+/*button.prev {
+  left: 0;
+  margin-left: 0;
+}
+
+button.next {
+  right: 0;
+  margin-right: 0;
+}*/
+
+button:hover {
+  background-color: #f9d361;
+  color: #00204a;
+}
+
+/* Page Counter (Dots) */
+.page-counter {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.page-counter .dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.page-counter .dot.active {
+  background-color: #00204a;
+}
+
+/* my try on instruction part*/
 .instruction-flex {
     display: flex;
 }
@@ -77,6 +262,7 @@ body {
     justify-content: center;
     border: solid;
 }
+/*start of about us image wrap*/
 .float-image {
             float: left;
             margin-right: 30px;
