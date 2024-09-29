@@ -1,0 +1,28 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	href: string;
+    img: string;
+    description: string; 
+    // using description placeholder for Location, do i need one for category?
+}
+
+const { href, title, body, img, description } = Astro.props;
+---
+
+<div class="game-item">
+    <img src={img} alt={title} class="game-image">
+    <div class="game-details">
+        <h3 class="game-title">Power Grid</h3>
+        <p class="game-description">
+        {body}
+        </p>
+        <p class="game-category">Category: Strategy Games</p>
+        <p class="game-location">Location: {description}</p>
+    </div>
+    <div class="game-meta">
+        <!-- To provide individual links to each game, this is just a demo link to the blueprint -->
+        <a href={href} class="game-read-more">Read more</a>
+    </div>
+</div>

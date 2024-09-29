@@ -1,0 +1,15 @@
+---
+interface Props {
+	title: string;
+    img: string;
+    description: number; 
+}
+
+const { title, img, description } = Astro.props;
+---
+<div class="category">
+    <img src={img} alt={title} class="category-icon">
+    <h3>{title}</h3>
+    <span>({description})</span>
+ </div>
+ 
