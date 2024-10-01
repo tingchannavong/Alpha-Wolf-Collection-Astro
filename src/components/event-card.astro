@@ -1,0 +1,21 @@
+---
+interface Props {
+	title: string;
+    img: string;
+    body: string
+    description: string;
+    // using description placeholder for Location, do i need one for category?
+
+}
+
+const { title, img, body, description } = Astro.props;
+---
+ 
+ <div class="event-item">
+    <img src={img} alt={title} class="event-image">
+    <div class="event-details">
+        <h3 class="event-title">{title}</h3>
+        <p class="event-description">{body}</p>
+        <p class="event-location">Location: {description}</p>
+    </div>
+</div>
