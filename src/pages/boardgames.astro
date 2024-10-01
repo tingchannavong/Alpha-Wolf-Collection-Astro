@@ -8,19 +8,10 @@ const allGames = await Astro.glob("./game-details/*");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/alpha_style.csss">
+    <link rel="stylesheet" href="/styles/alpha_style.css">
     <title>Board Games</title>
 </head>
 <MainLayout>
-    {
-        allGames.map( game => (
-            <div>
-                Title: {game.frontmatter.title} which {game.frontmatter.description}
-                {/* To check what object the fronmatter contains print out the json file: {JSON.stringify(game)} */}
-                <a href={game.url}>Read More</a>
-            </div>
-        ))
-    }
     <body>
         <section id="categories-section" class="container">
             <div class="categories">
@@ -28,40 +19,35 @@ const allGames = await Astro.glob("./game-details/*");
                 <p>There are many board game categories to choose from:</p>
                 <div class="grid-container">
                     <CategoryCard
-                        title = "Strategy Game"
+                        title = "Strategy Games"
                         img = "/strat-icon.png"
                         description = 18
                     />
-                    <div class="category">
-                        <img src="/api/placeholder/30/30" alt="Strategy Icon" class="category-icon">
-                        <h3>Strategy Games</h3>
-                        <span>(5)</span>
-                     </div>
-                     <div class="category">
-                        <img src="/api/placeholder/30/30" alt="Strategy Icon" class="category-icon">
-                        <h3>Bluffing Games</h3>
-                        <span>(10)</span>
-                     </div>
-                     <div class="category">
-                        <img src="/api/placeholder/30/30" alt="Strategy Icon" class="category-icon">
-                        <h3>Cooperative Games</h3>
-                        <span>(4)</span>
-                     </div>
-                     <div class="category">
-                        <img src="/api/placeholder/30/30" alt="Strategy Icon" class="category-icon">
-                        <h3>Party Games</h3>
-                        <span>(6)</span>
-                     </div>
-                     <div class="category">
-                        <img src="/api/placeholder/30/30" alt="Strategy Icon" class="category-icon">
-                        <h3>Creative Games</h3>
-                        <span>(8)</span>
-                     </div>
-                     <div class="category">
-                        <img src="/api/placeholder/30/30" alt="Strategy Icon" class="category-icon">
-                        <h3>Beginner-Friendly</h3>
-                        <span>(2)</span>
-                     </div>
+                    <CategoryCard
+                        title = "Bluffing Games"
+                        img = "/strat-icon.png"
+                        description = 10
+                    />
+                    <CategoryCard
+                        title = "Cooperative Games"
+                        img = "/strat-icon.png"
+                        description = 4
+                    />
+                    <CategoryCard
+                        title = "Party Games"
+                        img = "/strat-icon.png"
+                        description = 6
+                    />
+                    <CategoryCard
+                        title = "Creative Games"
+                        img = "/strat-icon.png"
+                        description = 6
+                    />
+                    <CategoryCard
+                        title = "Beginner-Friendly Games"
+                        img = "/strat-icon.png"
+                        description = 11
+                    />
                      <!-- Repeat the category div for other categories -->
                 </div>
                 <div class="see-more">
@@ -70,7 +56,17 @@ const allGames = await Astro.glob("./game-details/*");
                 </div>
               </div>
         </section>
-    
+
+            <!-- To check what object the fronmatter contains print out the json file: {JSON.stringify(game)} -->
+    {
+        allGames.map( game => (
+            <div>
+                Title: {game.frontmatter.title} which {game.frontmatter.description}
+                <a href={game.url}>Read More</a>
+            </div>
+        ))
+    }
+
         <section id="all-games-section" class="container">
             <h2>All Board Games</h2>
             <p>These are all the board games in Alpha Wolf's collection and their designated location. </p>

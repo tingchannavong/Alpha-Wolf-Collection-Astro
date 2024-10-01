@@ -22,3 +22,7 @@ In this game of clever placement, players take turns adding pieces to the Great 
 
 ### Awards & Honors
 - 2008 Boardgames Australia Awards Best International Game Nominee
+
+# How to Play
+
+<img src="/catan.png" alt="Game Instructions" style="width: 80%; max-width: 1000px; height: auto;" >
