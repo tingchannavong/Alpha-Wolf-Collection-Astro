@@ -1,0 +1,27 @@
+---
+const headColor = 'purple';
+const response = await fetch('https://66f93cba2a683ce97311538a.mockapi.io/api/title');
+const posts = await response.json();
+---
+
+<body>
+    <h1>Test change H1 style variable</h1>
+    <p>change color at frontmatter server side part</p>
+</body>
+
+<style define:vars={{headColor}}>
+    h1 {
+        color: var(--headColor);
+        font-size: 4rem;
+    }
+</style>
+<div>
+    {
+        posts.map( post => (
+            <div>
+                <img width="100px" src={post.avatar}/>
+                <div>{post.title}</div>
+            </div>
+        ))
+    }
+</div>
