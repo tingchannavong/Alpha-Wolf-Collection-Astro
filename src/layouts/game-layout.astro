@@ -4,7 +4,7 @@
  --- 
 <header>
     <div class="flex-container">
-        <div><img src="logo.png" alt="Alpha Wolf Vientiane BoardGame Club" style="width:200px;height:90px;" class="logo"></div>
+        <div><img src="/logo.png" alt="Alpha Wolf Vientiane BoardGame Club" style="width:200px;height:90px;" class="logo"></div>
         <div><nav>
             <ul>
                 <li><a href="/" >Home</a></li>
@@ -21,21 +21,40 @@
     </div>
 </header>
 
+<div class="container" style="margin-top: 5px; margin-bottom: 20px;">
+    <a href="/boardgames" class="back-btn">← Back</a>
+</div>
+
+<section class="container">
+    <slot />
+</section>
+
+<section class="how-to-play">
+    <div class="container" style="margin-top: 5px; margin-bottom: 20px;">
+        <h1> How to Play</h1>
+        <div class="instruction-flex" style="margin-top: 5px; margin-bottom: 20px;">
+            <div class="button-loc"><button class="prev-next-btn"><</button></div>
+            <div><img src="/catan.png" alt="cc instructions" class="instruction-img"></div>
+            <div class="button-loc"><button class="prev-next-btn">></button></div>
+        </div>
+        <div class="page-counter">
+        </div>
+    </div>
+</section>
+
 Hello Post, {frontmatter.title}
 Written by: {frontmatter.author}
 Date: {frontmatter.date}
-
-<slot />
 
 <footer class="footer">
     <div class="footer-logo">
         <img src="path-to-logo.png" alt="Alpha Wolves Logo">
     </div>
     <nav class="footer-nav">
-    	<li><a href="file:///Users/tingchannavong/Desktop/AWsite/homepage.html">Home</a></li>
-        <li><a href="file:///Users/tingchannavong/Desktop/AWsite/boardgames.html">Board Games</a></li>
-        <li><a href="file:///Users/tingchannavong/Desktop/AWsite/about-us.html">About us</a></li>
-        <li><a href="file:///Users/tingchannavong/Desktop/AWsite/contact-us.html">Contact</a></li>
+    	<li><a href="/">Home</a></li>
+        <li><a href="/boardgames" target="_blank">Board Games</a></li>
+        <li><a href="/about">About us</a></li>
+        <li><a href="/contact">Contact</a></li>
     </nav>
 </footer>
 <div class="copyright-section">
