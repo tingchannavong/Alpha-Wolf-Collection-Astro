@@ -21,32 +21,32 @@ const allGames = await Astro.glob("./game-details/*");
                     <CategoryCard
                         title = "Strategy Games"
                         img = "/strat-icon.png"
-                        description = 18
+                        description = {18}
                     />
                     <CategoryCard
                         title = "Bluffing Games"
                         img = "/strat-icon.png"
-                        description = 10
+                        description = {10}
                     />
                     <CategoryCard
                         title = "Cooperative Games"
                         img = "/strat-icon.png"
-                        description = 4
+                        description = {4}
                     />
                     <CategoryCard
                         title = "Party Games"
                         img = "/strat-icon.png"
-                        description = 6
+                        description = {6}
                     />
                     <CategoryCard
                         title = "Creative Games"
                         img = "/strat-icon.png"
-                        description = 6
+                        description = {6}
                     />
                     <CategoryCard
                         title = "Beginner-Friendly Games"
                         img = "/strat-icon.png"
-                        description = 11
+                        description = {11}
                     />
                      <!-- Repeat the category div for other categories -->
                 </div>
@@ -157,13 +157,13 @@ const allGames = await Astro.glob("./game-details/*");
                     </select>
                 </div>
                 <div class="pagination">
-                    <button class="pagination-btn-next"><</button>
+                    <button class="pagination-btn-next">{"<"}</button>
                     <button class="pagination-btn">1</button>
                     <button class="pagination-btn">2</button>
                     <button class="pagination-btn">3</button>
                     <button class="pagination-btn">...</button>
                     <button class="pagination-btn">10</button>
-                    <button class="pagination-btn-next">></button>
+                    <button class="pagination-btn-next">{">"}</button>
                 </div>
             </div>
         </section>
