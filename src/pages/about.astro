@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/main-layout.astro";
+import EventCard from "../components/event-card.astro";
 ---
 <head>
     <meta charset="UTF-8">
@@ -42,47 +43,34 @@ import MainLayout from "../layouts/main-layout.astro";
         <section class="container">
             <h1> Events </h1>
             <p> These are some example of Alpha Wolf Vientiane BoardGame Club's previous events: </p>
-             <!-- Game list starts here -->
+             <!-- Event list starts here -->
             <div class="grid-list">
-                <!-- Game Item -->
-                <div class="event-item">
-                    <img src="/event 2.jpeg" alt="The Low Land" class="event-image">
-                    <div class="event-details">
-                        <h3 class="event-title">Negotiation Game Work Shop</h3>
-                        <p class="event-description">The low land is an area known for its hard-working folk...</p>
-                        <p class="event-category">Category: Strategy Games</p>
-                        <p class="event-location">Location: Banmuang Village Xaysettha District, Vientiane</p>
-                    </div>
-                </div>
-                <div class="event-item">
-                    <img src="/event 3.jpeg" alt="The Low Land" class="event-image">
-                    <div class="event-details">
-                        <h3 class="event-title">2nd Hand World #2</h3>
-                        <p class="event-description">The low land is an area known for its hard-working folk...</p>
-                        <p class="event-category">Category: Strategy Games</p>
-                        <p class="event-location">Location: Banmuang Village Xaysettha District, Vientiane</p>
-                    </div>
-                </div>
-                <div class="event-item">
-                    <img src="/event 4.jpeg" alt="The Low Land" class="event-image">
-                    <div class="event-details">
-                        <h3 class="event-title">Clear Mobile Legend Event</h3>
-                        <p class="event-description">The low land is an area known for its hard-working folk...</p>
-                        <p class="event-category">Category: Strategy Games</p>
-                        <p class="event-location">Location: Banmuang Village Xaysettha District, Vientiane</p>
-                    </div>
-                </div>
-                <div class="event-item">
-                    <img src="file:///Users/tingchannavong/Desktop/AWsite/img/event1.jpeg" alt="The Low Land" class="event-image">
-                    <div class="event-details">
-                        <h3 class="event-title">Psychology Games Work Shop</h3>
-                        <p class="event-description">The low land is an area known for its hard-working folk...</p>
-                        <p class="event-category">Category: Strategy Games</p>
-                        <p class="event-location">Location: Banmuang Village Xaysettha District, Vientiane</p>
-                    </div>
-                </div>
-                
-                <!-- Repeat this block for each event -->
+                <!-- Event Items -->
+                <EventCard 
+                        title = "Negotiation Game Work Shop"
+                        img = "/event1.jpeg"
+                        body = "Games featured are Survive, Catan, Chinatown, Sheriff of Nottingham and more!"
+                        description = "Makerbox Laos"
+                />
+                <EventCard 
+                        title = "2nd Hand World #2"
+                        img = "/event 4.jpeg"
+                        body = "Proud to be joining 2nd Hand World for the second time! Free flow style."
+                        description = "Naga Mall"
+                />
+                <EventCard 
+                        title = "Clear Mobile Legend Event"
+                        img = "/event 3.jpeg"
+                        body = "We joined Mobile Legend competition at Parkson!"
+                        description = "Parkson"
+                />
+                <EventCard 
+                        title = "Psychology Games Work Shop"
+                        img = "/event 2.jpeg"
+                        body = "Games featured are the Mind, Coup, Salem among others"
+                        description = "Stella"
+                />
+                <!-- Repeat this card for each event -->
             </div>
         </section>
     </body>    
