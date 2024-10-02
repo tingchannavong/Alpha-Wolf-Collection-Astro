@@ -1,10 +1,12 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Power Grid"
-description: "This game is a strategy game where you collect treasures in a sinking island."
+description: "This game is a strategy game where you build power plants."
 author: "Alpha Wolf Volunteers"
 date: "29 September 2024"
-image: ".img"
+image: "/powergrid.jpeg"
+category: "Strategy"
+location: "NN"
 ---
 # Power Grid
 
