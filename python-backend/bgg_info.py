@@ -1,12 +1,13 @@
 #A program to request for public board game information from BGG
 import requests
 import xml.etree.ElementTree as ET
+import os
 
-def get_board_game_info(board_game):
-    url = f'https://www.boardgamegeek.com/xmlapi/search?search={board_game}&exact=1'
+def get_board_game_info(board_game, image_folder='board_game_images'):
+    search_url = f'https://www.boardgamegeek.com/xmlapi/search?search={board_game}&exact=1'
     
     try:
-        response = requests.get(url)
+        response = requests.get(search_url)
         response.raise_for_status()
         
         # Parse the response XML
@@ -24,14 +25,20 @@ def get_board_game_info(board_game):
             return None
         
         # Use the game ID to fetch detailed information
-        url = f'https://www.boardgamegeek.com/xmlapi/boardgame/{game_id}?stats=1'
-        response = requests.get(url)
+        detail_url = f'https://www.boardgamegeek.com/xmlapi/boardgame/{game_id}?stats=1'
+        response = requests.get(detail_url)
         response.raise_for_status()
         
         # Parse the response XML
         root = ET.fromstring(response.content)
         
         # Extract the desired information
+        description_elem = root.find('.//description')
+        description = description_elem.text if description_elem is not None else "No description available"
+        
+        image_elem = root.find('.//image')
+        image_url = image_elem.text if image_elem is not None else None
+        
         playing_time_elem = root.find('.//playingtime')
         playing_time = playing_time_elem.text if playing_time_elem is not None else "Not specified"
         
@@ -47,12 +54,29 @@ def get_board_game_info(board_game):
         categories_elems = root.findall('.//boardgamecategory')
         categories = ', '.join(category.text for category in categories_elems) if categories_elems else "Not specified"
         
+        # Download and save the image to the specified folder
+        if image_url:
+            if not os.path.exists(image_folder):
+                os.makedirs(image_folder)
+            
+            image_response = requests.get(image_url)
+            image_filename = os.path.join(image_folder, f"{board_game}.jpg")
+            img_url = os.path.basename(image_filename)
+            with open(image_filename, 'wb') as image_file:
+                image_file.write(image_response.content)
+            print(f"Image saved for {board_game} at {image_filename}")
+            print(f"The image url to use in the markdown is {img_url}")
+        else:
+            print(f"No image found for {board_game}.")
+        
         return {
+            'Description': description,
             'Playing Time': playing_time,
             'Minimum Players': min_players,
             'Maximum Players': max_players,
             'Minimum Age': min_age,
-            'Categories': categories
+            'Categories': categories,
+            'Image URL': image_url
         }
     except Exception as e:
         print(f"Error fetching information for {board_game}: {e}")
@@ -60,9 +84,10 @@ def get_board_game_info(board_game):
 
 def main():
     board_games = ['Catan', 'Ticket to Ride', 'Codenames']  # List of board games to fetch information for
+    image_folder = r"c:\Users\Macbook pro\Desktop\AWsite\public"
     
     for game in board_games:
-        game_info = get_board_game_info(game)
+        game_info = get_board_game_info(game, image_folder=image_folder)
         if game_info:
             print(f"Information for {game}:")
             for key, value in game_info.items():
@@ -71,3 +96,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
