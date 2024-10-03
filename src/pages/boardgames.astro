@@ -11,7 +11,15 @@ const allGames = await Astro.glob("./game-details/*");
     <link rel="stylesheet" href="/styles/alpha_style.css">
     <title>Board Games</title>
 </head>
+
 <MainLayout>
+    {
+        allGames.map( game => (
+            <div>
+                {JSON.stringify(game)}
+            </div>   
+        ))
+    }
     <body>
         <section id="categories-section" class="container">
             <div class="categories">
@@ -57,16 +65,6 @@ const allGames = await Astro.glob("./game-details/*");
               </div>
         </section>
 
-            <!-- To check what object the fronmatter contains print out the json file: {JSON.stringify(game)} -->
-    {
-        allGames.map( game => (
-            <div>
-                Title: {game.frontmatter.title} which {game.frontmatter.description}
-                <a href={game.url}>Read More</a>
-            </div>
-        ))
-    }
-
         <section id="all-games-section" class="container">
             <h2>All Board Games</h2>
             <p>These are all the board games in Alpha Wolf's collection and their designated location. </p>
@@ -103,49 +101,38 @@ const allGames = await Astro.glob("./game-details/*");
             <!-- Game list starts here -->
             <div class="grid-list">
                 <!-- Game Item -->
+                <!-- To check what object the fronmatter contains print out the json file: {JSON.stringify(game)} -->
+            {
+                allGames.map( game => (
+                        <Card
+                            title = {game.frontmatter.title}
+                            body = {game.frontmatter.description}
+                            href = {game.url}
+                            img = {game.frontmatter.image}
+                            category = {game.frontmatter.category}
+                            location = {game.frontmatter.location}
+
+                        /> 
+                ))
+            }
                 <Card
-                    title = "Power Grid"
+                    title = "Cash Flow"
                     body = "A game where you assume the role of electricity provider and generate it to cities!"
                     href = "/game-details/power-grid"
-                    img = "/powergrid.jpeg"
-                    description = "Location: Banmuang Village Xaysettha District, Vientiane"
+                    img = "/cashflow.jpeg"
+                    location = "Banmuang Village Xaysettha District, Vientiane"
+                    category = "Financial"
                 />
-                <div class="game-item">
-                    <img src="file:///Users/tingchannavong/Desktop/AWsite/img/powergrid.jpeg" alt="Power Grid" class="game-image">
-                    <div class="game-details">
-                        <h3 class="game-title">Power Grid</h3>
-                        <p class="game-description">
-                            A game where you assume the role of electricity provider and generate it to cities! However, as plants are purchased, newer, more efficient plants become available, so by merely purchasing, you're potentially allowing others access to superior equipment.
-
-                            Additionally, players must acquire the raw materials (coal, oil, garbage, and uranium) needed to power said plants (except for the 'renewable' windfarm/ solar plants, which require no fuel), making it a constant struggle to upgrade your plants for maximum efficiency while still retaining enough wealth to quickly expand your network to get the cheapest routes.
-                        </p>
-                        <p class="game-category">Category: Strategy Games</p>
-                        <p class="game-location">Location: Banmuang Village Xaysettha District, Vientiane</p>
-                    </div>
-                    <div class="game-meta">
-                        <!-- To provide individual links to each game, this is just a demo link to the blueprint -->
-                        <a href="file:///Users/tingchannavong/Desktop/AWsite/game-details.html" class="game-read-more">Read more</a>
-                    </div>
-                </div>
-                <div class="game-item">
-                    <img src="forbidden island.jpeg" alt="Forbidden Island" class="game-image">
-                    <div class="game-details">
-                        <h3 class="game-title">Forbidden Island</h3>
-                        <p class="game-description">
-                        A game where you assume the role of electricity provider and generate it to cities! However, as plants are purchased, newer, more efficient plants become available, so by merely purchasing, you're potentially allowing others access to superior equipment.
-    
-                        Additionally, players must acquire the raw materials (coal, oil, garbage, and uranium) needed to power said plants (except for the 'renewable' windfarm/ solar plants, which require no fuel), making it a constant struggle to upgrade your plants for maximum efficiency while still retaining enough wealth to quickly expand your network to get the cheapest routes.
-                        </p>
-                        <p class="game-category">Category: Cooperative Games</p>
-                        <p class="game-location">Location: Banmuang Village Xaysettha District, Vientiane</p>
-                    </div>
-                    <div class="game-meta">
-                        <a href="file:///Users/tingchannavong/Desktop/AWsite/game-details.html" class="game-read-more">Read more</a>
-                    </div>
-                </div>
-                <!-- Repeat this block for each game -->
+                <Card
+                    title = "Poetry for Neanderthals"
+                    body = "A game where you assume the role of electricity provider and generate it to cities!"
+                    href = "/game-details/forbidden-island"
+                    img = "/forbiddenisland.jpeg"
+                    location = "Banmuang Village Xaysettha District, Vientiane"
+                    category = "Party"
+                />
+                <!-- Repeat this card component for each game -->
             </div>
-    
             <!-- Pagination Section -->
             <div class="pagination-section">
                 <div class="show-results">

@@ -1,12 +1,14 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Forbidden Island"
-description: "This game is a strategy game where you collect treasures in a sinking island."
+description: "This game is a cooperative game where you collect treasures in a sinking island."
 author: "Alpha Wolf Volunteers"
 date: "29 September 2024"
 image: ".img"
+category: "Cooperative"
+location: "L6"
 ---
-# Power Grid
+# Forbidden Island
 
 ![Forbidden Island Image](/forbiddenisland.jpeg)
 

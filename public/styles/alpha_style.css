@@ -125,7 +125,7 @@ body {
 .game-gallery {
     display: inline-grid;
     justify-content: space-between;
-    padding; 1px 1px;
+    padding: 1px 1px;
     margin: auto;
     grid-template-columns: auto auto auto auto;
     height: 20%;
