@@ -1,9 +1,11 @@
 #A program to request for public board game information from BGG
+import ezsheets
 import requests
 import xml.etree.ElementTree as ET
 import os
 
 def get_board_game_info(board_game, image_folder='board_game_images'):
+    """Fetch board game information from BoardGameGeek"""
     search_url = f'https://www.boardgamegeek.com/xmlapi/search?search={board_game}&exact=1'
     
     try:
@@ -61,7 +63,7 @@ def get_board_game_info(board_game, image_folder='board_game_images'):
             
             image_response = requests.get(image_url)
             image_filename = os.path.join(image_folder, f"{board_game}.jpg")
-            img_url = os.path.basename(image_filename)
+            img_url = f"/{os.path.basename(image_filename)}"
             with open(image_filename, 'wb') as image_file:
                 image_file.write(image_response.content)
             print(f"Image saved for {board_game} at {image_filename}")
@@ -76,23 +78,21 @@ def get_board_game_info(board_game, image_folder='board_game_images'):
             'Maximum Players': max_players,
             'Minimum Age': min_age,
             'Categories': categories,
-            'Image URL': image_url
+            'Image URL': img_url #filepath saved locally in /public
         }
     except Exception as e:
         print(f"Error fetching information for {board_game}: {e}")
         return None
 
 def main():
-    board_games = ['Catan', 'Ticket to Ride', 'Codenames']  # List of board games to fetch information for
-    image_folder = r"c:\Users\Macbook pro\Desktop\AWsite\public"
+    # Access google sheet
+    sheet_obj = ezsheets.Spreadsheet('1a-TIrVEULIaBvgeQDHj51CDNaIySzU27A-vkL05GQMw') 
     
-    for game in board_games:
-        game_info = get_board_game_info(game, image_folder=image_folder)
-        if game_info:
-            print(f"Information for {game}:")
-            for key, value in game_info.items():
-                print(f"{key}: {value}")
-            print()
+    # Read the list of games from the first column
+    sheet = sheet_obj['Game']
+
+    #Set Image Folder
+    image_folder = r"C:\Users\Macbook pro\Desktop\AWsite\python-backend\bgg_images"
 
 if __name__ == "__main__":
     main()
