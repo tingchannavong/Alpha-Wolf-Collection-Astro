@@ -1,0 +1,25 @@
+// SAMPLE json Relational Data Planning 
+{
+  "games": [
+    {
+      "id": 1,
+      "name_en": "Catan",
+      "description_en": "A game of trading and building.",
+      "categories": 1,
+      "image_url": "https://example.com/catan.jpg",
+      "location" : "L01",
+    },
+    {
+      "id": 2,
+      "name": "Ticket to Ride",
+      "description": "Build your railroads across America.",
+      "category_id": 2,
+      "location": "Shelf B",
+      "image_url": "https://example.com/ticket_to_ride.jpg"
+    }
+  ],
+  "categories": [
+    { "id": 1, "name": "Strategy" },
+    { "id": 2, "name": "Family" }
+  ]
+}

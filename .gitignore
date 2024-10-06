@@ -25,3 +25,10 @@ pnpm-debug.log*
 
 # python venv
 python-backend/.venv
+python-backend/credentials-sheets.json
+python-backend/token-drive.pickle
+python-backend/token-sheets.pickle
+
+
+# images testing phase
+python-backend\bgg_images
