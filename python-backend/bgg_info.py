@@ -50,9 +50,6 @@ def get_board_game_info(board_game, image_folder='board_game_images'):
         max_players_elem = root.find('.//maxplayers')
         max_players = max_players_elem.text if max_players_elem is not None else "Not specified"
         
-        min_age_elem = root.find('.//minage')
-        min_age = min_age_elem.text if min_age_elem is not None else "Not specified"
-        
         categories_elems = root.findall('.//boardgamecategory')
         categories = ', '.join(category.text for category in categories_elems) if categories_elems else "Not specified"
         
