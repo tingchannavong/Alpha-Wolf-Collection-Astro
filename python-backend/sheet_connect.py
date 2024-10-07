@@ -20,15 +20,22 @@ sheet_id = '1a-TIrVEULIaBvgeQDHj51CDNaIySzU27A-vkL05GQMw'
 sheet_title = 'Game'
 sheet = connect_to_sheet(sheet_id, sheet_title)
 
-def loop_col_find_replace(column):
+def loop_col_find_replace(column, replacements):
     """Loop through column and perform find & replace on it."""
 
     # Make data array/list from specified column
-    data_array = sheet.getColumn(column)
+    data_array = sheet.getColumn(column, replacements)
 
     # Loop through the description array 
     for row, each in enumerate(data_array, start=1): #Start at 1 because google sheet start counting from row 1 
         print(f'We are in row {row}')
+
+        # Perform find and replace
+        new_text = replace_many(each, replacements) 
+
+        # Write new text to the cell
+        sheet[f'{column}{row}'] = new_text
+        print(f'Text found and replaced for {row}')
 
         # Different operations to perform
         short_desc = find_first_sentence(each)
@@ -40,4 +47,15 @@ def loop_col_find_replace(column):
         
     print("All operations completed.")
 
-loop_col_find_replace('K')
+# sample replacements dictionary
+replacements_dict = {
+    "&quot;": " ",
+    "&mdash;": " ",
+    "&ldquo;": " ",
+    "&hellip;": " ",
+    "&rdquo;": " ",
+    "&lsquo;": " ",
+    "&rsquo;": " "
+}
+
+loop_col_find_replace('K', replacements_dict)

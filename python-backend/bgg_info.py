@@ -1,8 +1,9 @@
-#A program to request for public board game information from BGG
+# A program to request for public board game information from BGG
 import requests
 import xml.etree.ElementTree as ET
 import os
 import re
+from bs4 import BeautifulSoup #Did not work
 
 def get_board_game_info_by_id(board_game, bgg_game_id, image_folder='board_game_images'):
     """Fetch board game information from BoardGameGeek by knowing id.
@@ -180,20 +181,8 @@ def replace_many(text, replacements):
         text = re.sub(re.escape(old_string), new_string, text)
     return text
 
-# sample replacements dictionary
-replacements_dict = {
-    "&quot;": " ",
-    "&mdash;": " ",
-    "&ldquo;": " ",
-    "&hellip;": " ",
-    "&rdquo;": " ",
-    "&lsquo;": " ",
-    "&rsquo;": " "
-}
+# Example usage:
+game_name = "pandemic (board game) "
 
-    #    # Perform find and replace
-    #     new_text = replace_many(each, replacements) 
-
-    #     # Write new text to the cell
-    #     sheet[f'{column}{row}'] = new_text
-    #     print(f'Text found and replaced for {row}')
+#Set Image Folder
+image_folder = r"C:\Users\Macbook pro\Desktop\AWsite\python-backend\bgg_images"
