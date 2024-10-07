@@ -2,6 +2,7 @@
 import requests
 import xml.etree.ElementTree as ET
 import os
+import re
 
 def get_board_game_info_by_id(board_game, bgg_game_id, image_folder='board_game_images'):
     """Fetch board game information from BoardGameGeek by knowing id.
@@ -66,6 +67,7 @@ def get_board_game_info_by_id(board_game, bgg_game_id, image_folder='board_game_
         return None
     
 def get_board_game_info(board_game, image_folder='board_game_images'):
+
     """Fetch board game information from BoardGameGeek"""
     search_url = f'https://www.boardgamegeek.com/xmlapi/search?search={board_game}&exact=1'
     
@@ -139,3 +141,59 @@ def get_board_game_info(board_game, image_folder='board_game_images'):
         }
     except Exception as e:
         print(f"Error fetching information for {board_game}: {e}")
+
+def find_first_sentence(text):
+    """A functino that finds and returns only the first sentence in a given text."""
+    match = re.search(r"^[^.]*\.", text)
+    if match:
+        return match.group()
+    else:
+        return None  # No sentence found
+    
+def replace_one(text, find, replace):
+    """Replaces all occurrences of old_string with new_string in text.
+
+    Args:
+        text: The input text.
+        find: The old_string to be replaced.
+        replace: The replacement new_string.
+
+    Returns:
+        The modified text with all occurrences of old_string replaced.
+    """
+
+    return re.sub(re.escape(find), replace, text)
+
+def replace_many(text, replacements):
+    """Replaces multiple occurrences of strings in text.
+
+    Args:
+        text: The input text.
+        replacements: A dictionary where keys are the strings to be replaced and values are their replacements.
+                {find: replace,
+                find: replace}
+    Returns:
+        The modified text with all occurrences of the strings replaced.
+    """
+
+    for old_string, new_string in replacements.items():
+        text = re.sub(re.escape(old_string), new_string, text)
+    return text
+
+# sample replacements dictionary
+replacements_dict = {
+    "&quot;": " ",
+    "&mdash;": " ",
+    "&ldquo;": " ",
+    "&hellip;": " ",
+    "&rdquo;": " ",
+    "&lsquo;": " ",
+    "&rsquo;": " "
+}
+
+    #    # Perform find and replace
+    #     new_text = replace_many(each, replacements) 
+
+    #     # Write new text to the cell
+    #     sheet[f'{column}{row}'] = new_text
+    #     print(f'Text found and replaced for {row}')

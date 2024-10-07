@@ -1,66 +1,43 @@
-# A program to connect to google sheets and fetch game clean up new logic main check by image blank row
+# A program to connect to google sheets and operate on different tasks
 
 import ezsheets
-from bgg_info import get_board_game_info_by_id
+from bgg_info import replace_many, find_first_sentence
 
-sheet_obj = ezsheets.Spreadsheet('1a-TIrVEULIaBvgeQDHj51CDNaIySzU27A-vkL05GQMw') # sheet ID between d/ and /edit
+def connect_to_sheet(sheet_id, sheet_title):
+    """Connect to your specific google sheet and select the sheet title you want to work with." 
+      Args:
+        sheet_id: The sheet ID is between d/ and /edit in the url.
+        sheet_title: The literal string title of your sheet.
+        Returns sheet object for you to work with."""
+    # Make a request to google sheet API provided your ID
+    sheet_obj = ezsheets.Spreadsheet(sheet_id) 
     
-# Create game sheet object
-sheet = sheet_obj['Game']
+    # Create game sheet object
+    sheet = sheet_obj[sheet_title]
+    return sheet
 
-# Set Image Folder
-image_folder = r"C:\Users\Macbook pro\Desktop\AWsite\python-backend\bgg_images"
+sheet_id = '1a-TIrVEULIaBvgeQDHj51CDNaIySzU27A-vkL05GQMw'
+sheet_title = 'Game'
+sheet = connect_to_sheet(sheet_id, sheet_title)
 
-new_game = {
-        34: ('Cash Flow', 106637), 
-}
+def loop_col_find_replace(column):
+    """Loop through column and perform find & replace on it."""
 
-# Loop through the missing games and fetch information with year (if provided)
-for row, (game, id) in missing_games.items():
-    print(f"Fetching info for {game} (Year: {id})...")
-    
-    # Fetch game info
-    game_info = get_board_game_info_by_id(game, id, image_folder)
-    
-    if game_info:
-        # Write the information to the respective columns in the Google Sheet
-        sheet[f'G{row}'] = game_info.get('Image URL', '')  # Column G: Image URL local path, second arguement refers to what happens if not found
-        sheet[f'K{row}'] = game_info.get('Description', 'No description available') 
-        sheet[f'M{row}'] = game_info.get('Categories', 'Not specified') 
-        sheet[f'O{row}'] = game_info.get('Playing Time', 'Not specified')  
-        sheet[f'P{row}'] = game_info.get('Minimum Players', 'Not specified')  
-        sheet[f'Q{row}'] = game_info.get('Maximum Players', 'Not specified') 
-        print(f"Details for {sheet[f'B{row}']} written to row {row}.")
-        print(f"Details for {game}written to row {row}.")
-    else:
-        print(f"Failed to fetch details for {game}.")
+    # Make data array/list from specified column
+    data_array = sheet.getColumn(column)
 
-print("Finished writing all missing game details.")
+    # Loop through the description array 
+    for row, each in enumerate(data_array, start=1): #Start at 1 because google sheet start counting from row 1 
+        print(f'We are in row {row}')
 
-# Dictionary to store missing games for future fetch
-# key pair value is row: (game_name, game_id)
-missing_games = {
-        9: ('Ticket to Ride: Asia Map', 106637), 
-        16: ('Pop-up Pirate', 9004), 
-        19: ('The Resistance: Avalon', 128882),
-        21: ('Decrypto', 225694),  
-        33: ('Dead Man on the Orient Express', 226522), 
-        49: ('Who Is It', 4143), 
-        62: ('Coup', 131357), 
-        84: ('Evolution', 155703)  
-    }
+        # Different operations to perform
+        short_desc = find_first_sentence(each)
+        print(short_desc)
 
-year_search = {
-        21: ('Decrypto', 2018),  
-        33: ('Dead Man on the Orient Express', 2017), 
-        49: ('Who Is It', 1979), 
-        62: ('Coup', 2012),  
-        84: ('Evolution', 2014)  
-    }
+        # Write first sentence to cell in column I 
+        sheet[f'I{row}'] = short_desc
+        print(f'Short description for {sheet[f'B{row}']} written to {row}')
+        
+    print("All operations completed.")
 
-manual_search = {
-        15: ('Face Change Rubik Cube', None),
-        52: ('IQ Game', None),
-        63: ('Spot it Holidays', None), 
-        83: ('The Empathy Box', None), 
-}
+loop_col_find_replace('K')
