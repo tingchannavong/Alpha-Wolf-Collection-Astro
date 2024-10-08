@@ -298,6 +298,9 @@ button:hover {
     margin-top: 30px;
     margin-bottom: 30px;
     border-style: hidden;
+    overflow: auto; /* Or overflow: scroll; */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
 }
 
 header {
