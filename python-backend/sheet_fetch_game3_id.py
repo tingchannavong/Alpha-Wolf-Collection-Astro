@@ -3,11 +3,14 @@
 # 2) name in a dictionary structure, more generic but less manual work
 
 import ezsheets
-from bgg_info import get_board_game_info_by_id, get_board_game_info
+from bgg_info import get_board_game_info_by_id, get_board_game_info, replace_spaces_in_filepath, find_first_sentence
+from create_markdowns import bulk_create_mds
 
 # Dictionary to store missing games for future fetch
 # key pair value is row: (game_name, game_id)
 missing_games = {
+        
+        89: ('Forbidden Island', None),
         9: ('Ticket to Ride: Asia Map', 106637), 
         16: ('Pop-up Pirate', 9004), 
         19: ('The Resistance: Avalon', 128882),
@@ -17,15 +20,7 @@ missing_games = {
         62: ('Coup', 131357), 
         84: ('Evolution', 155703),
         34: ('Carcassonne', None),
-        36: ('Cashflow 101', None),  
-    }
-
-year_search = {
-        21: ('Decrypto', 2018),  
-        33: ('Dead Man on the Orient Express', 2017), 
-        49: ('Who Is It', 1979), 
-        62: ('Coup', 2012),  
-        84: ('Evolution', 2014)  
+        36: ('Cashflow 101', None), 
     }
 
 manual_search = {
@@ -36,7 +31,8 @@ manual_search = {
 }
 
 new_game = {
-        89: ('Forbidden Island', None),
+        85: ('Twice as Clever', 269210),
+        86: ("That's pretty clever", 244522),
         }
 
 def loop_sheet_find_game(sheet, img_folder, games_array):
@@ -72,11 +68,4 @@ sheet_obj = ezsheets.Spreadsheet('1a-TIrVEULIaBvgeQDHj51CDNaIySzU27A-vkL05GQMw')
 # Create game sheet object
 sheet = sheet_obj['Game']
 
-# Set Image Folder
-image_folder = r"C:\Users\Macbook pro\Desktop\AWsite\python-backend\bgg_images"
-
 # EXAMPLE USAGE
-loop_sheet_find_game(sheet, image_folder, new_game)
-
-
-

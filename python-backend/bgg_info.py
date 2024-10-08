@@ -46,7 +46,7 @@ def get_board_game_info_by_id(board_game, bgg_game_id, image_folder='board_game_
                 os.makedirs(image_folder)
             
             image_response = requests.get(image_url)
-            image_filename = os.path.join(image_folder, f"{board_game}.jpg")
+            image_filename = os.path.join(image_folder, f"{board_game.lower().replace(' ', '_')}.jpg")
             img_url = f"/{os.path.basename(image_filename)}"
             with open(image_filename, 'wb') as image_file:
                 image_file.write(image_response.content)
@@ -123,7 +123,7 @@ def get_board_game_info(board_game, image_folder='board_game_images'):
                 os.makedirs(image_folder)
             
             image_response = requests.get(image_url)
-            image_filename = os.path.join(image_folder, f"{board_game}.jpg")
+            image_filename = os.path.join(image_folder, f"{board_game.lower().replace(' ', '_')}.jpg")
             img_url = f"/{os.path.basename(image_filename)}"
             with open(image_filename, 'wb') as image_file:
                 image_file.write(image_response.content)

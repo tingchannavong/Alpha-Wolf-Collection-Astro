@@ -547,10 +547,16 @@ select:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-style: solid;
 }
+.game-image-container {
+    width: 170px;
+    display: grid;
+    place-items: center;
+}
 
 .game-image {
-    width: 150px;
+    max-width: 150px;
     height: auto;
+    max-height: 180px;
     margin-right: 20px;
     border-radius: 10px;
 }
@@ -1269,7 +1275,13 @@ select:hover {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-style: solid;
+    max-width: 100%;
 }
+
+.game-image-container {
+    flex-shrink: 0;
+    max-width: 150px;
+    }
 
 .game-image {
     width: 150px;
@@ -1280,6 +1292,9 @@ select:hover {
 /*consider using grid-row universal format*/
 .game-details {
     flex-grow: 1;
+    max-width: 400px; /* Restrict the width of the details */
+    overflow: hidden;
+    margin-right: 15px; /* Add space between details and "Read more" button */
 }
 
 .game-title {
@@ -1292,7 +1307,7 @@ select:hover {
     font-size: 1rem;
     margin-bottom: 10px;
     margin-right: 15px;
-    text-align: justify;
+    text-align: left;
 }
 
 .game-category {
@@ -1304,12 +1319,18 @@ select:hover {
     color: #666;
 }
 /*consider using grid-row*/
-.game-meta {
+.game-meta { 
+    flex-shrink: 0;
     text-align: right;
+    min-width: 150px; /* Ensure uniform width for the button container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .game-meta p {
     margin: 5px 0;
+    text-align: right;
 }
 .game-read-more {
     display: inline-block;
