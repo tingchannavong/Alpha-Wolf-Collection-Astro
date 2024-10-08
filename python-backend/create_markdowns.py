@@ -18,24 +18,8 @@ sheet_id = '1a-TIrVEULIaBvgeQDHj51CDNaIySzU27A-vkL05GQMw'
 sheet_title = 'Game'
 sheet = connect_to_sheet(sheet_id, sheet_title)
 
-missing_rows = {1:'Exit', 
-                2: 'Codenames Pictures',
-                3: 'Exit',
-                4: 'Explode NSFW',
-                5: 'Ghost blitz',
-                5: 'im boss',
-                6: 'monopoly cantebria',
-                7: 'pandemic contagion',
-                8: 'taco flip',
-                9: 'truth drink',
-                10: 'ultimate werewolf',
-                12: 'timeline',
-                13: 'timeline',
-                14: 'timeline',
-                15: 'forbidden island'}
-
 # Loop through the google sheet rows 3 to 89, have to plus 1
-for row in range(3, 49):
+for row in range(3, 90):
     # Get game data from the relevant columns
     title = sheet[f'B{row}']  or 'Untitled Game'
     image_url = sheet[f'G{row}']  or 'No image url available'
@@ -68,7 +52,7 @@ location: "{location}"
 
 ### Location: {location}
 
-![{title} Image]({image_url})
+<img src="{image_url}" alt="{title} Image" width="500" style="display: block; margin: 0 auto">
 
 """
     print(f'We are in row {row}')
@@ -84,7 +68,5 @@ location: "{location}"
 
     sheet[f'S{row}'] = file_path
     print(f"Markdown file generated for {title} and file path saved to sheets.")
-
-    
 
 print('Bulk markdown creations completed.')

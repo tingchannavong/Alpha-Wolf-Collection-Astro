@@ -1,7 +1,7 @@
 # A program to connect to google sheets and operate on different tasks
 
 import ezsheets
-from bgg_info import replace_many, find_first_sentence
+from bgg_info import replace_spaces_in_filepath, replace_many, find_first_sentence
 
 def connect_to_sheet(sheet_id, sheet_title):
     """Connect to your specific google sheet and select the sheet title you want to work with." 
@@ -21,7 +21,7 @@ sheet_title = 'Game'
 sheet = connect_to_sheet(sheet_id, sheet_title)
 
 def loop_col_find_replace(column, replacements):
-    """Loop through column and perform find & replace on it."""
+    """Loop through column and perform find & replace certain parts of text on the cell."""
 
     # Make data array/list from specified column
     data_array = sheet.getColumn(column, replacements)
@@ -58,4 +58,5 @@ replacements_dict = {
     "&rsquo;": " "
 }
 
-loop_col_find_replace('K', replacements_dict)
+# EXAMPLE USAGE
+# replace_spaces_in_filepath(sheet, 'G', 3, 90)

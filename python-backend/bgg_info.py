@@ -181,8 +181,49 @@ def replace_many(text, replacements):
         text = re.sub(re.escape(old_string), new_string, text)
     return text
 
-# Example usage:
-game_name = "pandemic (board game) "
+def replace_spaces_in_filenames(folder_path):
+    """This function takes a folder path, goes through the folder and rename all the files by replacing spaces with _."""
+    # Ensure the folder path exists
+    if not os.path.exists(folder_path):
+        print(f"The folder '{folder_path}' does not exist.")
+        return
 
-#Set Image Folder
-image_folder = r"C:\Users\Macbook pro\Desktop\AWsite\python-backend\bgg_images"
+    # Iterate through all files in the specified folder
+    for filename in os.listdir(folder_path):
+        # Check if the file name contains spaces
+        if ' ' in filename:
+            # Create the new file name by replacing spaces with underscores
+            new_filename = filename.replace(' ', '_')
+            
+            # Construct full file paths
+            old_file = os.path.join(folder_path, filename)
+            new_file = os.path.join(folder_path, new_filename)
+            
+            # Rename the file
+            os.rename(old_file, new_file)
+            print(f"Renamed: '{filename}' to '{new_filename}'")
+
+def replace_spaces_in_filepath(sheet, col, from_row, to_row):
+    """This function takes a sheet object, column alphabet, row number from and row number to, goes through the rows and rename all the files by replacing spaces with _."""
+    # Loop through each row where image URLs are located (modify row range as needed)
+    for row in range(from_row, to_row):  # Update for your actual range
+        image_url = sheet[f'{col}{row}']
+
+        if image_url:
+            # Get the filename from the URL
+            image_name = os.path.basename(image_url)
+            new_image_name = image_name.replace(' ', '_')  # Replace spaces with underscores
+
+            # If the name changed, update the Google Sheet entry
+            if image_name != new_image_name:
+                # Update the URL in the Google Sheet
+                new_image_url = image_url.replace(image_name, new_image_name)
+                sheet[f'G{row}'] = new_image_url
+                print(f"Updated Google Sheet URL for row {row}: {new_image_url}")
+
+            else:
+                print(f"No spaces in filename for row {row}, no change needed.")
+
+# Example usage
+# folder_path = r"C:\Users\Macbook pro\Desktop\AWsite\public"
+# replace_spaces_in_filenames(folder_path)
