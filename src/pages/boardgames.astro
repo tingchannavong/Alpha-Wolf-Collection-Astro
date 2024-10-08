@@ -13,13 +13,14 @@ const allGames = await Astro.glob("./game-details/*");
 </head>
 
 <MainLayout>
-    {
+    <!-- To check what object the fronmatter contains print out the json file below-->
+    <!-- {
         allGames.map( game => (
             <div>
                 {JSON.stringify(game)}
             </div>   
         ))
-    }
+    } -->
     <body>
         <section id="categories-section" class="container">
             <div class="categories">
@@ -63,7 +64,7 @@ const allGames = await Astro.glob("./game-details/*");
                     <a href="#">See more</a>
                 </div>
               </div>
-        </section>
+            </section>
 
         <section id="all-games-section" class="container">
             <h2>All Board Games</h2>
@@ -98,10 +99,11 @@ const allGames = await Astro.glob("./game-details/*");
                     </select>
                 </div>
             </div>
+        </section>
+        <section id="game-cards-section" class="container">
             <!-- Game list starts here -->
             <div class="grid-list">
                 <!-- Game Item -->
-                <!-- To check what object the fronmatter contains print out the json file: {JSON.stringify(game)} -->
             {
                 allGames.map( game => (
                         <Card
@@ -115,43 +117,26 @@ const allGames = await Astro.glob("./game-details/*");
                         /> 
                 ))
             }
-                <Card
-                    title = "Cash Flow"
-                    body = "A game where you assume the role of electricity provider and generate it to cities!"
-                    href = "/game-details/power-grid"
-                    img = "/cashflow.jpeg"
-                    location = "Banmuang Village Xaysettha District, Vientiane"
-                    category = "Financial"
-                />
-                <Card
-                    title = "Poetry for Neanderthals"
-                    body = "A game where you assume the role of electricity provider and generate it to cities!"
-                    href = "/game-details/forbidden-island"
-                    img = "/forbiddenisland.jpeg"
-                    location = "Banmuang Village Xaysettha District, Vientiane"
-                    category = "Party"
-                />
-                <!-- Repeat this card component for each game -->
             </div>
-            <!-- Pagination Section -->
-            <div class="pagination-section">
-                <div class="show-results">
-                    <label for="show">Show:</label>
-                    <select id="show" name="show">
-                        <option value="10">10</option>
-                        <option value="20">20</option>
-                        <option value="30">30</option>
-                    </select>
-                </div>
-                <div class="pagination">
-                    <button class="pagination-btn-next">{"<"}</button>
-                    <button class="pagination-btn">1</button>
-                    <button class="pagination-btn">2</button>
-                    <button class="pagination-btn">3</button>
-                    <button class="pagination-btn">...</button>
-                    <button class="pagination-btn">10</button>
-                    <button class="pagination-btn-next">{">"}</button>
-                </div>
+        </section>
+        <!-- Pagination Section -->
+        <section class="pagination-section container">
+            <div class="show-results">
+                <label for="show">Show:</label>
+                <select id="show" name="show">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                </select>
+            </div>
+            <div class="pagination">
+                <button class="pagination-btn-next">{"<"}</button>
+                <button class="pagination-btn">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn">...</button>
+                <button class="pagination-btn">10</button>
+                <button class="pagination-btn-next">{">"}</button>
             </div>
         </section>
     </body>
