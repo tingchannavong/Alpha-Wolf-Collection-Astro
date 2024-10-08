@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Mahjong"
-description: "Mah-Jong (Chinese 麻將/麻将 game of the sparrow) is a traditional Chinese game using illustrated tiles, with game play similarities to rummy."
+description: "Mahjong (game of the sparrow) is a traditional Chinese game using illustrated tiles."
 image: "/Mahjong.jpg"
 category: "Abstract Strategy"
 location: "Lak6"

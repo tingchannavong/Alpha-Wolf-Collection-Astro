@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Sushi Go Party!"
-description: "Sushi Go Party! expands Sushi Go! with a party platter of mega maki, super sashimi, and endless edamame."
+description: "Players enjoy choosing the platter of mega maki, super sashimi, and endless edamame."
 image: "/Sushi_Go_Party!.jpg"
 category: "Card Game, Party Game"
 location: "MakerBox Lao"

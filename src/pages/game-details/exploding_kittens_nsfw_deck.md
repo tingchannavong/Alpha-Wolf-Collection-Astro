@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Exploding Kittens NSFW Deck"
-description: "Originally an expansion for Exploding Kittens, the most successful Kickstarer project ever, that contained cards that were too horrific and/or incredible to be included in a kid safe version."
+description: "Expansion for Exploding Kittens that contained cards that were too horrific and/or incredible to be included in a kid safe version."
 image: "/Exploding_Kittens_NSFW_Deck.jpg"
 category: "Animals, Card Game, Comic Book / Strip, Humor, Mature / Adult"
 location: "MakerBox Lao"

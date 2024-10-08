@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Forbidden Island"
-description: "No description available"
+description: "Forbidden Island is a visually stunning cooperative board game. Instead of winning by competing with other players like most games, everyone must work together to win the game. "
 image: "/Forbidden_Island.jpg"
 category: "Adventure, Fantasy, Science Fiction"
 location: "Lak6"

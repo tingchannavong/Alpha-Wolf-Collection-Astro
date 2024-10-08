@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Clue"
-description: "In Clue, players move from room to room in a mansion to solve the mystery of: who done it, with what, and where?"
+description: "Players move from room to room in a mansion to solve the mystery of: who done it, with what, and where?"
 image: "/Clue.jpg"
 category: "Deduction, Movies / TV / Radio theme, Murder/Mystery"
 location: "MakerBox Lao"

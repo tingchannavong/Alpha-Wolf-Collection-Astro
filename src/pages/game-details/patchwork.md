@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Patchwork"
-description: "In Patchwork, two players compete to build the most aesthetic (and high-scoring) patchwork quilt on a personal 9x9 game board."
+description: "Two players compete to build the most aesthetic patchwork quilt on a personal 9x9 game board."
 image: "/Patchwork.jpg"
 category: "Abstract Strategy, Economic, Puzzle"
 location: "Lak6"

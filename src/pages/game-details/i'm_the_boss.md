@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "I'm the Boss"
-description: "I'm the Boss!: The Card Game, a version of Sid Sackson's classic negotiation game I'm the Boss! that's based on his original design of that game, is still all about negotiation, with players trying to end up with more money in hand than anyone else."
+description: "Players take turns being the bosses and negotiate projects trying to end up with more money in hand than anyone else."
 image: "/im-the-boss.png"
 category: "Card Game, Economic, Negotiation"
 location: "MakerBox Lao"

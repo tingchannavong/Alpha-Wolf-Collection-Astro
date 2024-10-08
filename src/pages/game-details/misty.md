@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Misty"
-description: "It s raining outside. The windows are misty, but covered in drawings. Players receive cards with different designs and keep only one for their window."
+description: "The windows are misty, but covered in drawings. "
 image: "/Misty.jpg"
 category: "Card Game"
 location: "MakerBox Lao"

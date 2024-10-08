@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Camel Up"
-description: "In Camel Up, up to eight players bet on five racing camels, trying to suss out which will place first and second in a quick race around a pyramid."
+description: "Players bet on five racing camels, trying to suss out which will place first and second in a race around a pyramid."
 image: "/Camel_Up.jpg"
 category: "Animals, Arabian, Dice, Racing"
 location: "Lak6"

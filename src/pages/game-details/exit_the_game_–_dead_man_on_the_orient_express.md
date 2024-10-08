@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Exit The Game – Dead Man on the Orient Express"
-description: "Exit: The Game &ndash; Dead Man on the Orient Express is a puzzle game modeled after escape rooms."
+description: "Exit: The Game - Dead Man on the Orient Express is a puzzle game modeled after escape rooms."
 image: "/Dead_Man_on_the_Orient_Express.jpg"
 category: "Deduction, Murder/Mystery, Puzzle, Real-time"
 location: "Lak6"

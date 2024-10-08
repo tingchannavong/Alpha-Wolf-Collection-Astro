@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Azul"
-description: "Introduced by the Moors, azulejos (originally white and blue ceramic tiles) were fully embraced by the Portuguese when their king Manuel I, on a visit to the Alhambra palace in Southern Spain, was mesmerized by the stunning beauty of the Moorish decorative tiles."
+description: "As a tile-laying artist, you have been challenged to embellish the walls of the Royal Palace of Evora."
 image: "/Azul.jpg"
 category: "Abstract Strategy, Puzzle, Renaissance"
 location: "Lak6"

@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Taboo"
-description: "In the party game Taboo, you're trying to give clues to your teammates so that they'll guess a particular word, but you can't say just anything you like."
+description: "You're trying to give clues to your teammates to guess a particular word, but you can't say the taboo'd words."
 image: "/Taboo.jpg"
 category: "Party Game, Real-time, Word Game"
 location: "Lak6"

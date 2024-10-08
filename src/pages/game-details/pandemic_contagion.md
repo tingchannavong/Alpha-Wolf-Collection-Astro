@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Pandemic Contagion"
-description: "After many years of trying to defeat the diseases that threaten mankind & existence, the tables have been turned."
+description: "You are now the disease competing against other diseases (fellow players) to see who can eliminate humanity. "
 image: "/Pandemic_Contagion.jpg"
 category: "Card Game, Medical"
 location: "MakerBox Lao"

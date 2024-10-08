@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "BANG! The Dice Game"
-description: "At the start of the game, players each take a role card that secretly places them on a team: the Sheriff and deputies, outlaws, and renegades."
+description: "Players take a role card that secretly places them on a team: the Sheriff and deputies, outlaws or renegades."
 image: "/BANG!_The_Dice_Game.jpg"
 category: "American West, Bluffing, Deduction, Dice, Fighting, Party Game"
 location: "Lak6"

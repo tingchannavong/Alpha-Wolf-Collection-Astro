@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Chess"
-description: "Chess is a two-player, abstract strategy board game that represents medieval warfare on an 8x8 board with alternating light and dark squares."
+description: "Chess is a two-player game that represents medieval warfare on an 8x8 board with light and dark squares."
 image: "/Chess.jpg"
 category: "Abstract Strategy"
 location: "Lak6"

@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Who Is It"
-description: "The mystery face game where you flip over a collection of faces with different color hair, eye color, hair, hats, glasses etc."
+description: "The mystery game where you flip over a collection of faces with different color hair, eye color, hats, glasses.."
 image: "/Who_Is_It.jpg"
 category: "Children's Game, Deduction, Movies / TV / Radio theme"
 location: "MakerBox Lao"

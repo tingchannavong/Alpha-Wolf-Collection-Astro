@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Power Grid"
-description: "Power Grid is the updated release of the Friedemann Friese crayon game Funkenschlag."
+description: "Players build power plants and compete to supply the most electricity to cities!"
 image: "/Power_Grid.jpg"
 category: "Economic, Industry / Manufacturing"
 location: "Lak6"

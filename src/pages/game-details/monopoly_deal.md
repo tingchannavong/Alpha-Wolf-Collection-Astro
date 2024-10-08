@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Monopoly Deal"
-description: "From the back of the box:  Fast-dealing, card-stealing fun! Enjoy the rollercoaster experience of Monopoly in just 15 minutes! Collect full property sets to win!  This is the  lite  version of Monopoly Deal Card Game, distributed by Wm Morrison Supermarkets PLC (UK) consisting of 52 cards for 2-3 players including 3 Forced Purchase cards, 6 sets of property cards, wildcards, action cards and money cards."
+description: "Fast-dealing, card-stealing fun! Collect full property sets to win!"
 image: "/Monopoly_Deal.jpg"
 category: "Card Game"
 location: "MakerBox Lao"

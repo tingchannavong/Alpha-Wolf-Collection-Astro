@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Codenames Pictures"
-description: "What are these strange symbols on the map? They are code for locations where spies must contact secret agents!  Two rival spymasters know the agent in each location."
+description: "Agents are no longer represented by a single word, but by an image that contains multiple elements.  "
 image: "/Codenames_Pictures.jpg"
 category: "Card Game, Deduction, Party Game, Spies/Secret Agents"
 location: "MakerBox Lao"

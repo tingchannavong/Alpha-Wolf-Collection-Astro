@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Catan"
-description: "In CATAN (formerly The Settlers of Catan), players try to be the dominant force on the island of Catan by building settlements, cities, and roads."
+description: "Players try to be the dominant force on the island of Catan by building settlements, cities, and roads."
 image: "/Catan.jpg"
 category: "Economic, Negotiation"
 location: "Lak6"

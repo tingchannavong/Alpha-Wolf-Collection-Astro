@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Cash Flow"
-description: "Cashflow 101 is a serious game designed by investor, businessman, and self-help author Robert Kiyosaki to serve as a tool for learning basic financial strategies and accounting principles."
+description: "Cashflow 101 is a game designed by investor, businessman, and self-help author Robert Kiyosaki to serve as a tool for learning basic financial strategies and accounting principles."
 image: "/Cashflow_101.jpg"
 category: "Economic, Educational, Math, Number"
 location: "Lak6"

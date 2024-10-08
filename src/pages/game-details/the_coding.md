@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "The Coding"
-description: "The Coding is a deduction game where victory is acquired by intelligently outsmarting other players in a second."
+description: "You act as a hacker who attempts to cover the secret data in the coding."
 image: "/The_Coding.jpg"
 category: "Deduction"
 location: "MakerBox Lao"

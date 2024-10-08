@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Carcassonne"
-description: "Carcassonne is a tile-placement game in which the players draw and place a tile with a piece of southern French landscape on it."
+description: "Players draw and place a tile to expand and control the southern French city Carcassonne."
 image: "/Carcassonne.jpg"
 category: "Medieval, Territory Building"
 location: "Lak6"
