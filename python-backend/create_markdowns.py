@@ -18,17 +18,34 @@ sheet_id = '1a-TIrVEULIaBvgeQDHj51CDNaIySzU27A-vkL05GQMw'
 sheet_title = 'Game'
 sheet = connect_to_sheet(sheet_id, sheet_title)
 
-# Loop through the rows 3 to 88
-for row in range(3, 4):
+missing_rows = {1:'Exit', 
+                2: 'Codenames Pictures',
+                3: 'Exit',
+                4: 'Explode NSFW',
+                5: 'Ghost blitz',
+                5: 'im boss',
+                6: 'monopoly cantebria',
+                7: 'pandemic contagion',
+                8: 'taco flip',
+                9: 'truth drink',
+                10: 'ultimate werewolf',
+                12: 'timeline',
+                13: 'timeline',
+                14: 'timeline',
+                15: 'forbidden island'}
+
+# Loop through the google sheet rows 3 to 89, have to plus 1
+for row in range(3, 49):
     # Get game data from the relevant columns
-    title = sheet[f'B{row}']  # Title is in column B
-    image_url = sheet[f'G{row}']  # Image URL in column G
+    title = sheet[f'B{row}']  or 'Untitled Game'
+    image_url = sheet[f'G{row}']  or 'No image url available'
     short_desc = sheet[f'I{row}'] or 'No description available'
     description = sheet[f'K{row}'] or 'No description available'
     category = sheet[f'M{row}'] or 'Not specified'
     playing_time = sheet[f'O{row}'] or 'Not specified'
     min_players = sheet[f'P{row}'] or 'Not specified'
     max_players = sheet[f'Q{row}'] or 'Not specified'
+    location = sheet[f'R{row}'] or 'Not specified' 
 
     # Format the markdown content
     markdown_content = f"""---
@@ -37,10 +54,9 @@ title: "{title}"
 description: "{short_desc}"
 image: "{image_url}"
 category: "{category}"
+location: "{location}"
 ---
 # {title}
-
-![{title} Image]({image_url})
 
 {description}
 
@@ -50,15 +66,25 @@ category: "{category}"
 
 ### Players: {min_players} - {max_players}
 
+### Location: {location}
+
+![{title} Image]({image_url})
+
 """
-    
+    print(f'We are in row {row}')
+
     output_folder = r"C:\Users\Macbook pro\Desktop\AWsite\src\pages\game-details"
     
     # Save to a markdown file (one per game)
     file_name = f"{title.lower().replace(' ', '_')}.md"  # Create a markdown file name based on the game title
     file_path = os.path.join(output_folder, file_name)  # Combine folder path with file name
 
-    with open(file_path, 'w') as file:
+    with open(file_path, 'w', encoding='utf-8') as file:
         file.write(markdown_content)
 
-    print(f"Markdown file generated for {title}")
+    sheet[f'S{row}'] = file_path
+    print(f"Markdown file generated for {title} and file path saved to sheets.")
+
+    
+
+print('Bulk markdown creations completed.')

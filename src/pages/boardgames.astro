@@ -13,13 +13,14 @@ const allGames = await Astro.glob("./game-details/*");
 </head>
 
 <MainLayout>
-    {
+    <!-- To check what object the fronmatter contains print out the json file below-->
+    <!-- {
         allGames.map( game => (
             <div>
                 {JSON.stringify(game)}
             </div>   
         ))
-    }
+    } -->
     <body>
         <section id="categories-section" class="container">
             <div class="categories">
@@ -101,7 +102,6 @@ const allGames = await Astro.glob("./game-details/*");
             <!-- Game list starts here -->
             <div class="grid-list">
                 <!-- Game Item -->
-                <!-- To check what object the fronmatter contains print out the json file: {JSON.stringify(game)} -->
             {
                 allGames.map( game => (
                         <Card
@@ -115,7 +115,7 @@ const allGames = await Astro.glob("./game-details/*");
                         /> 
                 ))
             }
-                <Card
+                <!-- <Card
                     title = "Cash Flow"
                     body = "A game where you assume the role of electricity provider and generate it to cities!"
                     href = "/game-details/power-grid"
@@ -130,7 +130,7 @@ const allGames = await Astro.glob("./game-details/*");
                     img = "/forbiddenisland.jpeg"
                     location = "Banmuang Village Xaysettha District, Vientiane"
                     category = "Party"
-                />
+                /> -->
                 <!-- Repeat this card component for each game -->
             </div>
             <!-- Pagination Section -->
