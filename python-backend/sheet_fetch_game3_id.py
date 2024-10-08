@@ -15,7 +15,9 @@ missing_games = {
         33: ('Dead Man on the Orient Express', 226522), 
         49: ('Who Is It', 4143), 
         62: ('Coup', 131357), 
-        84: ('Evolution', 155703)  
+        84: ('Evolution', 155703),
+        34: ('Carcassonne', None),
+        36: ('Cashflow 101', None),  
     }
 
 year_search = {
@@ -34,8 +36,7 @@ manual_search = {
 }
 
 new_game = {
-        34: ('Carcassonne', None),
-        36: ('Cashflow 101', None), 
+        89: ('Forbidden Island', None),
         }
 
 def loop_sheet_find_game(sheet, img_folder, games_array):
@@ -61,7 +62,6 @@ def loop_sheet_find_game(sheet, img_folder, games_array):
             sheet[f'P{row}'] = game_info.get('Minimum Players', 'Not specified')  
             sheet[f'Q{row}'] = game_info.get('Maximum Players', 'Not specified') 
             print(f"Details for {sheet[f'B{row}']} written to row {row}.")
-            print(f"Details for {game}written to row {row}.")
         else:
             print(f"Failed to fetch details for {game}.")
 
@@ -76,7 +76,7 @@ sheet = sheet_obj['Game']
 image_folder = r"C:\Users\Macbook pro\Desktop\AWsite\python-backend\bgg_images"
 
 # EXAMPLE USAGE
-# loop_sheet_find_game(sheet, image_folder, new_game)
+loop_sheet_find_game(sheet, image_folder, new_game)
 
 
 
