@@ -4,6 +4,18 @@ const paginationList = Array.from({length: `${length}`}, (_, i) => i + 1);
 ---
 
 <nav aria-label="Game pages" class="pagination">
+    { firstUrl == currentUrl ? (
+        <span class="pagination__link disabled">
+            <i class="pi-angle-left"></i>
+            <i class="pi-angle-left"></i>
+        </span>
+    ) : (
+        <a href={firstUrl} class="pagination__link">
+            <i class="pi-angle-left"></i>
+            <i class="pi-angle-left"></i>
+        </a>
+    )}
+
     { prevUrl ? (
         <a href={prevUrl} class="pagination-btn">
             {"<"}
@@ -30,6 +42,18 @@ const paginationList = Array.from({length: `${length}`}, (_, i) => i + 1);
     ) : (
         <a href={nextUrl} class="pagination-btn">
             {">"}
+            <i class="pi-angle-right"></i>
+        </a>
+    )}
+
+    { lastUrl == currentUrl ? (
+        <span class="pagination__link disabled">
+            <i class="pi-angle-right"></i>
+            <i class="pi-angle-right"></i>
+        </span>
+    ) : (
+        <a href={lastUrl} class="pagination__link">
+            <i class="pi-angle-right"></i>
             <i class="pi-angle-right"></i>
         </a>
     )}
