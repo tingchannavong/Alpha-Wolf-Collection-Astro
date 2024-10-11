@@ -1,0 +1,36 @@
+---
+const { length, currentUrl, currentPage, firstUrl, prevUrl, nextUrl, lastUrl } = Astro.props;
+const paginationList = Array.from({length: `${length}`}, (_, i) => i + 1);
+---
+
+<nav aria-label="Game pages" class="pagination">
+    { prevUrl ? (
+        <a href={prevUrl} class="pagination-btn">
+            {"<"}
+            <i class="pi-angle-left"></i>
+        </a>
+    ) : (
+        <span class="pagination-btn">
+            <i class="pi-angle-left"></i>
+        </span>        
+    )}
+    
+    {
+        paginationList.map((num) => (
+            <a href={`${firstUrl}/${num}`} class={`pagination__link ${currentPage == num ? "disabled active" : ""}`}>
+                {num}
+            </a>
+        ))
+    }
+
+    { !nextUrl ? (
+        <span class="pagination-btn">
+            <i class="pi-angle-right"></i>
+        </span>
+    ) : (
+        <a href={nextUrl} class="pagination-btn">
+            {">"}
+            <i class="pi-angle-right"></i>
+        </a>
+    )}
+</nav>

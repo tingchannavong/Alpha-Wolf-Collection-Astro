@@ -659,7 +659,7 @@ select:hover {
     font-size: 1rem;
 }
 
-.pagination-btn-next {
+.pagination-btn-next{
     background-color: #121f40;
     color: white;
     border: none;
@@ -669,12 +669,12 @@ select:hover {
     font-size: 1rem;
 }
 
-.pagination-btn:hover, .pagination-btn-next:hover {
+.pagination-btn:hover, .pagination-btn-next:hover{
     background-color: #121f40;
     color: white;
 }
 /* New from pagination suggestion */
-.pagination .active {
+.pagination .active{
     background-color: #0070f3;
     color: white;
 }
@@ -1403,7 +1403,7 @@ select:hover {
     font-size: 1rem;
 }
 
-.pagination-btn-next {
+.pagination-btn-next a:link {
     background-color: #121f40;
     color: white;
     border: none;
@@ -1413,7 +1413,7 @@ select:hover {
     font-size: 1rem;
 }
 
-.pagination-btn:hover, .pagination-btn-next:hover {
+.pagination-btn a:hover, .pagination-btn-next a:hover {
     background-color: #121f40;
     color: white;
 }
