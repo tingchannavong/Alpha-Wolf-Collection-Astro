@@ -8,6 +8,10 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     color: #121f40; /*blue*/
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 .contact-container {
     display: flex;
@@ -301,6 +305,7 @@ button:hover {
     overflow: auto; /* Or overflow: scroll; */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;
+    flex: 1 0 auto;
 }
 
 header {
@@ -333,6 +338,10 @@ nav ul li a:hover {
     border-bottom: 2px solid;
     color: #121f40;
     font-style: bold;
+}
+.nav-bar {
+    flex-grow: 1;
+    margin-right: 50px;
 }
 /*Search for boardgame in the header*/
 .search-bar {
@@ -662,6 +671,11 @@ select:hover {
 
 .pagination-btn:hover, .pagination-btn-next:hover {
     background-color: #121f40;
+    color: white;
+}
+/* New from pagination suggestion */
+.pagination .active {
+    background-color: #0070f3;
     color: white;
 }
 
@@ -1067,6 +1081,7 @@ nav ul li a:hover {
 .search-bar {
     float: right;
     margin-top: 10px;
+    margin-left: 10px;
 }
 .search-bar input {
     padding: 5px;

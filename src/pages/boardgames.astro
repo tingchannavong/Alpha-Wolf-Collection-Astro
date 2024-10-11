@@ -1,9 +1,27 @@
 ---
 import MainLayout from "../layouts/main-layout.astro";
 import Card from "../components/game-card.astro";
-import CategoryCard from "../components/category-card.astro";
+import { handleSelectChange } from "../scripts/pagination.js"; // Import client-side function
 
+// Fetch all games using Astro.glob
 const allGames = await Astro.glob("./game-details/*");
+
+// Get the current page from the query parameters (default to page 1)
+const params = Astro.url.searchParams;
+const currentPage = Number(params.get('page')) || 1;
+
+// Get the number of games to display per page (from dropdown or default to 10)
+const gamesPerPage = Number(params.get('show')) || 10;
+
+// Calculate the total number of pages
+const totalPages = Math.ceil(allGames.length / gamesPerPage);
+
+// Calculate the slice indexes to show the correct games on the current page
+const start = (currentPage - 1) * gamesPerPage;
+const end = start + gamesPerPage;
+
+// Slice the games array to only show the games for the current page
+const paginatedGames = allGames.slice(start, end);
 ---
 <head>
     <meta charset="UTF-8">
@@ -22,50 +40,6 @@ const allGames = await Astro.glob("./game-details/*");
         ))
     } -->
     <body>
-        <section id="categories-section" class="container">
-            <div class="categories">
-                <h2>Categories</h2>
-                <p>There are many board game categories to choose from:</p>
-                <div class="grid-container">
-                    <CategoryCard
-                        title = "Strategy Games"
-                        img = "/strat-icon.png"
-                        description = {18}
-                    />
-                    <CategoryCard
-                        title = "Bluffing Games"
-                        img = "/strat-icon.png"
-                        description = {10}
-                    />
-                    <CategoryCard
-                        title = "Cooperative Games"
-                        img = "/strat-icon.png"
-                        description = {4}
-                    />
-                    <CategoryCard
-                        title = "Party Games"
-                        img = "/strat-icon.png"
-                        description = {6}
-                    />
-                    <CategoryCard
-                        title = "Creative Games"
-                        img = "/strat-icon.png"
-                        description = {6}
-                    />
-                    <CategoryCard
-                        title = "Beginner-Friendly Games"
-                        img = "/strat-icon.png"
-                        description = {11}
-                    />
-                     <!-- Repeat the category div for other categories -->
-                </div>
-                <div class="see-more">
-                    <!-- Link to categories page -->
-                    <a href="#">See more</a>
-                </div>
-              </div>
-            </section>
-
         <section id="all-games-section" class="container">
             <h2>All Board Games</h2>
             <p>These are all the board games in Alpha Wolf's collection and their designated location. </p>
@@ -103,40 +77,58 @@ const allGames = await Astro.glob("./game-details/*");
         <section id="game-cards-section" class="container">
             <!-- Game list starts here -->
             <div class="grid-list">
-                <!-- Game Item -->
-            {
-                allGames.map( game => (
-                        <Card
-                            title = {game.frontmatter.title}
-                            body = {game.frontmatter.description}
-                            href = {game.url}
-                            img = {game.frontmatter.image}
-                            category = {game.frontmatter.category}
-                            location = {game.frontmatter.location}
-
-                        /> 
-                ))
-            }
+                <!-- Render paginated game items -->
+                {paginatedGames.map((game) => (
+                    <Card
+                        title={game.frontmatter.title}
+                        body={game.frontmatter.description}
+                        href={game.url}
+                        img={game.frontmatter.image}
+                        category={game.frontmatter.category}
+                        location={game.frontmatter.location}
+                    />
+                ))}
             </div>
         </section>
         <!-- Pagination Section -->
         <section class="pagination-section container">
+            <!-- Dropdown for number of games per page -->
             <div class="show-results">
                 <label for="show">Show:</label>
-                <select id="show" name="show">
-                    <option value="10">10</option>
-                    <option value="20">20</option>
-                    <option value="30">30</option>
+                <!-- Add client:load to make the onchange event interactive -->
+                <select
+                    id="show"
+                    name="show"
+                    client:load
+                    onchange= handleSelectChange(event)
+                >
+                    <option value="10" selected={gamesPerPage === 10}>10</option>
+                    <option value="20" selected={gamesPerPage === 20}>20</option>
+                    <option value="30" selected={gamesPerPage === 30}>30</option>
                 </select>
             </div>
             <div class="pagination">
                 <button class="pagination-btn-next">{"<"}</button>
-                <button class="pagination-btn">1</button>
-                <button class="pagination-btn">2</button>
-                <button class="pagination-btn">3</button>
-                <button class="pagination-btn">...</button>
-                <button class="pagination-btn">10</button>
-                <button class="pagination-btn-next">{">"}</button>
+                {currentPage > 1 && (
+                    <a href={`?page=${currentPage - 1}&show=${gamesPerPage}`} class="pagination-btn-next">
+                        {"<"}
+                    </a>
+                )}
+        
+                {Array.from({ length: totalPages }).map((_, index) => (
+                    <a
+                        href={`?page=${index + 1}&show=${gamesPerPage}`}
+                        class={index + 1 === currentPage ? 'pagination-btn active' : 'pagination-btn'}
+                    >
+                        {index + 1}
+                    </a>
+                ))}
+        
+                {currentPage < totalPages && (
+                    <a href={`?page=${currentPage + 1}&show=${gamesPerPage}`} class="pagination-btn-next">
+                        {">"}
+                    </a>
+                )}
             </div>
         </section>
     </body>
