@@ -1,0 +1,18 @@
+---
+export async function getStaticPaths() {
+    return [
+        { params: { tag: "game1"}},
+        { params: { tag: "game2"}},
+        { props: { game }},
+    ];
+}
+
+const { tag } = Astro.params;
+const { game } = Astro.props;
+---
+
+<div>
+    this is tag: {tag}
+    this is a game property: { game }
+</div>
+
