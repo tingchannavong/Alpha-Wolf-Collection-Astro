@@ -1,0 +1,58 @@
+---
+import MainLayout from "../layouts/main-layout.astro";
+import CategoryCard from "../components/category-card.astro";
+---
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/alpha_style.css">
+    <title>Categories</title>
+</head>
+<MainLayout>
+    <body>
+        <section id="categories-section" class="container">
+            <div class="categories">
+                <h2>Categories</h2>
+                <p>There are many board game categories to choose from:</p>
+                <div class="grid-container">
+                    <CategoryCard
+                        title = "Strategy Games"
+                        img = "/strat-icon.png"
+                        description = {18}
+                    />
+                    <CategoryCard
+                        title = "Bluffing Games"
+                        img = "/strat-icon.png"
+                        description = {10}
+                    />
+                    <CategoryCard
+                        title = "Cooperative Games"
+                        img = "/strat-icon.png"
+                        description = {4}
+                    />
+                    <CategoryCard
+                        title = "Party Games"
+                        img = "/strat-icon.png"
+                        description = {6}
+                    />
+                    <CategoryCard
+                        title = "Creative Games"
+                        img = "/strat-icon.png"
+                        description = {6}
+                    />
+                    <CategoryCard
+                        title = "Beginner-Friendly Games"
+                        img = "/strat-icon.png"
+                        description = {11}
+                    />
+                     <!-- Repeat the category div for other categories -->
+                </div>
+                <div class="see-more">
+                    <!-- Link to categories page -->
+                    <a href="#">See more</a>
+                </div>
+              </div>
+            </section>
+    </body>
+</MainLayout>

@@ -1,0 +1,24 @@
+<aside>
+    <form class="form">
+        <div class="search-bar">
+            <input type="search" required min="2" max="24" name="search" id="search" placeholder="Search game...">
+        </div>
+    </form>
+</aside>
+
+<script>
+    import DOMPurify from "dompurify"; //library to strip out malicious search term
+
+    const form = document.querySelector("form"); // Select from class="form"
+    form?.addEventListener("submit", (e) => { // on event submit, grab e object which is form in this case
+        e.preventDefault();
+        const form_data = new FormData(form); // new form data object API best practice
+        const search_term = DOMPurify.sanitize(form_data.get("search")?.toString());
+        console.log(search_term);
+        if (!search_term || search_term.length === 0) return;
+        const url = new URL("/search", window.location.origin); // url is a class
+        url.searchParams.set("q", search_term); //set search param
+        window.location.assign(url.toString()); 
+    })
+
+</script>
