@@ -1,0 +1,80 @@
+---
+import MainLayout from "../layouts/main-layout.astro";
+import Card from "../components/game-card.astro";
+
+const allGames = await Astro.glob("./boardgames/*.md");
+---
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/alpha_style.css">
+    <title>Categories</title>
+</head>
+<MainLayout>
+    <body>
+        <section id="game-cards-section" class="container" aria-label="Search Results">
+            <!-- <aside>
+                <form class="form">
+                    <div class="search-bar">
+                        <input id="search" type="search" required min="2" max="24" name="search" placeholder="Search game...">
+                    </div>
+                </form>
+            </aside> -->
+            <h2 id="search_readout"></h2>
+            <!-- Game list starts here -->
+            <div class="grid-list">
+                <!-- Render paginated game items -->
+                {
+                    allGames.map( game => (
+                            <Card
+                                title = {game.frontmatter.title}
+                                body = {game.frontmatter.description}
+                                href = {game.url}
+                                img = {game.frontmatter.image}
+                                category = {game.frontmatter.category}
+                                location = {game.frontmatter.location}
+    
+                            /> 
+                    ))
+                }
+            </div>
+        </section>
+    </body>
+</MainLayout>
+
+<script>
+    import DOMPurify from "dompurify";
+
+    const search = document.querySelector("#search");
+    const search_readout = document.querySelector("#search_readout");
+
+    function updateDocumentTitle(search) {
+        document.title = search 
+        ? `Search results for ${search}` 
+        : ""
+    }
+
+    function updateSearchReadout(search) {
+        search_readout.textContent = search 
+        ? `Search results for ${search}:` 
+        : "";    
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+        const urlParams = DOMPurify.sanitize(
+            new URLSearchParams(window.location.search).get("q")
+        );
+        updateDocumentTitle(urlParams);
+        updateSearchReadout(urlParams);
+        search.value = urlParams;
+        search.focus();
+    })
+
+    search.addEventListener("input", () => {
+        const search_term = DOMPurify.sanitize(search.value);
+        updateDocumentTitle(search_term);
+        updateSearchReadout(search_term);
+    });
+
+</script>
