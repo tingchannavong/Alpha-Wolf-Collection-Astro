@@ -1,8 +1,5 @@
 ---
 import MainLayout from "../layouts/main-layout.astro";
-import Card from "../components/game-card.astro";
-
-const allGames = await Astro.glob("./boardgames/*.md");
 ---
 <!DOCTYPE html>
 <head>
@@ -23,22 +20,8 @@ const allGames = await Astro.glob("./boardgames/*.md");
             </aside> -->
             <h2 id="search_readout"></h2>
             <!-- Game list starts here -->
-            <div class="grid-list">
-                <ul id="search_results"></ul>
-                <!-- Render paginated game items -->
-                <!-- {
-                    allGames.map( game => (
-                            <Card
-                                title = {game.frontmatter.title}
-                                body = {game.frontmatter.description}
-                                href = {game.url}
-                                img = {game.frontmatter.image}
-                                category = {game.frontmatter.category}
-                                location = {game.frontmatter.location}
-    
-                            /> 
-                    ))
-                } -->
+            <div id="search_results" class="grid-list">
+                <!-- Render game results items -->
             </div>
         </section>
     </body>
@@ -113,39 +96,29 @@ const allGames = await Astro.glob("./boardgames/*.md");
 
         results.forEach((result) => {
             const game = result.item;
-            const listItem = document.createElement("li");
-
-            // Create the <Card> structure
-            // listItem.innerHTML = '
-            //     <Card
-            //                     title = {game.frontmatter.title}
-            //                     body = {game.frontmatter.description}
-            //                     href = {game.url}
-            //                     img = {game.frontmatter.image}
-            //                     category = {game.frontmatter.category}
-            //                     location = {game.frontmatter.location}
-    
-            //                 />
-            // ';
+            const listItem = document.createElement('ul');
 
             listItem.innerHTML = `
-            <div class="card">
-                <img src="${game.frontmatter.image}" alt="${game.frontmatter.title}" />
-                <div class="card-content">
-                <h3>${game.frontmatter.title}</h3>
-                <p>${game.frontmatter.description}</p>
-                <div class="card-meta">
-                    <span>Category: ${game.frontmatter.category}</span>
-                    <span>Location: ${game.frontmatter.location}</span>
+            <div class="game-item">
+                <div class="game-image-container">
+                    <img src="${game.frontmatter.image}" alt="${game.frontmatter.title}" class="game-image">
                 </div>
-                <a href="${game.url}" class="card-link">View Details</a>
+                <div class="game-details">
+                    <h3 class="game-title">${game.frontmatter.title}</h3>
+                    <p class="game-description">
+                        ${game.frontmatter.description}
+                    </p>
+                    <p class="game-category">Category: ${game.frontmatter.category}</p>
+                    <p class="game-location">Location: ${game.frontmatter.location}</p>
+                </div>
+                <div class="game-meta">
+                    <a href="${game.url}" class="game-read-more">Read more</a>
                 </div>
             </div>
             `;
             searchResultsContainer.appendChild(listItem);
         });
 }
-
 
     window.addEventListener("DOMContentLoaded", () => {
         const urlParams = DOMPurify.sanitize(
