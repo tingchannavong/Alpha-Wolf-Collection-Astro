@@ -1,6 +1,6 @@
 ---
  const {frontmatter} = Astro.props;
-//  import Search from "../components/search-bar.astro";
+ import Search from "../components/search-bar.astro";
 --- 
 <header>
     <div class="flex-container">
@@ -10,15 +10,13 @@
                 <li><a href="/" >Home</a></li>
                 <li><a href="/boardgames" target="_blank">Board Games</a></li>
                 <li><a href="/about" >About us</a></li>
-                <!-- style="border-bottom: 2px solid;" -->
                 <li><a href="/contact">Contact</a></li>
             </ul>
         </nav></div>
         <div class="search-bar">
-            <!-- <Search/> -->
-            <input type="text" placeholder="Search game...">
+            <Search/> 
         </div>
-        <div><a href="#" class="login-btn">Log in</a></div>
+        <!-- <div><a href="#" class="login-btn">Log in</a></div> -->
     </div>
 </header>
 
@@ -29,10 +27,6 @@
 <section class="container">
     <slot />
 </section>
-
-<!-- Hello Post, {frontmatter.title}
-Written by: {frontmatter.author}
-Date: {frontmatter.date} -->
 
 <footer class="footer">
     <div class="footer-logo">
