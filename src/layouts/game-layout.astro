@@ -21,7 +21,18 @@
 </header>
 
 <div class="container" style="margin-top: 5px; margin-bottom: 20px;">
-    <a href="/boardgames/1" class="back-btn">← Back</a>
+    <!-- <a href="/boardgames/1" class="back-btn">← Back</a> -->
+    <button id="back_button" class="back-btn">← Back</button>
+    <script>
+        const backButton = document.querySelector("#back_button");
+    
+        if (backButton) {
+            backButton.addEventListener("click", () => {
+                // Navigate back in history
+                history.back();
+            });
+        }
+    </script>
 </div>
 
 <section class="container">
