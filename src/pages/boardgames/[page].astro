@@ -2,15 +2,6 @@
 import MainLayout from "../../layouts/main-layout.astro";
 import Card from "../../components/game-card.astro";
 import Pagination from "../../components/pagination.astro";
-
-export function handleSelectChange(e) {
-    const showValue = e.target.value;
-    const url = new URL(window.location.href);
-    url.searchParams.set('show', showValue);
-    url.searchParams.set('page', '1'); // Reset to page 1 on show change
-    window.location.href = url.toString();
-}
-
 const allGames = await Astro.glob("./*.md");
 
 export async function getStaticPaths({ paginate }) {
@@ -21,7 +12,6 @@ export async function getStaticPaths({ paginate }) {
 
 const { page } = Astro.props;
 const pathname = new URL(Astro.request.url).pathname.split('/');
-console.log(pathname);
 const firstPath = pathname[1];
 
 ---
@@ -30,6 +20,7 @@ const firstPath = pathname[1];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/alpha_style.css">
     <title>Board Games</title>
+    <script src="../../scripts/filter.ts"></script> 
 </head>
 
 <MainLayout>
@@ -50,15 +41,23 @@ const firstPath = pathname[1];
                     <label for="category-select">Filter by Categories:</label>
                     <select id="category-select">
                         <option value="all">All Categories</option>
-                        <option value="strategy">Strategy Games</option>
-                        <option value="family">Family Games</option>
-                        <option value="party">Party Games</option>
-                        <!-- Add more categories as needed -->
+                        <option value="Economic">Economic</option>
+                        <option value="Card Game">Card Game</option>
+                        <option value="Party Game">Party Game</option>
+                        <option value="Abstract Strategy">Abstract Strategy</option>
+                        <option value="Bluffing">Bluffing</option>
+                        <option value="Negotiation">Negotiation</option>
+                        <option value="Deduction">Deduction</option>
+                        <option value="Dexterity">Dexterity</option>
+                        <option value="Cooperation">Cooperation</option>
+                        <option value="Word Game">Word Game</option>
+                        <option value="Children's Game">Children's Game</option>
+                        <option value="Mature / Adult">Mature / Adult</option>
                     </select>
                 </div>
                 <div class="filter">
-                    <label for="category-select">Filter by Location:</label>
-                    <select id="category-select">
+                    <label for="location-select">Filter by Location:</label>
+                    <select id="location-select">
                         <option value="MBL">Makerbox Laos</option>
                         <option value="Stella">Stella</option>
                         <option value="L6">Lak6</option>
