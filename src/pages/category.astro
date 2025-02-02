@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/main-layout.astro";
+import FilterCard from "../components/category-filter.astro";
 ---
 <!DOCTYPE html>
 <head>
@@ -12,43 +13,9 @@ import MainLayout from "../layouts/main-layout.astro";
 <MainLayout>
     <body>
         <section id="filtered-section" class="container" aria-label="Filtered Results">
-            <h2 id="search_readout"></h2>
+            <h2 id="filter_readout"></h2>
             <div class="sort-filter-container">
-                <div class="sort">
-                    <label for="sort-select">Sort by:</label>
-                    <select id="sort-select">
-                        <option value="a-z">A-Z</option>
-                        <option value="z-a">Z-A</option>
-                    </select>
-                </div>
-                <div class="filter">
-                    <label for="category-select">Filter by Categories:</label>
-                    <select id="category-select">
-                        <option value="all">All Categories</option>
-                        <option value="Economic">Economic</option>
-                        <option value="Card Game">Card Game</option>
-                        <option value="Party Game">Party Game</option>
-                        <option value="Abstract Strategy">Abstract Strategy</option>
-                        <option value="Bluffing">Bluffing</option>
-                        <option value="Negotiation">Negotiation</option>
-                        <option value="Deduction">Deduction</option>
-                        <option value="Dexterity">Dexterity</option>
-                        <option value="Cooperation">Cooperation</option>
-                        <option value="Word Game">Word Game</option>
-                        <option value="Children's Game">Children's Game</option>
-                        <option value="Mature / Adult">Mature / Adult</option>
-                    </select>
-                </div>
-                <div class="filter">
-                    <label for="location-select">Filter by Location:</label>
-                    <select id="location-select">
-                        <option value="MBL">Makerbox Laos</option>
-                        <option value="Stella">Stella</option>
-                        <option value="L6">Lak6</option>
-                        <option value="NN">Nongnieng</option>
-                        <!-- Add more categories as needed -->
-                    </select>
-                </div>
+                <FilterCard/>
             </div>
             <!-- Game list starts here -->
             <div id="filter_results" class="grid-list">
