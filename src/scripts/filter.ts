@@ -18,8 +18,7 @@ async function fetchFilter(filter) {
   const filteredData = data.filter((game) => 
     game.frontmatter.category.includes(filter) 
   );
-  console.log(filteredData);
-  return filteredData; 
+  displayFilterResults(filteredData);
 }
 
 function updateDocumentTitle(filter) {
@@ -79,8 +78,6 @@ categoryFilter.addEventListener("change", (event) => {
     const url = new URL("/filter", window.location.origin);
     url.searchParams.set("category", selectedCategory); // set filtered param
     window.location.assign(url.toString());
-
-    // filterResults(selectedCategory);
   });
 
 // when filter is selected update the filter terms
@@ -88,6 +85,5 @@ window.addEventListener("DOMContentLoaded", () => {
     const urlParams = new URLSearchParams(window.location.search).get("category");
     updateDocumentTitle(urlParams);
     updateFilterSelection(urlParams);
-    const  results = fetchFilter(urlParams);
-    console.log(results);
+    fetchFilter(urlParams);
 })
