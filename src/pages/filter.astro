@@ -1,13 +1,14 @@
 ---
 import MainLayout from "../layouts/main-layout.astro";
 import FilterCard from "../components/category-filter.astro";
+import Card from "../components/game-card.astro";
 ---
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/alpha_style.css">
-    <title>Category Filter</title>
+    <title>Filter</title>
     <script src="../scripts/filter.ts"></script>
 </head>
 <MainLayout>
@@ -18,7 +19,7 @@ import FilterCard from "../components/category-filter.astro";
                 <FilterCard/>
             </div>
             <!-- Game list starts here -->
-            <div id="filter_results" class="grid-list">
+            <div id="search_results" class="grid-list">
                 <!-- Render filtered game results items -->
             </div>
         </section>
