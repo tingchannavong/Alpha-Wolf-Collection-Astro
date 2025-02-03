@@ -10,14 +10,16 @@ async function fetchData() {
 
 async function fetchFilter(filter) {
   const data = await fetchData();
-  const filteredData = data.filter((game) => 
-    game.frontmatter.category === filter);
-  return filteredData;
-}
 
-async function useFilteredData() {
-  const filteredGames = await fetchFilter("Action"); 
-  console.log(filteredGames); // Now filteredGames is an array
+  if (!filter || filter === "all") {
+    return data; // Return all games if no filter is applied or "all" is selected
+  }
+
+  const filteredData = data.filter((game) => 
+    game.frontmatter.category.includes(filter) 
+  );
+  console.log(filteredData);
+  return filteredData; 
 }
 
 function updateDocumentTitle(filter) {
@@ -86,6 +88,6 @@ window.addEventListener("DOMContentLoaded", () => {
     const urlParams = new URLSearchParams(window.location.search).get("category");
     updateDocumentTitle(urlParams);
     updateFilterSelection(urlParams);
-    const  results = await fetchFilter(urlParams);
+    const  results = fetchFilter(urlParams);
     console.log(results);
 })
