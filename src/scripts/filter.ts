@@ -12,13 +12,13 @@ async function fetchFilter(filter) {
   const data = await fetchData();
 
   if (!filter || filter === "all") {
-    return data; // Return all games if no filter is applied or "all" is selected
+    displayFilterResults(data); // if no filter is applied or "all" is selected, return to boardgames/1 page?
+  } else {
+    const filteredData = data.filter((game) => 
+      game.frontmatter.category.includes(filter) 
+    );
+    displayFilterResults(filteredData);
   }
-
-  const filteredData = data.filter((game) => 
-    game.frontmatter.category.includes(filter) 
-  );
-  displayFilterResults(filteredData);
 }
 
 function updateDocumentTitle(filter) {
