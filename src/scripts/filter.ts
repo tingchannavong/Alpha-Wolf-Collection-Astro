@@ -11,13 +11,20 @@ async function fetchData() {
 async function fetchFilter(filter) {
   const data = await fetchData();
 
-  if (!filter || filter === "all") {
-    displayFilterResults(data); // if no filter is applied or "all" is selected, return to boardgames/1 page?
+  if (filter === "all") {
+    window.location.href = "/boardgames/1"; 
   } else {
     const filteredData = data.filter((game) => 
       game.frontmatter.category.includes(filter) 
     );
     displayFilterResults(filteredData);
+    console.log(filteredData);
+
+    // calculation filter size
+    const FilterSize = filteredData.length;
+    filter_readout.textContent = filter
+    ? `Filter results for ${filter} (${FilterSize}):` 
+    : "";
   }
 }
 
@@ -83,7 +90,10 @@ categoryFilter.addEventListener("change", (event) => {
 // when filter is selected update the filter terms
 window.addEventListener("DOMContentLoaded", () => {
     const urlParams = new URLSearchParams(window.location.search).get("category");
-    updateDocumentTitle(urlParams);
-    updateFilterSelection(urlParams);
-    fetchFilter(urlParams);
+
+    if (urlParams === null) {return} else {
+      updateDocumentTitle(urlParams);
+      updateFilterSelection(urlParams);
+      fetchFilter(urlParams);
+    }
 })
