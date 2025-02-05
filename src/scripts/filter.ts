@@ -35,12 +35,12 @@ function updateDocumentTitle(filter) {
   : ""
 }
 
-function updateFilterSelection(filter) {
-  if (!filter) {categoryFilter.value = "all"}
+function updateFilterSelection(filter_type, value) {
+  if (!value) {filter_type.value = "all"}
   else {
-    categoryFilter.value = filter; 
-    filter_readout.textContent = filter
-    ? `Filter results for ${filter}:` 
+    filter_type.value = value; 
+    filter_readout.textContent = value
+    ? `Filter results for ${value}:` 
     : "";
   };
 }
@@ -106,6 +106,47 @@ function applyFilters() {
   // You can now apply these filters to your game list
 }
 
+function extractUrlParams() {
+  const query = new URLSearchParams(window.location.search);
+
+  const filters = {
+    category: query.get("category"),
+    location: query.get("location")|| [],
+  }
+  console.log(filters);
+    return filters;
+};
+
+function calcFilterSize(filteredGames) {
+   // calculation filter size
+   const FilterSize = filteredGames.length;
+   filter_readout.textContent = `Filter results (${FilterSize}):`;
+}
+
+async function filterQuery(filters) {
+
+  const data = await fetchData();
+
+  if (filters.category === "all") {
+    const filteredLoc = data.filter(game => game.frontmatter.location.includes(filters.location)); 
+    displayFilterResults(filteredLoc);
+    calcFilterSize(filteredLoc);
+
+  } else if (filters.location === "all") {
+    const filteredCat = data.filter(game => game.frontmatter.category.includes(filters.category)); 
+    displayFilterResults(filteredCat);
+    calcFilterSize(filteredCat);
+
+  } else {
+  const filteredGames = data
+  .filter(game => game.frontmatter.category.includes(filters.category))
+  .filter(game => game.frontmatter.location.includes(filters.location)); 
+
+  displayFilterResults(filteredGames);
+  calcFilterSize(filteredGames);
+  }
+}
+
 // Add event listener to the category dropdown
 categoryFilter.addEventListener("change", (event) => { 
   const selectedCategory = event.target.value.toString();
@@ -115,7 +156,7 @@ categoryFilter.addEventListener("change", (event) => {
     updateFilters('category', selectedCategory);
   });
 
-//   // Add event listener to location dropdown
+// Add event listener to location dropdown
 locationFilter.addEventListener("change", (event) => { 
   const selectedLocation = event.target.value.toString();
     if (!selectedLocation || selectedLocation.length === 0)  return;
@@ -126,11 +167,15 @@ locationFilter.addEventListener("change", (event) => {
 
 // when filter is selected update the filter terms
 window.addEventListener("DOMContentLoaded", () => {
-    const urlParams = new URLSearchParams(window.location.search).get("category");
+    const catParams = new URLSearchParams(window.location.search).get("category");
+    const locParams = new URLSearchParams(window.location.search).get("location");
 
-    if (urlParams === null) {return} else {
-      updateDocumentTitle(urlParams);
-      updateFilterSelection(urlParams);
-      fetchFilter(urlParams);
+    if (catParams === null) {return} else {
+      updateDocumentTitle(catParams);
+      updateFilterSelection(categoryFilter, catParams);
+      updateFilterSelection(locationFilter, locParams);
+
+      const queries = extractUrlParams();
+      filterQuery(queries);
     }
 })
