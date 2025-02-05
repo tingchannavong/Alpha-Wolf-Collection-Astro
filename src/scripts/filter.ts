@@ -1,4 +1,5 @@
 const categoryFilter = document.querySelector("#category-select");
+const locationFilter = document.querySelector("#location-select");
 const filter_readout = document.querySelector("#filter_readout");
 const searchResultsContainer = document.querySelector("#search_results");
 
@@ -78,13 +79,49 @@ function displayFilterResults(results) {
       searchResultsContainer.innerHTML = html;
 }
 
-// Add event listener to the dropdown
-categoryFilter.addEventListener("change", (event) => {
-    const selectedCategory = event.target.value.toString();
+function updateFilters(key, value) {
+  const params = new URLSearchParams(window.location.search);
+
+  if (value) {
+    params.set(key, value); // Update the filter
+  } else {
+    params.delete(key); // Remove filter if empty
+  }
+  const url = new URL("/filter", window.location.origin);
+  const newUrl = `${url}?${params.toString()}`;
+  window.location.assign(newUrl.toString());
+  
+  applyFilters(); // Call filtering function after updating URL
+}
+
+function applyFilters() {
+  const query = new URLSearchParams(window.location.search);
+
+  const filters = {
+    category: query.get("category") || null,
+    location: query.get("location") || null,
+  };
+
+  console.log("Active filters:", filters);
+  // You can now apply these filters to your game list
+}
+
+// Add event listener to the category dropdown
+categoryFilter.addEventListener("change", (event) => { 
+  const selectedCategory = event.target.value.toString();
     if (!selectedCategory || selectedCategory.length === 0)  return;
-    const url = new URL("/filter", window.location.origin);
-    url.searchParams.set("category", selectedCategory); // set filtered param
-    window.location.assign(url.toString());
+
+    //set new url
+    updateFilters('category', selectedCategory);
+  });
+
+//   // Add event listener to location dropdown
+locationFilter.addEventListener("change", (event) => { 
+  const selectedLocation = event.target.value.toString();
+    if (!selectedLocation || selectedLocation.length === 0)  return;
+
+    //set new url
+    updateFilters('location', selectedLocation);
   });
 
 // when filter is selected update the filter terms
