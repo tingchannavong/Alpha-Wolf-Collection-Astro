@@ -30,12 +30,6 @@ async function fetchFilter(filter) {
   }
 }
 
-function updateDocumentTitle(filter) {
-  document.title = filter 
-  ? `Filter results for ${filter}` 
-  : ""
-}
-
 function updateFilterSelection(filter_type, value) {
   if (!value) {filter_type.value = "all"}
   else {
@@ -97,29 +91,15 @@ function updateFilters(key, value) {
   const newUrl = `${url}?${params.toString()}`;
   window.location.assign(newUrl.toString());
   
-  applyFilters(); // Call filtering function after updating URL
-}
-
-function applyFilters() {
-  const query = new URLSearchParams(window.location.search);
-
-  const filters = {
-    category: query.get("category") || null,
-    location: query.get("location") || null,
-    players: query.get("players") || null,
-  };
-
-  console.log("Active filters:", filters);
-  // You can now apply these filters to your game list
 }
 
 function extractUrlParams() {
   const query = new URLSearchParams(window.location.search);
 
   const filters = {
-    category: query.get("category"),
-    location: query.get("location")|| [],
-    players: query.get("players")|| [],
+    category: query.get("category")|| "all",
+    location: query.get("location")|| "all",
+    players: query.get("players")|| "all",
   }
   console.log(filters);
     return filters;
@@ -233,15 +213,13 @@ window.addEventListener("DOMContentLoaded", () => {
     const catParams = new URLSearchParams(window.location.search).get("category");
     const locParams = new URLSearchParams(window.location.search).get("location");
     const playersParams = new URLSearchParams(window.location.search).get("players");
+    
+    updateFilterSelection(categoryFilter, catParams);
+    updateFilterSelection(locationFilter, locParams);
+    updateFilterSelection(playerNumFilter, playersParams);
 
+    const queries = extractUrlParams();
 
-    if (catParams === null) {return} else {
-      updateDocumentTitle(catParams);
-      updateFilterSelection(categoryFilter, catParams);
-      updateFilterSelection(locationFilter, locParams);
-      updateFilterSelection(playerNumFilter, playersParams);
-
-      const queries = extractUrlParams();
-      filterQuery(queries);
+    filterQuery(queries);
     }
-})
+)
