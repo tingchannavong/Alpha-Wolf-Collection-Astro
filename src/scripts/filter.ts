@@ -131,24 +131,70 @@ function calcFilterSize(filteredGames) {
    filter_readout.textContent = `Filter results (${FilterSize}):`;
 }
 
+function isMin(value1, filter) {
+  return value1 === filter;
+}
+
+function filterLoc(data, filters) {
+  const filteredData = data.filter(game => game.frontmatter.location.includes(filters.location));
+  return filteredData;
+}
+
+function filterCat(data, filters) {
+  const filteredData = data.filter(game => game.frontmatter.category.includes(filters.category));
+  return filteredData;
+}
+
+function filterPlayers(data, filters) {
+  const filteredData = data.filter(game => isMin(game.frontmatter.min_players, Number(filters.players)));
+  return filteredData;
+}
+
 async function filterQuery(filters) {
 
   const data = await fetchData();
 
-  if (filters.category === "all") {
-    const filteredLoc = data.filter(game => game.frontmatter.location.includes(filters.location)); 
-    displayFilterResults(filteredLoc);
-    calcFilterSize(filteredLoc);
+  if (filters.category === "all" && filters.location === "all" && filters.players === "all") {
+    displayFilterResults(data);
+    calcFilterSize(data);
+
+  } else if (filters.category === "all" && filters.location === "all") {
+  const filter2 = filterPlayers(data, filters)
+  displayFilterResults(filter2);
+  calcFilterSize(filter2);
+
+} else if (filters.category === "all" && filters.players === "all") {
+  const filter2 = filterLoc(data, filters)
+  displayFilterResults(filter2);
+  calcFilterSize(filter2);
+
+} else if (filters.location === "all" && filters.players === "all") {
+  const filter2 = filterCat(data, filters)
+  displayFilterResults(filter2);
+  calcFilterSize(filter2);
+
+} else if (filters.category === "all") {
+    const filter1 = filterLoc(data, filters)
+    const filter2 = filterPlayers(filter1, filters)
+    displayFilterResults(filter2);
+    calcFilterSize(filter2);
 
   } else if (filters.location === "all") {
-    const filteredCat = data.filter(game => game.frontmatter.category.includes(filters.category)); 
-    displayFilterResults(filteredCat);
-    calcFilterSize(filteredCat);
+    const filter1 = filterCat(data, filters)
+    const filter2 = filterPlayers(filter1, filters)
+    displayFilterResults(filter2);
+    calcFilterSize(filter2);
 
+  } else if (filters.players === "all") {
+    const filter1 = filterCat(data, filters)
+    const filter2 = filterLoc(filter1, filters)
+    displayFilterResults(filter2);
+    calcFilterSize(filter2);
   } else {
   const filteredGames = data
   .filter(game => game.frontmatter.category.includes(filters.category))
-  .filter(game => game.frontmatter.location.includes(filters.location)); 
+  .filter(game => game.frontmatter.location.includes(filters.location))
+  .filter(game => isMin(game.frontmatter.min_players, Number(filters.players)))
 
   displayFilterResults(filteredGames);
   calcFilterSize(filteredGames);
