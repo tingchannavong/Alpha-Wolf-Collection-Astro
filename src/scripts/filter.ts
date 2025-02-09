@@ -68,7 +68,12 @@ function displayFilterResults(results) {
                   ${game.frontmatter.description}
               </p>
               <p class="game-category">Category: ${game.frontmatter.category}</p>
-              <p class="game-location">Location: ${game.frontmatter.location}</p>
+            <div class="game-info-container">
+                <p class="game-location">Playing Time:  ${game.frontmatter.playing_time} Minutes</p>
+                <p class="game-location">Minimum Players:  ${game.frontmatter.min_players}</p>
+                <p class="game-location">Maximum Players:  ${game.frontmatter.max_players}</p>
+                <p class="game-location">Location: ${game.frontmatter.location}</p>
+            </div>
           </div>
           <div class="game-meta">
               <a href="${game.url}" class="game-read-more">Read more</a>
