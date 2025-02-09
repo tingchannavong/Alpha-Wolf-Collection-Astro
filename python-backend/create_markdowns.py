@@ -41,6 +41,9 @@ description: "{short_desc}"
 image: "{image_url}"
 category: "{category}"
 location: "{location}"
+playing_time: "{playing_time}"
+min_players: "{min_players}"
+max_players: "{max_players}"
 ---
 # {title}
 
