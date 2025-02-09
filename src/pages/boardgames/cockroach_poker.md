@@ -2,7 +2,7 @@
 layout: ../../layouts/game-layout.astro
 title: "Cockroach poker"
 description: "Cockroach Poker is a reverse set collection game that has nothing to do with poker &ndash; except that the game is all about bluffing, with cards that show cockroaches, rats and stink bugs."
-image: "Cockroach Poker is all about bluffing, with cards that show cockroaches, rats and stink bugs."
+image: "/Cockroach_poker.jpg"
 category: "Bluffing, Card Game, Party Game"
 location: "MakerBox Lao"
 playing_time: "20"
