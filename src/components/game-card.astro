@@ -6,10 +6,13 @@ interface Props {
     img: string; 
     category: string;
     location: string;
+    min_players: number;
+    max_players: number,
+    playing_time: number,
     // using description placeholder for Location, do i need one for category?
 }
 
-const { href, title, body, img, category, location } = Astro.props;
+const { href, title, body, img, category, location, playing_time, min_players, max_players} = Astro.props;
 ---
 
 <div class="game-item">
@@ -22,7 +25,12 @@ const { href, title, body, img, category, location } = Astro.props;
             {body}
         </p>
         <p class="game-category">Category: {category}</p>
-        <p class="game-location">Location: {location}</p>
+        <div class="game-info-container">
+            <p class="game-location">Playing Time: {playing_time} Minutes</p>
+            <p class="game-location">Minimum Players: {min_players}</p>
+            <p class="game-location">Maximum Players: {max_players}</p>
+            <p class="game-location">Location: {location}</p>
+        </div>
     </div>
     <div class="game-meta">
         <a href={href} class="game-read-more">Read more</a>

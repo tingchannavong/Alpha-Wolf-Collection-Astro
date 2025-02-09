@@ -595,6 +595,11 @@ select:hover {
     margin-bottom: 5px;
 }
 
+.game-info-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 .game-location {
     color: #666;
 }
