@@ -5,6 +5,9 @@ description: "For Sale is a quick, fun game nominally about buying and selling r
 image: "/For_Sale.jpg"
 category: "Card Game, Economic"
 location: "Lak6"
+playing_time: "30"
+min_players: "3"
+max_players: "6"
 ---
 # For Sale
 
@@ -20,3 +23,4 @@ For Sale is a quick, fun game nominally about buying and selling real estate. Du
 
 <img src="/For_Sale.jpg" alt="For Sale Image" width="500" style="display: block; margin: 0 auto">
 
+    

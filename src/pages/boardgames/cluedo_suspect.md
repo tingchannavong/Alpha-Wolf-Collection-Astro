@@ -5,6 +5,9 @@ description: "This is a fast-playing stripped down version of the classic boardg
 image: "/Cluedo_Suspect.jpg"
 category: "Card Game, Deduction, Murder/Mystery"
 location: "MakerBox Lao"
+playing_time: "15"
+min_players: "3"
+max_players: "4"
 ---
 # Cluedo Suspect
 
@@ -20,3 +23,4 @@ This is a fast-playing stripped down version of the classic boardgame, Clue. Bas
 
 <img src="/Cluedo_Suspect.jpg" alt="Cluedo Suspect Image" width="500" style="display: block; margin: 0 auto">
 
+    

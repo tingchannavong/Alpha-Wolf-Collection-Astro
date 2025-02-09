@@ -5,6 +5,9 @@ description: "No moderator, no elimination, ten-minute games."
 image: "/One_Night_Ultimate_Werewolf.jpg"
 category: "Bluffing, Card Game, Deduction, Horror, Party Game"
 location: "MakerBox Lao"
+playing_time: "10"
+min_players: "3"
+max_players: "10"
 ---
 # One Night Ultimate Werewolf
 
@@ -20,3 +23,4 @@ No moderator, no elimination, ten-minute games.  One Night Ultimate Werewolf is 
 
 <img src="/One_Night_Ultimate_Werewolf.jpg" alt="One Night Ultimate Werewolf Image" width="500" style="display: block; margin: 0 auto">
 
+    

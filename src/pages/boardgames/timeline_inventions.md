@@ -5,6 +5,9 @@ description: "Timeline: Inventions is a card game played using 55 cards."
 image: "/timeline-inventions.jpg"
 category: "Card Game, Educational, Trivia"
 location: "Lak6"
+playing_time: "15"
+min_players: "2"
+max_players: "8"
 ---
 # Timeline Inventions
 
@@ -20,3 +23,4 @@ Timeline: Inventions is a card game played using 55 cards. Each card depicts an 
 
 <img src="/timeline-inventions.jpg" alt="Timeline Inventions Image" width="500" style="display: block; margin: 0 auto">
 
+    

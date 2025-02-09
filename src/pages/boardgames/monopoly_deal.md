@@ -5,6 +5,9 @@ description: "Fast-dealing, card-stealing fun! Collect full property sets to win
 image: "/Monopoly_Deal.jpg"
 category: "Card Game"
 location: "MakerBox Lao"
+playing_time: "15"
+min_players: "2"
+max_players: "3"
 ---
 # Monopoly Deal
 
@@ -20,3 +23,4 @@ From the back of the box:  Fast-dealing, card-stealing fun! Enjoy the rollercoas
 
 <img src="/Monopoly_Deal.jpg" alt="Monopoly Deal Image" width="500" style="display: block; margin: 0 auto">
 
+    

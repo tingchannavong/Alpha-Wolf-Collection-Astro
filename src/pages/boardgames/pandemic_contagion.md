@@ -5,6 +5,9 @@ description: "You are now the disease competing against other diseases (fellow p
 image: "/Pandemic_Contagion.jpg"
 category: "Card Game, Medical"
 location: "MakerBox Lao"
+playing_time: "30"
+min_players: "2"
+max_players: "5"
 ---
 # Pandemic Contagion
 
@@ -20,3 +23,4 @@ After many years of trying to defeat the diseases that threaten mankind & existe
 
 <img src="/Pandemic_Contagion.jpg" alt="Pandemic Contagion Image" width="500" style="display: block; margin: 0 auto">
 
+    

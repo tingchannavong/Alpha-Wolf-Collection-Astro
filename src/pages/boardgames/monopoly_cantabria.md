@@ -5,6 +5,9 @@ description: "Discover the essence of Cantabria in this amazing edition of Monop
 image: "/monopoly-c.png"
 category: "Economic, Negotiation"
 location: "MakerBox Lao"
+playing_time: "180"
+min_players: "2"
+max_players: "6"
 ---
 # Monopoly Cantabria
 
@@ -20,3 +23,4 @@ Discover the essence of Cantabria in this amazing edition of Monopoly.  Cantabri
 
 <img src="/monopoly-c.png" alt="Monopoly Cantabria Image" width="500" style="display: block; margin: 0 auto">
 
+    

@@ -5,6 +5,9 @@ description: "UNO gets a brand new twist in the new UNO Flip! card game."
 image: "/UNO_Flip!.jpg"
 category: "Card Game, Number"
 location: "Lak6"
+playing_time: "30"
+min_players: "2"
+max_players: "10"
 ---
 # UNO Flip!
 
@@ -20,3 +23,4 @@ UNO gets a brand new twist in the new UNO Flip! card game. It essentially plays 
 
 <img src="/UNO_Flip!.jpg" alt="UNO Flip! Image" width="500" style="display: block; margin: 0 auto">
 
+    

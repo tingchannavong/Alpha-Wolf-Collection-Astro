@@ -5,6 +5,9 @@ description: "Chess is a two-player game that represents medieval warfare on an 
 image: "/Chess.jpg"
 category: "Abstract Strategy"
 location: "Lak6"
+playing_time: "0"
+min_players: "2"
+max_players: "2"
 ---
 # Chess
 
@@ -20,3 +23,4 @@ Chess is a two-player, abstract strategy board game that represents medieval war
 
 <img src="/Chess.jpg" alt="Chess Image" width="500" style="display: block; margin: 0 auto">
 
+    

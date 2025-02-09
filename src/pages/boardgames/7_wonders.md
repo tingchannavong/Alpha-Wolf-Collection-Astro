@@ -3,8 +3,11 @@ layout: ../../layouts/game-layout.astro
 title: "7 Wonders"
 description: "You are the leader of one of the 7 great cities of the Ancient World."
 image: "/7_Wonders.jpg"
-category: "Ancient, Card Game, City Building, Civilization, Economic"
+category: "Card Game, Economic"
 location: "MakerBox Lao"
+playing_time: "30"
+min_players: "3"
+max_players: "7"
 ---
 # 7 Wonders
 
@@ -16,7 +19,7 @@ Each player then chooses another card from the deck they were passed, and the pr
 
 Each card is played immediately after being drafted, so you'll know which cards your neighbor is receiving and how her choices might affect what you've already built up. Cards are passed left-right-left over the three ages, so you need to keep an eye on the neighbors in both directions.  Though the box of earlier editions is listed as being for 3&ndash;7 players, there is an official 2-player variant included in the instructions.
 
-### Category: Ancient, Card Game, City Building, Civilization, Economic
+### Category: Card Game, Economic
 
 ### Playing Time: 30 minutes
 
@@ -26,3 +29,4 @@ Each card is played immediately after being drafted, so you'll know which cards 
 
 <img src="/7_Wonders.jpg" alt="7 Wonders Image" width="500" style="display: block; margin: 0 auto">
 
+    

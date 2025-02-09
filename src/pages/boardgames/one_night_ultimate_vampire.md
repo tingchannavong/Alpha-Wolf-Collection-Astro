@@ -5,6 +5,9 @@ description: "No moderator, no elimination, no werewolves."
 image: "/One_Night_Ultimate_Vampire.jpg"
 category: "Bluffing, Card Game, Deduction, Horror, Party Game"
 location: "MakerBox Lao"
+playing_time: "10"
+min_players: "3"
+max_players: "10"
 ---
 # One Night Ultimate Vampire
 
@@ -20,3 +23,4 @@ No moderator, no elimination, no werewolves.  In One Night Ultimate Vampire, the
 
 <img src="/One_Night_Ultimate_Vampire.jpg" alt="One Night Ultimate Vampire Image" width="500" style="display: block; margin: 0 auto">
 
+    

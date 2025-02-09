@@ -5,6 +5,9 @@ description: "In Evolution, players adapt their species in a dynamic ecosystem w
 image: "/Evolution.jpg"
 category: "Animals, Card Game, Educational, Environmental, Prehistoric, Print & Play"
 location: "Nongnieng"
+playing_time: "60"
+min_players: "2"
+max_players: "6"
 ---
 # Evolution
 
@@ -20,3 +23,4 @@ In Evolution, players adapt their species in a dynamic ecosystem where food is s
 
 <img src="/Evolution.jpg" alt="Evolution Image" width="500" style="display: block; margin: 0 auto">
 
+    

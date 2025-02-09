@@ -5,6 +5,9 @@ description: "Sequence is a board and card game."
 image: "/Sequence.jpg"
 category: "Abstract Strategy, Card Game"
 location: "MakerBox Lao"
+playing_time: "30"
+min_players: "2"
+max_players: "12"
 ---
 # Sequence
 
@@ -20,3 +23,4 @@ Sequence is a board and card game. The board shows all the cards (except for the
 
 <img src="/Sequence.jpg" alt="Sequence Image" width="500" style="display: block; margin: 0 auto">
 
+    

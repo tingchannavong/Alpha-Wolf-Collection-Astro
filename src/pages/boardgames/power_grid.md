@@ -5,6 +5,9 @@ description: "Players build power plants and compete to supply the most electric
 image: "/Power_Grid.jpg"
 category: "Economic, Industry / Manufacturing"
 location: "Lak6"
+playing_time: "120"
+min_players: "2"
+max_players: "6"
 ---
 # Power Grid
 
@@ -20,3 +23,4 @@ Power Grid is the updated release of the Friedemann Friese crayon game Funkensch
 
 <img src="/Power_Grid.jpg" alt="Power Grid Image" width="500" style="display: block; margin: 0 auto">
 
+    

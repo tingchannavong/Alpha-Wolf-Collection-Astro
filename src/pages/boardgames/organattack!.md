@@ -5,6 +5,9 @@ description: "Organ ATTACK! blends medically accurate terminology with immature 
 image: "/OrganATTACK!.jpg"
 category: "Card Game, Comic Book / Strip, Educational, Humor, Medical"
 location: "MakerBox Lao"
+playing_time: "15"
+min_players: "2"
+max_players: "6"
 ---
 # OrganATTACK!
 
@@ -20,3 +23,4 @@ Organ ATTACK! blends medically accurate terminology with immature potty humor.  
 
 <img src="/OrganATTACK!.jpg" alt="OrganATTACK! Image" width="500" style="display: block; margin: 0 auto">
 
+    

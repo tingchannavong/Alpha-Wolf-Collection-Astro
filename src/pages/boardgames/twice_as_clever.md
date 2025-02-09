@@ -1,10 +1,13 @@
 ---
-    layout: ../../layouts/game-layout.astro
-    title: "Twice As Clever"
-    description: "Twice as clever follows the model of 2018's Ganz schön clever."
-    image: "/twice_as_clever.jpg"
-    category: "Dice, Number"
-    location: "Lak6"
+layout: ../../layouts/game-layout.astro
+title: "Twice As Clever"
+description: "Doppelt so clever follows the model of 2018's Ganz schön clever."
+image: "/twice_as_clever.jpg"
+category: "Dice, Number"
+location: "Lak6"
+playing_time: "30"
+min_players: "1"
+max_players: "4"
 ---
 # Twice As Clever
 

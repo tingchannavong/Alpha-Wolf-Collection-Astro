@@ -5,6 +5,9 @@ description: "Avalon pits the forces of Good and Evil in a battle to control the
 image: "/avalon.jpg"
 category: "Bluffing, Card Game, Deduction, Negotiation, Party Game"
 location: "MakerBox Lao"
+playing_time: "30"
+min_players: "5"
+max_players: "10"
 ---
 # Avalon
 
@@ -20,3 +23,4 @@ The Resistance: Avalon pits the forces of Good and Evil in a battle to control t
 
 <img src="/avalon.jpg" alt="Avalon Image" width="500" style="display: block; margin: 0 auto">
 
+    

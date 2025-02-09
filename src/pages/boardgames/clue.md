@@ -5,6 +5,9 @@ description: "Players move from room to room in a mansion to solve the mystery o
 image: "/Clue.jpg"
 category: "Deduction, Movies / TV / Radio theme, Murder/Mystery"
 location: "MakerBox Lao"
+playing_time: "45"
+min_players: "2"
+max_players: "6"
 ---
 # Clue
 
@@ -20,3 +23,4 @@ The classic detective game!  In Clue, players move from room to room in a mansio
 
 <img src="/Clue.jpg" alt="Clue Image" width="500" style="display: block; margin: 0 auto">
 
+    

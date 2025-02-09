@@ -5,6 +5,9 @@ description: "Mahjong (game of the sparrow) is a traditional Chinese game using 
 image: "/Mahjong.jpg"
 category: "Abstract Strategy"
 location: "Lak6"
+playing_time: "120"
+min_players: "3"
+max_players: "4"
 ---
 # Mahjong
 
@@ -20,3 +23,4 @@ Mah-Jong (Chinese 麻將/麻将 game of the sparrow) is a traditional Chinese ga
 
 <img src="/Mahjong.jpg" alt="Mahjong Image" width="500" style="display: block; margin: 0 auto">
 
+    

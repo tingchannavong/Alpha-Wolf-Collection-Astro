@@ -5,6 +5,9 @@ description: "Agents are no longer represented by a single word, but by an image
 image: "/Codenames_Pictures.jpg"
 category: "Card Game, Deduction, Party Game, Spies/Secret Agents"
 location: "MakerBox Lao"
+playing_time: "15"
+min_players: "2"
+max_players: "8"
 ---
 # Codenames Pictures
 
@@ -20,3 +23,4 @@ What are these strange symbols on the map? They are code for locations where spi
 
 <img src="/Codenames_Pictures.jpg" alt="Codenames Pictures Image" width="500" style="display: block; margin: 0 auto">
 
+    

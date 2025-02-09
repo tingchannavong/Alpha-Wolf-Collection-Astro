@@ -94,11 +94,11 @@ replacements_dict = {
 image_folder = r"C:\Users\Macbook pro\Desktop\AWsite\public"
 
 # Set markdown save folder
-output_folder = r"C:\Users\Macbook pro\Desktop\AWsite\src\pages\game-details"
+output_folder = r"C:\Users\Macbook pro\Desktop\AWsite\src\pages\boardgames"
 
 # EXAMPLE USAGE
-loop_sheet_find_game(sheet, image_folder, new_game)
+# loop_sheet_find_game(sheet, image_folder, new_game)
 
-loop_range_fnr_1s(sheet, 85, 87)
+# loop_range_fnr_1s(sheet, 85, 87)
 
-bulk_create_mds(sheet, 85, 87, output_folder)
+bulk_create_mds(sheet, 3, 89, output_folder)

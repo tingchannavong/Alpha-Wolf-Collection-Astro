@@ -5,6 +5,9 @@ description: "Expansion for Exploding Kittens that contained cards that were too
 image: "/Exploding_Kittens_NSFW_Deck.jpg"
 category: "Animals, Card Game, Comic Book / Strip, Humor, Mature / Adult"
 location: "MakerBox Lao"
+playing_time: "20"
+min_players: "2"
+max_players: "5"
 ---
 # Exploding Kittens NSFW Deck
 
@@ -20,3 +23,4 @@ Originally an expansion for Exploding Kittens, the most successful Kickstarer pr
 
 <img src="/Exploding_Kittens_NSFW_Deck.jpg" alt="Exploding Kittens NSFW Deck Image" width="500" style="display: block; margin: 0 auto">
 
+    

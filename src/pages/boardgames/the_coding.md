@@ -5,6 +5,9 @@ description: "You act as a hacker who attempts to cover the secret data in the c
 image: "/The_Coding.jpg"
 category: "Deduction"
 location: "MakerBox Lao"
+playing_time: "25"
+min_players: "2"
+max_players: "4"
 ---
 # The Coding
 
@@ -20,3 +23,4 @@ The Coding is a deduction game where victory is acquired by intelligently outsma
 
 <img src="/The_Coding.jpg" alt="The Coding Image" width="500" style="display: block; margin: 0 auto">
 
+    

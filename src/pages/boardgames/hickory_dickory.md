@@ -5,6 +5,9 @@ description: "In Hickory Dickory, players control a team of mice competing in a 
 image: "/Hickory_Dickory.jpg"
 category: "Animals, Racing"
 location: "Nongnieng"
+playing_time: "120"
+min_players: "1"
+max_players: "4"
 ---
 # Hickory Dickory
 
@@ -20,3 +23,4 @@ In Hickory Dickory, players control a team of mice competing in a royal scavenge
 
 <img src="/Hickory_Dickory.jpg" alt="Hickory Dickory Image" width="500" style="display: block; margin: 0 auto">
 
+    

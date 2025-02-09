@@ -5,6 +5,9 @@ description: "Players take turns being the bosses and negotiate projects trying 
 image: "/im-the-boss.png"
 category: "Card Game, Economic, Negotiation"
 location: "MakerBox Lao"
+playing_time: "45"
+min_players: "3"
+max_players: "6"
 ---
 # I'm the Boss
 
@@ -20,3 +23,4 @@ I'm the Boss!: The Card Game, a version of Sid Sackson's classic negotiation gam
 
 <img src="/im-the-boss.png" alt="I'm the Boss Image" width="500" style="display: block; margin: 0 auto">
 
+    

@@ -5,6 +5,9 @@ description: "Players race to empty their hands and catch opposing players with 
 image: "/UNO.jpg"
 category: "Card Game, Children's Game, Comic Book / Strip, Movies / TV / Radio theme, Number"
 location: "Lak6"
+playing_time: "30"
+min_players: "2"
+max_players: "10"
 ---
 # UNO
 
@@ -20,3 +23,4 @@ Players race to empty their hands and catch opposing players with cards left in 
 
 <img src="/UNO.jpg" alt="UNO Image" width="500" style="display: block; margin: 0 auto">
 
+    

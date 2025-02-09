@@ -5,6 +5,9 @@ description: "Fit all the 3D-puzzle pieces on the game board in such a way that 
 image: "/iq-game.jpg"
 category: "Puzzle"
 location: "MakerBox Lao"
+playing_time: "15"
+min_players: "1"
+max_players: "2"
 ---
 # IQ Game
 
@@ -23,3 +26,4 @@ When solved, all puzzle pieces will fit on the game board without any holes unco
 
 <img src="/iq-game.jpg" alt="IQ Game Image" width="500" style="display: block; margin: 0 auto">
 
+    
