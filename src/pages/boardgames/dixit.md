@@ -5,9 +5,9 @@ description: "Each turn in Dixit, one player is the storyteller, chooses one of 
 image: "/Dixit.jpg"
 category: "Card Game, Party Game"
 location: "Lak6"
-playing_time: "30"
-min_players: "3"
-max_players: "8"
+playing_time: 30
+min_players: 3
+max_players: 8
 ---
 # Dixit
 

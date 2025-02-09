@@ -5,9 +5,9 @@ description: "A simple modular drinking card game by Cut.com, spun-off from thei
 image: "/truth-or-drink.jpg"
 category: "Humor, Mature / Adult, Party Game"
 location: "Lak6"
-playing_time: "60"
-min_players: "3"
-max_players: "8"
+playing_time: 60
+min_players: 3
+max_players: 8
 ---
 # Truth or Drink The Card Game
 

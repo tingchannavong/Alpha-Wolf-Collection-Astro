@@ -5,9 +5,9 @@ description: "As a tile-laying artist, you have been challenged to embellish the
 image: "/Azul.jpg"
 category: "Abstract Strategy, Puzzle"
 location: "Lak6"
-playing_time: "45"
-min_players: "2"
-max_players: "4"
+playing_time: 45
+min_players: 2
+max_players: 4
 ---
 # Azul
 

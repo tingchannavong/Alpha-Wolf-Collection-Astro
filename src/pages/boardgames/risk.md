@@ -5,9 +5,9 @@ description: "Possibly the most popular, mass market war game."
 image: "/Risk.jpg"
 category: "Territory Building, Wargame"
 location: "MakerBox Lao"
-playing_time: "120"
-min_players: "2"
-max_players: "6"
+playing_time: 120
+min_players: 2
+max_players: 6
 ---
 # Risk
 

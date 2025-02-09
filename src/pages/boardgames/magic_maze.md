@@ -5,9 +5,9 @@ description: "Description from the publisher:  After being stripped of all their
 image: "/Magic_Maze.jpg"
 category: "Cooperation"
 location: "Lak6"
-playing_time: "15"
-min_players: "1"
-max_players: "8"
+playing_time: 15
+min_players: 1
+max_players: 8
 ---
 # Magic Maze
 

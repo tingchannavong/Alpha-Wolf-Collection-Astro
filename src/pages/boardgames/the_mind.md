@@ -5,9 +5,9 @@ description: "The Mind is more than just a game."
 image: "/The_Mind.jpg"
 category: "Card Game, Cooperation"
 location: "MakerBox Lao"
-playing_time: "20"
-min_players: "2"
-max_players: "4"
+playing_time: 20
+min_players: 2
+max_players: 4
 ---
 # The Mind
 

@@ -5,9 +5,9 @@ description: "In Jungle Speed, you must rely on your keen sense of observation a
 image: "/Jungle_Speed.jpg"
 category: "Action / Dexterity, Card Game, Party Game, Real-time"
 location: "MakerBox Lao, Lak6"
-playing_time: "10"
-min_players: "2"
-max_players: "10"
+playing_time: 10
+min_players: 2
+max_players: 10
 ---
 # Jungle Speed
 

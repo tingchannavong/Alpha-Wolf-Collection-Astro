@@ -5,9 +5,9 @@ description: "Splendor is a game of chip-collecting and card development."
 image: "/Splendor.jpg"
 category: "Card Game, Economic"
 location: "Lak6"
-playing_time: "30"
-min_players: "2"
-max_players: "4"
+playing_time: 30
+min_players: 2
+max_players: 4
 ---
 # Splendor
 

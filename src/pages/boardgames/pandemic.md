@@ -5,9 +5,9 @@ description: "In Pandemic, several virulent diseases have broken out simultaneou
 image: "/Pandemic.jpg"
 category: "Medical"
 location: "MakerBox Lao"
-playing_time: "45"
-min_players: "2"
-max_players: "4"
+playing_time: 45
+min_players: 2
+max_players: 4
 ---
 # Pandemic
 

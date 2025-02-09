@@ -5,9 +5,9 @@ description: "Choose your dice cleverly in Ganz sch&ouml;n clever (German for  T
 image: "/thats_pretty_clever.jpg"
 category: "Dice, Number"
 location: "Lak6"
-playing_time: "30"
-min_players: "1"
-max_players: "4"
+playing_time: 30
+min_players: 1
+max_players: 4
 ---
 # That's Pretty Clever
 

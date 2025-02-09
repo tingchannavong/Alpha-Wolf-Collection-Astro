@@ -5,9 +5,9 @@ description: "Xiang Qi is one of the most played board games in the world."
 image: "/xiàng_qí.jpg"
 category: "Abstract Strategy"
 location: "Lak6"
-playing_time: "60"
-min_players: "2"
-max_players: "2"
+playing_time: 60
+min_players: 2
+max_players: 2
 ---
 # Xiang Qi
 

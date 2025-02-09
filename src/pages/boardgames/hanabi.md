@@ -5,9 +5,9 @@ description: "Hanabi named for the Japanese word for fireworks is a cooperative 
 image: "/Hanabi.jpg"
 category: "Card Game, Deduction, Memory"
 location: "MakerBox Lao"
-playing_time: "25"
-min_players: "2"
-max_players: "5"
+playing_time: 25
+min_players: 2
+max_players: 5
 ---
 # Hanabi
 

@@ -5,9 +5,9 @@ description: "The party game Apples to Apples consists of two decks of cards: Th
 image: "/Apples_to_Apples.jpg"
 category: "Card Game, Humor, Party Game"
 location: "MakerBox Lao"
-playing_time: "30"
-min_players: "4"
-max_players: "10"
+playing_time: 30
+min_players: 4
+max_players: 10
 ---
 # Apples to Apples
 

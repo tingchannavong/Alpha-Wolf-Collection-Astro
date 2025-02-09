@@ -5,9 +5,9 @@ description: "Players build power plants and compete to supply the most electric
 image: "/Power_Grid.jpg"
 category: "Economic, Industry / Manufacturing"
 location: "Lak6"
-playing_time: "120"
-min_players: "2"
-max_players: "6"
+playing_time: 120
+min_players: 2
+max_players: 6
 ---
 # Power Grid
 

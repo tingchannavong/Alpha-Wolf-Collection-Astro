@@ -5,9 +5,9 @@ description: "Exploding Kittens is a kitty-powered version of Russian Roulette."
 image: "/Exploding_Kittens.jpg"
 category: "Animals, Card Game, Comic Book / Strip, Humor"
 location: "MakerBox Lao"
-playing_time: "15"
-min_players: "2"
-max_players: "5"
+playing_time: 15
+min_players: 2
+max_players: 5
 ---
 # Exploding Kittens
 

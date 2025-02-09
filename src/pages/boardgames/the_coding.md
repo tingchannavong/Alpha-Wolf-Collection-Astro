@@ -5,9 +5,9 @@ description: "You act as a hacker who attempts to cover the secret data in the c
 image: "/The_Coding.jpg"
 category: "Deduction"
 location: "MakerBox Lao"
-playing_time: "25"
-min_players: "2"
-max_players: "4"
+playing_time: 25
+min_players: 2
+max_players: 4
 ---
 # The Coding
 

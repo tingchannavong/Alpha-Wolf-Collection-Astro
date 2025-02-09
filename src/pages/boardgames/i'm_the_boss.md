@@ -5,9 +5,9 @@ description: "Players take turns being the bosses and negotiate projects trying 
 image: "/im-the-boss.png"
 category: "Card Game, Economic, Negotiation"
 location: "MakerBox Lao"
-playing_time: "45"
-min_players: "3"
-max_players: "6"
+playing_time: 45
+min_players: 3
+max_players: 6
 ---
 # I'm the Boss
 

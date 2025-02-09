@@ -5,9 +5,9 @@ description: "Tichu took much of its rules and mechanics from Zheng Fen."
 image: "/Tichu.jpg"
 category: "Card Game"
 location: "Lak6"
-playing_time: "60"
-min_players: "4"
-max_players: "4"
+playing_time: 60
+min_players: 4
+max_players: 4
 ---
 # Tichu
 

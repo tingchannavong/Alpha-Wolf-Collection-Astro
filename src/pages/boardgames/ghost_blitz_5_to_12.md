@@ -5,9 +5,9 @@ description: "The quick-playing reaction game Geisterblitz takes on new shape   
 image: "/ghost-blitz.jpg"
 category: "Action / Dexterity"
 location: "MakerBox Lao"
-playing_time: "20"
-min_players: "2"
-max_players: "8"
+playing_time: 20
+min_players: 2
+max_players: 8
 ---
 # Ghost Blitz 5 to 12
 

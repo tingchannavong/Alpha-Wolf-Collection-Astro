@@ -1,5 +1,6 @@
 const categoryFilter = document.querySelector("#category-select");
 const locationFilter = document.querySelector("#location-select");
+const playerNumFilter = document.querySelector("#player-num-select");
 const filter_readout = document.querySelector("#filter_readout");
 const searchResultsContainer = document.querySelector("#search_results");
 
@@ -105,6 +106,7 @@ function applyFilters() {
   const filters = {
     category: query.get("category") || null,
     location: query.get("location") || null,
+    players: query.get("players") || null,
   };
 
   console.log("Active filters:", filters);
@@ -117,6 +119,7 @@ function extractUrlParams() {
   const filters = {
     category: query.get("category"),
     location: query.get("location")|| [],
+    players: query.get("players")|| [],
   }
   console.log(filters);
     return filters;
@@ -170,15 +173,27 @@ locationFilter.addEventListener("change", (event) => {
     updateFilters('location', selectedLocation);
   });
 
+// Add event listener to location dropdown
+playerNumFilter.addEventListener("change", (event) => { 
+  const playerNumFilter = event.target.value;
+    if (!playerNumFilter || playerNumFilter.length === 0 || playerNumFilter === null)  return;
+
+    //set new url
+    updateFilters('players', playerNumFilter);
+  });
+
 // when filter is selected update the filter terms
 window.addEventListener("DOMContentLoaded", () => {
     const catParams = new URLSearchParams(window.location.search).get("category");
     const locParams = new URLSearchParams(window.location.search).get("location");
+    const playersParams = new URLSearchParams(window.location.search).get("players");
+
 
     if (catParams === null) {return} else {
       updateDocumentTitle(catParams);
       updateFilterSelection(categoryFilter, catParams);
       updateFilterSelection(locationFilter, locParams);
+      updateFilterSelection(playerNumFilter, playersParams);
 
       const queries = extractUrlParams();
       filterQuery(queries);

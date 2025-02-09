@@ -5,9 +5,9 @@ description: "Halli Galli is a speed action game in which players watch for sets
 image: "/Halli_Galli.jpg"
 category: "Action / Dexterity, Card Game, Children's Game, Party Game, Real-time"
 location: "MakerBox Lao"
-playing_time: "10"
-min_players: "2"
-max_players: "6"
+playing_time: 10
+min_players: 2
+max_players: 6
 ---
 # Halli Galli
 

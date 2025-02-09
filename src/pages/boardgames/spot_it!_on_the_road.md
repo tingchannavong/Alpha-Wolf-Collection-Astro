@@ -5,9 +5,9 @@ description: "Spot it! On the Road uses the same game play as Spot it!, a simple
 image: "/Spot_it!_On_the_road.jpg"
 category: "Card Game"
 location: "Lak6"
-playing_time: "15"
-min_players: "2"
-max_players: "8"
+playing_time: 15
+min_players: 2
+max_players: 8
 ---
 # Spot it! On the road
 

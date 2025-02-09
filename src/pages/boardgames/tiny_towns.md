@@ -5,9 +5,9 @@ description: "You are the mayor of a tiny town in the forest in which the smalle
 image: "/Tiny_Towns.jpg"
 category: "Abstract Strategy, Animals, City Building, Puzzle"
 location: "Lak6"
-playing_time: "60"
-min_players: "1"
-max_players: "6"
+playing_time: 60
+min_players: 1
+max_players: 6
 ---
 # Tiny Towns
 

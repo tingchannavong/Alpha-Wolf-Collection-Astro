@@ -5,9 +5,9 @@ description: "Intruders have made their way onto your ship, and their goal is to
 image: "/Fuse.jpg"
 category: "Action / Dexterity, Dice, Real-time, Science Fiction"
 location: "LNT"
-playing_time: "10"
-min_players: "1"
-max_players: "5"
+playing_time: 10
+min_players: 1
+max_players: 5
 ---
 # Fuse
 

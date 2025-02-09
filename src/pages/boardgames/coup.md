@@ -5,9 +5,9 @@ description: "You are head of a family in an Italian city-state, a city run by a
 image: "/Coup.jpg"
 category: "Bluffing, Card Game, Deduction, Party Game, Political"
 location: "LNT"
-playing_time: "15"
-min_players: "2"
-max_players: "6"
+playing_time: 15
+min_players: 2
+max_players: 6
 ---
 # Coup
 

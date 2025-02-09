@@ -5,9 +5,9 @@ description: "Jinx is a new Game in the Dixit family."
 image: "/Dixit_Jinx.jpg"
 category: "Bluffing, Card Game, Party Game"
 location: "Lak6"
-playing_time: "15"
-min_players: "3"
-max_players: "6"
+playing_time: 15
+min_players: 3
+max_players: 6
 ---
 # Dixit Jinx
 

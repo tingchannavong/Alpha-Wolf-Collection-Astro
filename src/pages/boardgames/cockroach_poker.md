@@ -5,9 +5,9 @@ description: "Cockroach Poker is a reverse set collection game that has nothing 
 image: "/Cockroach_poker.jpg"
 category: "Bluffing, Card Game, Party Game"
 location: "MakerBox Lao"
-playing_time: "20"
-min_players: "2"
-max_players: "6"
+playing_time: 20
+min_players: 2
+max_players: 6
 ---
 # Cockroach poker
 
@@ -21,6 +21,6 @@ Cockroach Poker is a reverse set collection game that has nothing to do with pok
 
 ### Location: MakerBox Lao
 
-<img src="Cockroach Poker is all about bluffing, with cards that show cockroaches, rats and stink bugs." alt="Cockroach poker Image" width="500" style="display: block; margin: 0 auto">
+<img src="/Cockroach_poker.jpg" alt="Cockroach poker Image" width="500" style="display: block; margin: 0 auto">
 
     

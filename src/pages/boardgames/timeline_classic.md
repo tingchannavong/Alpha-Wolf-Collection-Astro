@@ -5,9 +5,9 @@ description: "Timeline: Classic is a card game played using 55 cards."
 image: "/timeline-classic.jpg"
 category: "Card Game, Educational, Trivia"
 location: "Lak6"
-playing_time: "15"
-min_players: "2"
-max_players: "6"
+playing_time: 15
+min_players: 2
+max_players: 6
 ---
 # Timeline Classic
 

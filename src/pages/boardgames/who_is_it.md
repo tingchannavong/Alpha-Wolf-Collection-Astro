@@ -5,9 +5,9 @@ description: "The mystery game where you flip over a collection of faces with di
 image: "/Who_Is_It.jpg"
 category: "Children's Game, Deduction, Movies / TV / Radio theme"
 location: "MakerBox Lao"
-playing_time: "20"
-min_players: "2"
-max_players: "2"
+playing_time: 20
+min_players: 2
+max_players: 2
 ---
 # Who Is It
 

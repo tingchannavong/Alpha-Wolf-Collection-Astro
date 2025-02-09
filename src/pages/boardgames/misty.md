@@ -5,9 +5,9 @@ description: "The windows are misty, but covered in drawings. "
 image: "/Misty.jpg"
 category: "Card Game"
 location: "MakerBox Lao"
-playing_time: "15"
-min_players: "2"
-max_players: "5"
+playing_time: 15
+min_players: 2
+max_players: 5
 ---
 # Misty
 

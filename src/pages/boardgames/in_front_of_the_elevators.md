@@ -5,9 +5,9 @@ description: "In Front of the Elevators (エレベータ前で) is a card game i
 image: "/In_Front_of_the_Elevators.jpg"
 category: "Card Game"
 location: "Lak6"
-playing_time: "40"
-min_players: "2"
-max_players: "4"
+playing_time: 40
+min_players: 2
+max_players: 4
 ---
 # In Front of the Elevators
 

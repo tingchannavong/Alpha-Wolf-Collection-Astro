@@ -41,9 +41,9 @@ description: "{short_desc}"
 image: "{image_url}"
 category: "{category}"
 location: "{location}"
-playing_time: "{playing_time}"
-min_players: "{min_players}"
-max_players: "{max_players}"
+playing_time: {int(playing_time)}
+min_players: {int(min_players)}
+max_players: {int(max_players)}
 ---
 # {title}
 
@@ -120,4 +120,4 @@ def validate_length(text, max_length):
 
 output_folder = r"C:\Users\Macbook pro\Desktop\AWsite\src\pages\boardgames"
 
-bulk_create_mds(sheet, 3, 89, output_folder)
+bulk_create_mds(sheet, 3, 90, output_folder)

@@ -5,9 +5,9 @@ description: "Exit: The Game - Dead Man on the Orient Express is a puzzle game m
 image: "/Dead_Man_on_the_Orient_Express.jpg"
 category: "Deduction, Puzzle"
 location: "Lak6"
-playing_time: "120"
-min_players: "1"
-max_players: "4"
+playing_time: 120
+min_players: 1
+max_players: 4
 ---
 # Exit The Game – Dead Man on the Orient Express
 

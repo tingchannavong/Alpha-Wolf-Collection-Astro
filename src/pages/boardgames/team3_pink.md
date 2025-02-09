@@ -5,9 +5,9 @@ description: "Three monkeys have started a construction company, and the buildin
 image: "/TEAM3_PINK.jpg"
 category: "Action / Dexterity"
 location: "Lak6"
-playing_time: "30"
-min_players: "3"
-max_players: "6"
+playing_time: 30
+min_players: 3
+max_players: 6
 ---
 # TEAM3 PINK
 

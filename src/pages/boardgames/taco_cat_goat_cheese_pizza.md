@@ -5,9 +5,9 @@ description: "Taco Cat Goat Cheese Pizza is filled to the brim with hand-slappin
 image: "/Taco_Cat_Goat_Cheese_Pizza.jpg"
 category: "Action / Dexterity, Card Game, Children's Game, Party Game"
 location: "Lak6"
-playing_time: "30"
-min_players: "2"
-max_players: "8"
+playing_time: 30
+min_players: 2
+max_players: 8
 ---
 # Taco Cat Goat Cheese Pizza
 

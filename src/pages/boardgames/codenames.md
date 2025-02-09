@@ -5,9 +5,9 @@ description: "Two rival spymasters know the secret identities of 25 agents."
 image: "/Codenames.jpg"
 category: "Card Game, Deduction, Party Game, Word Game"
 location: "Lak6"
-playing_time: "15"
-min_players: "2"
-max_players: "8"
+playing_time: 15
+min_players: 2
+max_players: 8
 ---
 # Codenames
 

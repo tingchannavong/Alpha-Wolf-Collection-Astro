@@ -5,9 +5,9 @@ description: "Players bet on five racing camels, trying to suss out which will p
 image: "/Camel_Up.jpg"
 category: "Dice"
 location: "Lak6"
-playing_time: "30"
-min_players: "2"
-max_players: "8"
+playing_time: 30
+min_players: 2
+max_players: 8
 ---
 # Camel Up
 

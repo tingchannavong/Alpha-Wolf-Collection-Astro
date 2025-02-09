@@ -5,9 +5,9 @@ description: "Days of Wonder's Ticket to Ride Map Collection is a series of expa
 image: "/Ticket_to_Ride_Asia_Map.jpg"
 category: "Abstract Strategy"
 location: "MakerBox Lao"
-playing_time: "60"
-min_players: "2"
-max_players: "6"
+playing_time: 60
+min_players: 2
+max_players: 6
 ---
 # Ticket to Ride Map Asia
 

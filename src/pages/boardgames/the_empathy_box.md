@@ -5,9 +5,9 @@ description: "Create a space for active listening, honest sharing and deep conne
 image: "/empathy-box.jpg"
 category: "Educational"
 location: "MakerBox Lao, Lak6"
-playing_time: "180"
-min_players: "2"
-max_players: "10"
+playing_time: 180
+min_players: 2
+max_players: 10
 ---
 # The Empathy Box
 

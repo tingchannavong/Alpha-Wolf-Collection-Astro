@@ -5,9 +5,9 @@ description: "Chess is a two-player game that represents medieval warfare on an 
 image: "/Chess.jpg"
 category: "Abstract Strategy"
 location: "Lak6"
-playing_time: "0"
-min_players: "2"
-max_players: "2"
+playing_time: 0
+min_players: 2
+max_players: 2
 ---
 # Chess
 

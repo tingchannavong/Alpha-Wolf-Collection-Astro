@@ -5,9 +5,9 @@ description: "Players take a role card that secretly places them on a team: the 
 image: "/BANG!_The_Dice_Game.jpg"
 category: "Bluffing, Deduction, Dice, Party Game"
 location: "Lak6"
-playing_time: "15"
-min_players: "3"
-max_players: "8"
+playing_time: 15
+min_players: 3
+max_players: 8
 ---
 # BANG! The Dice Game
 

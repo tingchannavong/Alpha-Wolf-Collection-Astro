@@ -5,9 +5,9 @@ description: "Players enjoy choosing the platter of mega maki, super sashimi, an
 image: "/Sushi_Go_Party!.jpg"
 category: "Card Game, Party Game"
 location: "MakerBox Lao"
-playing_time: "20"
-min_players: "2"
-max_players: "8"
+playing_time: 20
+min_players: 2
+max_players: 8
 ---
 # Sushi Go Party!
 

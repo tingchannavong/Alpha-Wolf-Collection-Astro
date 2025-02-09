@@ -5,9 +5,9 @@ description: "A simple pattern recognition game in which players try to find an 
 image: "/Spot_it!_Animals.jpg"
 category: "Card Game, Children's Game, Educational, Party Game, Action / Dexterity"
 location: "MakerBox Lao"
-playing_time: "15"
-min_players: "2"
-max_players: "8"
+playing_time: 15
+min_players: 2
+max_players: 8
 ---
 # Spot it! Animals
 

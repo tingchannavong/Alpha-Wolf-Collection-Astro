@@ -5,9 +5,9 @@ description: "Ultimate Werewolf is an interactive game of deduction for two team
 image: "/werewolf.png"
 category: "Bluffing, Card Game, Deduction, Party Game"
 location: "MakerBox Lao"
-playing_time: "30"
-min_players: "5"
-max_players: "75"
+playing_time: 30
+min_players: 5
+max_players: 75
 ---
 # Ultimate Werewolf
 

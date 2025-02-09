@@ -5,9 +5,9 @@ description: "Taco Cat Goat Cheese Pizza: On The Flipside  Taco Cat Goat Cheese 
 image: "/Taco_Cat_Goat_Cheese_Pizza_On_The_Flip_Side.jpg"
 category: "Action / Dexterity, Card Game, Children's Game, Educational, Party Game"
 location: "Lak6"
-playing_time: "10"
-min_players: "2"
-max_players: "8"
+playing_time: 10
+min_players: 2
+max_players: 8
 ---
 # Taco Cat Goat Cheese Pizza On The Flip Side
 

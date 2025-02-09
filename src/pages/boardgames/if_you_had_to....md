@@ -5,9 +5,9 @@ description: "Convince the judge your card is the worst and win a point."
 image: "/If_you_had_to....jpg"
 category: "Card Game"
 location: "Lak6"
-playing_time: "30"
-min_players: "3"
-max_players: "99"
+playing_time: 30
+min_players: 3
+max_players: 99
 ---
 # If you had to...
 

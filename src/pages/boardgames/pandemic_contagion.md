@@ -5,9 +5,9 @@ description: "You are now the disease competing against other diseases (fellow p
 image: "/Pandemic_Contagion.jpg"
 category: "Card Game, Medical"
 location: "MakerBox Lao"
-playing_time: "30"
-min_players: "2"
-max_players: "5"
+playing_time: 30
+min_players: 2
+max_players: 5
 ---
 # Pandemic Contagion
 

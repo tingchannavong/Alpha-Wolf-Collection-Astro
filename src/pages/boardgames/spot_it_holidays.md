@@ -5,9 +5,9 @@ description: "There is always one and only one, matching symbol between any two 
 image: "/spot-holiday.jpg"
 category: "Card Game, Children's Game, Educational, Party Game, Real-time, Sports"
 location: "MakerBox Lao"
-playing_time: "15"
-min_players: "2"
-max_players: "8"
+playing_time: 15
+min_players: 2
+max_players: 8
 ---
 # Spot it Holidays
 

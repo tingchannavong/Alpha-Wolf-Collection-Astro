@@ -5,9 +5,9 @@ description: "This is a negotiation game in the truest sense of the word."
 image: "/Chinatown.jpg"
 category: "City Building, Economic, Negotiation"
 location: "Lak6"
-playing_time: "60"
-min_players: "3"
-max_players: "5"
+playing_time: 60
+min_players: 3
+max_players: 5
 ---
 # Chinatown
 

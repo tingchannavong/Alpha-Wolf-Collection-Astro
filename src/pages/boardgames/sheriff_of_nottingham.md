@@ -5,9 +5,9 @@ description: "Prince John is coming to Nottingham! Players, in the role of merch
 image: "/Sheriff_of_Nottingham.jpg"
 category: "Bluffing, Card Game, Negotiation, Party Game"
 location: "Lak6"
-playing_time: "60"
-min_players: "3"
-max_players: "5"
+playing_time: 60
+min_players: 3
+max_players: 5
 ---
 # Sheriff of Nottingham
 

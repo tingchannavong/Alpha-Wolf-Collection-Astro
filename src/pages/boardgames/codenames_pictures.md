@@ -5,9 +5,9 @@ description: "Agents are no longer represented by a single word, but by an image
 image: "/Codenames_Pictures.jpg"
 category: "Card Game, Deduction, Party Game, Spies/Secret Agents"
 location: "MakerBox Lao"
-playing_time: "15"
-min_players: "2"
-max_players: "8"
+playing_time: 15
+min_players: 2
+max_players: 8
 ---
 # Codenames Pictures
 

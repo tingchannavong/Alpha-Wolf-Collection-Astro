@@ -5,9 +5,9 @@ description: "Fun Building Block Toy: The block puzzle toy has four colors block
 image: "/face-change.jpg"
 category: "Action / Dexterity, Children's Game"
 location: "Lak6"
-playing_time: "20"
-min_players: "2"
-max_players: "4"
+playing_time: 20
+min_players: 2
+max_players: 4
 ---
 # Face Change Rubik Cube
 

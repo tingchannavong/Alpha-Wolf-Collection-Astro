@@ -5,9 +5,9 @@ description: "You are the leader of one of the 7 great cities of the Ancient Wor
 image: "/7_Wonders.jpg"
 category: "Card Game, Economic"
 location: "MakerBox Lao"
-playing_time: "30"
-min_players: "3"
-max_players: "7"
+playing_time: 30
+min_players: 3
+max_players: 7
 ---
 # 7 Wonders
 

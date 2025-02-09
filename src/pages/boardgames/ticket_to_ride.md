@@ -5,9 +5,9 @@ description: "Compete with each other to build railways to connect cities across
 image: "/Ticket_to_Ride.jpg"
 category: "Abstract Strategy"
 location: "MakerBox Lao"
-playing_time: "60"
-min_players: "2"
-max_players: "5"
+playing_time: 60
+min_players: 2
+max_players: 5
 ---
 # Ticket to Ride
 

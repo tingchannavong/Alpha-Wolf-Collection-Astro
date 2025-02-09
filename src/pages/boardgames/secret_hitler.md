@@ -5,9 +5,9 @@ description: "Secret Hitler is a dramatic game of political intrigue and betraya
 image: "/Secret_Hitler.jpg"
 category: "Bluffing, Card Game, Deduction, Party Game"
 location: "Lak6"
-playing_time: "45"
-min_players: "5"
-max_players: "10"
+playing_time: 45
+min_players: 5
+max_players: 10
 ---
 # Secret Hitler
 

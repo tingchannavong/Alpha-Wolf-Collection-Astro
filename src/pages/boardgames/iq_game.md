@@ -5,9 +5,9 @@ description: "Fit all the 3D-puzzle pieces on the game board in such a way that 
 image: "/iq-game.jpg"
 category: "Puzzle"
 location: "MakerBox Lao"
-playing_time: "15"
-min_players: "1"
-max_players: "2"
+playing_time: 15
+min_players: 1
+max_players: 2
 ---
 # IQ Game
 

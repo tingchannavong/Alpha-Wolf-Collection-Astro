@@ -5,9 +5,9 @@ description: "Two players compete to build the most aesthetic patchwork quilt on
 image: "/Patchwork.jpg"
 category: "Abstract Strategy, Economic, Puzzle"
 location: "Lak6"
-playing_time: "30"
-min_players: "2"
-max_players: "2"
+playing_time: 30
+min_players: 2
+max_players: 2
 ---
 # Patchwork
 

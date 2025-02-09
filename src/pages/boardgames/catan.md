@@ -5,9 +5,9 @@ description: "Players try to be the dominant force on the island of Catan by bui
 image: "/Catan.jpg"
 category: "Economic, Negotiation"
 location: "Lak6"
-playing_time: "120"
-min_players: "3"
-max_players: "4"
+playing_time: 120
+min_players: 3
+max_players: 4
 ---
 # Catan
 

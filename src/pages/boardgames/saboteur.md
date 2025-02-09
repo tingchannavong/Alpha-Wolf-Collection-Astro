@@ -5,9 +5,9 @@ description: "Players take on the role of dwarves."
 image: "/Saboteur.jpg"
 category: "Bluffing, Card Game, Party Game"
 location: "MakerBox Lao, Lak6"
-playing_time: "30"
-min_players: "3"
-max_players: "10"
+playing_time: 30
+min_players: 3
+max_players: 10
 ---
 # Saboteur
 

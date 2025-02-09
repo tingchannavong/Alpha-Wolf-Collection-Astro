@@ -5,9 +5,9 @@ description: "Game play is simple: try to rid the village of witches and keep th
 image: "/Salem.jpg"
 category: "Deduction, Educational, Horror"
 location: "Lak6"
-playing_time: "180"
-min_players: "3"
-max_players: "7"
+playing_time: 180
+min_players: 3
+max_players: 7
 ---
 # Salem
 

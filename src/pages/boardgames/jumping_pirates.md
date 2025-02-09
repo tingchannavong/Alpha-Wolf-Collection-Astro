@@ -5,9 +5,9 @@ description: "Take turns to slide your swords into the barrel."
 image: "/Pop-up_Pirate.jpg"
 category: "Action / Dexterity, Children's Game"
 location: "Lak6"
-playing_time: "20"
-min_players: "2"
-max_players: "4"
+playing_time: 20
+min_players: 2
+max_players: 4
 ---
 # Jumping Pirates
 

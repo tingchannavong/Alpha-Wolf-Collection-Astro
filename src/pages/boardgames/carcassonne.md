@@ -5,9 +5,9 @@ description: "Players draw and place a tile to expand and control the southern F
 image: "/Carcassonne.jpg"
 category: "Abstract Strategy, Puzzle"
 location: "Lak6"
-playing_time: "45"
-min_players: "2"
-max_players: "5"
+playing_time: 45
+min_players: 2
+max_players: 5
 ---
 # Carcassonne
 

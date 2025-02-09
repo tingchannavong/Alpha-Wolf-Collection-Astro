@@ -5,9 +5,9 @@ description: "Root is a game of adventure and war in which players battle for co
 image: "/Root.jpg"
 category: "Negotiation"
 location: "MakerBox Lao"
-playing_time: "90"
-min_players: "2"
-max_players: "4"
+playing_time: 90
+min_players: 2
+max_players: 4
 ---
 # Root
 

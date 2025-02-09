@@ -5,9 +5,9 @@ description: " A party game for horrible people."
 image: "/Cards_Against_Humanity.jpg"
 category: "Card Game, Humor, Mature / Adult, Party Game, Print & Play"
 location: "Lak6"
-playing_time: "30"
-min_players: "4"
-max_players: "30"
+playing_time: 30
+min_players: 4
+max_players: 30
 ---
 # Cards Against Humanity
 

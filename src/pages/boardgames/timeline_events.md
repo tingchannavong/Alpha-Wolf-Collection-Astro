@@ -5,9 +5,9 @@ description: "Timeline: Events is a card game played using 55 cards."
 image: "/timeline-events.png"
 category: "Card Game, Educational, Party Game, Trivia"
 location: "Lak6"
-playing_time: "15"
-min_players: "2"
-max_players: "8"
+playing_time: 15
+min_players: 2
+max_players: 8
 ---
 # Timeline Events
 

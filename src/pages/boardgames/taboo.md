@@ -5,9 +5,9 @@ description: "You're trying to give clues to your teammates to guess a particula
 image: "/Taboo.jpg"
 category: "Party Game, Word Game"
 location: "Lak6"
-playing_time: "20"
-min_players: "4"
-max_players: "10"
+playing_time: 20
+min_players: 4
+max_players: 10
 ---
 # Taboo
 
