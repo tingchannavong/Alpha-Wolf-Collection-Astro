@@ -3,7 +3,6 @@ import MainLayout from "../../layouts/main-layout.astro";
 import Card from "../../components/game-card.astro";
 import Pagination from "../../components/pagination.astro";
 import FilterCard from "../../components/category-filter.astro";
-
 const allGames = await Astro.glob("./*.md");
 
 export async function getStaticPaths({ paginate }) {
@@ -32,10 +31,8 @@ const firstPath = pathname[1];
             <p>These are all the board games in Alpha Wolf's collection and their designated location. </p>
             <!-- Section for sort / filter functions -->
             <div class="sort-filter-container">
-                <FilterCard/>   
+                <FilterCard/>  
             </div>
-        </section>
-        <section id="game-cards-section" class="container">
             <!-- Game list starts here -->
             <div class="grid-list">
                 <!-- Render paginated game items -->

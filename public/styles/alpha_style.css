@@ -456,9 +456,11 @@ nav ul li a:hover {
 /* Sort and Filter Container Styling */
 .sort-filter-container {
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 5px;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     border-radius: 5px;
     margin: 5px auto;
 }
