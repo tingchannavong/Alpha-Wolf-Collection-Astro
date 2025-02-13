@@ -2,6 +2,7 @@ const categoryFilter = document.querySelector("#category-select");
 const locationFilter = document.querySelector("#location-select");
 const playerNumFilter = document.querySelector("#player-num-select");
 const filter_readout = document.querySelector("#filter_readout");
+const playtimeSort = document.querySelector("#sort-time-select");
 const searchResultsContainer = document.querySelector("#search_results");
 
 async function fetchData() {
@@ -183,7 +184,7 @@ async function filterQuery(filters) {
 
 // Add event listener to the category dropdown
 categoryFilter.addEventListener("change", (event) => { 
-  const selectedCategory = event.target.value.toString();
+  const selectedCategory = (event.target as HTMLInputElement).value.toString();
     if (!selectedCategory || selectedCategory.length === 0)  return;
 
     //set new url
@@ -192,7 +193,7 @@ categoryFilter.addEventListener("change", (event) => {
 
 // Add event listener to location dropdown
 locationFilter.addEventListener("change", (event) => { 
-  const selectedLocation = event.target.value.toString();
+  const selectedLocation = (event.target as HTMLInputElement).value.toString();
     if (!selectedLocation || selectedLocation.length === 0)  return;
 
     //set new url
@@ -201,12 +202,26 @@ locationFilter.addEventListener("change", (event) => {
 
 // Add event listener to location dropdown
 playerNumFilter.addEventListener("change", (event) => { 
-  const playerNumFilter = event.target.value;
+  const playerNumFilter = (event.target as HTMLInputElement).value;
     if (!playerNumFilter || playerNumFilter.length === 0 || playerNumFilter === null)  return;
 
     //set new url
     updateFilters('players', playerNumFilter);
   });
+
+// Add event listener to location dropdown
+playtimeSort.addEventListener("change", (event) => { 
+  const playtimeSort = (event.target as HTMLInputElement).value;
+    if (!playtimeSort || playtimeSort === "none")  return;
+
+    //set new url
+    // updateFilters('players', playerNumFilter);
+  });
+
+function sortAsc(data) {
+  const sortedData = data.sort((a, b) => a - b);
+  return sortedData;
+}
 
 // when filter is selected update the filter terms
 window.addEventListener("DOMContentLoaded", () => {
