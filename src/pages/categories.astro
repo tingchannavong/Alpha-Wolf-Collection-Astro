@@ -7,6 +7,7 @@ import CategoryCard from "../components/category-card.astro";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/alpha_style.css">
     <title>Categories</title>
+    <script src="../scripts/filter.ts"></script>
 </head>
 <MainLayout>
     <body>
@@ -15,11 +16,12 @@ import CategoryCard from "../components/category-card.astro";
                 <h2>Categories</h2>
                 <p>There are many board game categories to choose from:</p>
                 <div class="grid-container">
-                    <CategoryCard
-                        title = "Strategy Games"
+                    <a id="cat_1" href="/filter?category=Abstract+Strategy">
+                        <CategoryCard
+                        title = "Abstract Strategy"
                         img = "/strat-icon.png"
-                        description = {18}
-                    />
+                        description = {10}/>
+                    </a>
                     <CategoryCard
                         title = "Bluffing Games"
                         img = "/strat-icon.png"
