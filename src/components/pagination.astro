@@ -1,6 +1,6 @@
 ---
 const { length, currentUrl, currentPage, firstUrl, prevUrl, nextUrl, lastUrl } = Astro.props;
-const paginationList = Array.from({length: `${length}`}, (_, i) => i + 1);
+const paginationList = Array.from({length: Number(length)}, (_, i) => i + 1);
 ---
 
 <nav aria-label="Game pages" class="pagination">

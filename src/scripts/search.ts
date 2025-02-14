@@ -19,7 +19,7 @@ const FUSE_OPTIONS = {
     ]
 }
 
-const search = document.querySelector("#search");
+const search = document.querySelector("#search") as HTMLInputElement;
 const search_readout = document.querySelector("#search_readout");
 const searchResultsContainer = document.querySelector("#search_results");
 
@@ -54,7 +54,7 @@ async function fetchSearchResults(search) {
 }
 
 // Display the search results in the DOM using the <Card> format
-function displaySearchResults(results: SearchResult[]): void {
+function displaySearchResults(results): void {
     if (!searchResultsContainer) return;
 
     searchResultsContainer.innerHTML = ""; // Clear previous results
