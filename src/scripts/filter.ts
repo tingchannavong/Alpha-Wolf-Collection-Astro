@@ -1,34 +1,18 @@
 const categoryFilter = document.querySelector("#category-select");
 const locationFilter = document.querySelector("#location-select");
 const playerNumFilter = document.querySelector("#player-num-select");
+
 const filter_readout = document.querySelector("#filter_readout");
-const playtimeSort = document.querySelector("#sort-time-select");
 const searchResultsContainer = document.querySelector("#search_results");
 
+const titleSort = document.querySelector("#sort-title-select");
+// const playtimeSort = document.querySelector("#sort-time-select");
+
+// Function to fetch all games data from .json file
 async function fetchData() {
   const response = await fetch("/search.json");
   const data = await response.json();
   return data;
-}
-
-async function fetchFilter(filter) {
-  const data = await fetchData();
-
-  if (filter === "all") {
-    window.location.href = "/boardgames/1"; 
-  } else {
-    const filteredData = data.filter((game) => 
-      game.frontmatter.category.includes(filter) 
-    );
-    displayFilterResults(filteredData);
-    console.log(filteredData);
-
-    // calculation filter size
-    const FilterSize = filteredData.length;
-    filter_readout.textContent = filter
-    ? `Filter results for ${filter} (${FilterSize}):` 
-    : "";
-  }
 }
 
 function updateFilterSelection(filter_type, value) {
@@ -179,7 +163,39 @@ async function filterQuery(filters) {
 
   displayFilterResults(filteredGames);
   calcFilterSize(filteredGames);
+  return filteredGames;
   }
+}
+
+// function sortAsc(data) {
+//   const sortedData = data.sort((a, b) => a - b);
+//   return sortedData;
+// }
+
+function extractSortParams() {
+  const query = new URLSearchParams(window.location.search);
+
+  const sort = {
+    sort_title: query.get("sort_title")|| "a-z",
+    sort_players: query.get("sort_players")|| "none",
+    sort_time: query.get("sort_time")|| "none",
+  }
+  console.log(sort);
+    return sort;
+};
+
+function sortQuery(filteredData, sort_queries) {
+  if (sort_queries.sort_title === "none")  { 
+    (titleSort as HTMLInputElement).value === "none";
+    return;
+    } else if (sort_queries.sort_title === "z-a") {
+      // both filtered and sorted data is a fulfilled promise so need to handly by .then(arrow func)
+      const sortedData = filteredData.then((array) => array.reverse());
+      sortedData.then((array) => displayFilterResults(array));
+    } else if (sort_queries.sort_title === "a-z") {
+      const sortedData = filteredData.then((array) => array.sort());
+      sortedData.then((array) => displayFilterResults(array));
+    }
 }
 
 // Add event listener to the category dropdown
@@ -200,7 +216,7 @@ locationFilter.addEventListener("change", (event) => {
     updateFilters('location', selectedLocation);
   });
 
-// Add event listener to location dropdown
+// Add event listener to player number dropdown
 playerNumFilter.addEventListener("change", (event) => { 
   const playerNumFilter = (event.target as HTMLInputElement).value;
     if (!playerNumFilter || playerNumFilter.length === 0 || playerNumFilter === null)  return;
@@ -209,22 +225,27 @@ playerNumFilter.addEventListener("change", (event) => {
     updateFilters('players', playerNumFilter);
   });
 
-// Add event listener to location dropdown
-playtimeSort.addEventListener("change", (event) => { 
-  const playtimeSort = (event.target as HTMLInputElement).value;
-    if (!playtimeSort || playtimeSort === "none")  return;
+// Add event listener to playtime sort dropdown
+// playtimeSort.addEventListener("change", (event) => { 
+//   const playtimeSort = (event.target as HTMLInputElement).value;
+//     if (!playtimeSort || playtimeSort === "none")  return;
+
+//     //set new url
+//     // updateFilters('players', playerNumFilter);
+//   });
+
+// Add event listener to title sort dropdown
+titleSort.addEventListener("change", (event) => { 
+  const titleSort = (event.target as HTMLInputElement).value;
+    if (!titleSort || titleSort === "a-z")  return;
 
     //set new url
-    // updateFilters('players', playerNumFilter);
+    updateFilters('sort_title', titleSort);
   });
 
-function sortAsc(data) {
-  const sortedData = data.sort((a, b) => a - b);
-  return sortedData;
-}
-
-// when filter is selected update the filter terms
+// event listener when a page finishes loading
 window.addEventListener("DOMContentLoaded", () => {
+  // Handle filters first 
     const catParams = new URLSearchParams(window.location.search).get("category");
     const locParams = new URLSearchParams(window.location.search).get("location");
     const playersParams = new URLSearchParams(window.location.search).get("players");
@@ -235,6 +256,15 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const queries = extractUrlParams();
 
-    filterQuery(queries);
+    const filteredData = filterQuery(queries);
+
+    // Handle sorting second
+    const sortTitleParams = new URLSearchParams(window.location.search).get("sort_title");
+
+    updateFilterSelection(titleSort, sortTitleParams);
+
+    const sort_queries = extractSortParams();
+
+    sortQuery(filteredData, sort_queries);
     }
 )
