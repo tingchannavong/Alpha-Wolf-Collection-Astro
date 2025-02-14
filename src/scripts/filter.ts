@@ -175,16 +175,6 @@ async function filterQuery(filters) {
   }
 }
 
-function sortBy(filteredData, sort_type, order) {
-  return filteredData.sort((a,b) => {
-    if (order === "asc") {
-      return a.frontmatter.sort_type - b.frontmatter.sort_type;
-    } else {
-      return b.frontmatter.sort_type - a.frontmatter.sort_type;
-    }
-  })
-}
-
 function extractSortParams() {
   const query = new URLSearchParams(window.location.search);
 
@@ -195,7 +185,7 @@ function extractSortParams() {
   }
   console.log(sort);
     return sort;
-};
+}
 
 async function sortQuery(filteredData, sort_queries) {
   await filteredData;
@@ -206,13 +196,33 @@ async function sortQuery(filteredData, sort_queries) {
     } else if (sort_queries.sort_title === "a-z") {
       const sortedData = filteredData.then((array) => array.sort());
       sortedData.then((array) => displayFilterResults(array));
+    
     } else if (sort_queries.sort_time === "asc") {
+      console.log(filteredData);
       const sortedData = filteredData.then((array) => array.sort((a,b) => a.frontmatter.playing_time - b.frontmatter.playing_time));
       sortedData.then((array) => displayFilterResults(array));
     } else if (sort_queries.sort_time === "des") {
       const sortedData = filteredData.then((array) => array.sort((a,b) => b.frontmatter.playing_time - a.frontmatter.playing_time));
       sortedData.then((array) => displayFilterResults(array));
-    }
+    
+    } else if (sort_queries.sort_players === "asc") {
+      const sortedData = filteredData.then((array) => array.sort((a,b) => a.frontmatter.min_players - b.frontmatter.min_players));
+      sortedData.then((array) => displayFilterResults(array));
+    } else if (sort_queries.sort_players === "des") {
+      const sortedData = filteredData.then((array) => array.sort((a,b) => b.frontmatter.min_players - a.frontmatter.min_players));
+      sortedData.then((array) => displayFilterResults(array));
+}}
+
+function clearSortFilters( keysToRemove: string[]) {
+  const params = new URLSearchParams(window.location.search); // Get current url
+
+  // Remove specified keys
+  keysToRemove.forEach((key) => params.delete(key));
+
+  const newUrl = `${window.location.pathname}?${params.toString()}`;
+
+  window.location.assign(newUrl.toString());
+
 }
 
 // Add event listener to the category dropdown
@@ -249,10 +259,6 @@ titleSort.addEventListener("change", (event) => {
 
     //set new url
     updateFilters('sort_title', titleSort);
-
-    //update other sort queries as none
-    (playtimeSort as HTMLInputElement).value === "none";
-    (playersSort as HTMLInputElement).value === "none";
   });
 
 // Add event listener to sort playtime dropdown
@@ -310,11 +316,4 @@ window.addEventListener("DOMContentLoaded", () => {
 
     sortQuery(filteredData, sort_queries);
 
-    filteredData.then((array) => {
-      console.log(array.map(item => 
-        item.frontmatter.playing_time
-      ));
-    })
-
-    }
-)
+});
