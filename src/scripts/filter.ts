@@ -6,7 +6,8 @@ const filter_readout = document.querySelector("#filter_readout");
 const searchResultsContainer = document.querySelector("#search_results");
 
 const titleSort = document.querySelector("#sort-title-select");
-// const playtimeSort = document.querySelector("#sort-time-select");
+const playtimeSort = document.querySelector("#sort-time-select");
+const playersSort = document.querySelector("#sort-players-select");
 
 // Function to fetch all games data from .json file
 async function fetchData() {
@@ -122,39 +123,46 @@ async function filterQuery(filters) {
   if (filters.category === "all" && filters.location === "all" && filters.players === "all") {
     displayFilterResults(data);
     calcFilterSize(data);
+    return data;
 
   } else if (filters.category === "all" && filters.location === "all") {
   const filter2 = filterPlayers(data, filters)
   displayFilterResults(filter2);
   calcFilterSize(filter2);
+  return filter2;
 
 } else if (filters.category === "all" && filters.players === "all") {
   const filter2 = filterLoc(data, filters)
   displayFilterResults(filter2);
   calcFilterSize(filter2);
+  return filter2;
 
 } else if (filters.location === "all" && filters.players === "all") {
   const filter2 = filterCat(data, filters)
   displayFilterResults(filter2);
   calcFilterSize(filter2);
+  return filter2;
 
 } else if (filters.category === "all") {
     const filter1 = filterLoc(data, filters)
     const filter2 = filterPlayers(filter1, filters)
     displayFilterResults(filter2);
     calcFilterSize(filter2);
+    return filter2;
 
   } else if (filters.location === "all") {
     const filter1 = filterCat(data, filters)
     const filter2 = filterPlayers(filter1, filters)
     displayFilterResults(filter2);
     calcFilterSize(filter2);
+    return filter2;
 
   } else if (filters.players === "all") {
     const filter1 = filterCat(data, filters)
     const filter2 = filterLoc(filter1, filters)
     displayFilterResults(filter2);
     calcFilterSize(filter2);
+    return filter2;
   } else {
   const filteredGames = data
   .filter(game => game.frontmatter.category.includes(filters.category))
@@ -167,16 +175,21 @@ async function filterQuery(filters) {
   }
 }
 
-// function sortAsc(data) {
-//   const sortedData = data.sort((a, b) => a - b);
-//   return sortedData;
-// }
+function sortBy(filteredData, sort_type, order) {
+  return filteredData.sort((a,b) => {
+    if (order === "asc") {
+      return a.frontmatter.sort_type - b.frontmatter.sort_type;
+    } else {
+      return b.frontmatter.sort_type - a.frontmatter.sort_type;
+    }
+  })
+}
 
 function extractSortParams() {
   const query = new URLSearchParams(window.location.search);
 
   const sort = {
-    sort_title: query.get("sort_title")|| "a-z",
+    sort_title: query.get("sort_title")|| "none",
     sort_players: query.get("sort_players")|| "none",
     sort_time: query.get("sort_time")|| "none",
   }
@@ -184,16 +197,20 @@ function extractSortParams() {
     return sort;
 };
 
-function sortQuery(filteredData, sort_queries) {
-  if (sort_queries.sort_title === "none")  { 
-    (titleSort as HTMLInputElement).value === "none";
-    return;
-    } else if (sort_queries.sort_title === "z-a") {
+async function sortQuery(filteredData, sort_queries) {
+  await filteredData;
+   if (sort_queries.sort_title === "z-a") {
       // both filtered and sorted data is a fulfilled promise so need to handly by .then(arrow func)
       const sortedData = filteredData.then((array) => array.reverse());
       sortedData.then((array) => displayFilterResults(array));
     } else if (sort_queries.sort_title === "a-z") {
       const sortedData = filteredData.then((array) => array.sort());
+      sortedData.then((array) => displayFilterResults(array));
+    } else if (sort_queries.sort_time === "asc") {
+      const sortedData = filteredData.then((array) => array.sort((a,b) => a.frontmatter.playing_time - b.frontmatter.playing_time));
+      sortedData.then((array) => displayFilterResults(array));
+    } else if (sort_queries.sort_time === "des") {
+      const sortedData = filteredData.then((array) => array.sort((a,b) => b.frontmatter.playing_time - a.frontmatter.playing_time));
       sortedData.then((array) => displayFilterResults(array));
     }
 }
@@ -225,22 +242,43 @@ playerNumFilter.addEventListener("change", (event) => {
     updateFilters('players', playerNumFilter);
   });
 
-// Add event listener to playtime sort dropdown
-// playtimeSort.addEventListener("change", (event) => { 
-//   const playtimeSort = (event.target as HTMLInputElement).value;
-//     if (!playtimeSort || playtimeSort === "none")  return;
-
-//     //set new url
-//     // updateFilters('players', playerNumFilter);
-//   });
-
-// Add event listener to title sort dropdown
+// Add event listener to sort title dropdown
 titleSort.addEventListener("change", (event) => { 
   const titleSort = (event.target as HTMLInputElement).value;
-    if (!titleSort || titleSort === "a-z")  return;
+    if (!titleSort) return;
 
     //set new url
     updateFilters('sort_title', titleSort);
+
+    //update other sort queries as none
+    (playtimeSort as HTMLInputElement).value === "none";
+    (playersSort as HTMLInputElement).value === "none";
+  });
+
+// Add event listener to sort playtime dropdown
+playtimeSort.addEventListener("change", (event) => { 
+  const playtimeSort = (event.target as HTMLInputElement).value;
+    if (!playtimeSort)  return;
+
+    //set new url
+    updateFilters('sort_time', playtimeSort);
+
+    //update other sort queries as none
+    (titleSort as HTMLInputElement).value === "none";
+    (playersSort as HTMLInputElement).value === "none";
+  });
+
+// Add event listener to sort players dropdown
+playersSort.addEventListener("change", (event) => { 
+  const playersSort = (event.target as HTMLInputElement).value;
+    if (!playersSort)  return;
+
+    //set new url
+    updateFilters('sort_players', playersSort);
+
+    //update other sort queries as none
+    (titleSort as HTMLInputElement).value === "none";
+    (playtimeSort as HTMLInputElement).value === "none";
   });
 
 // event listener when a page finishes loading
@@ -260,11 +298,23 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // Handle sorting second
     const sortTitleParams = new URLSearchParams(window.location.search).get("sort_title");
+    const sortTimeParams = new URLSearchParams(window.location.search).get("sort_time");
+    const sortPlayersParams = new URLSearchParams(window.location.search).get("sort_players");
 
+    // Need to get rid of the url params for each sort case
     updateFilterSelection(titleSort, sortTitleParams);
+    updateFilterSelection(playtimeSort, sortTimeParams);
+    updateFilterSelection(playersSort, sortPlayersParams);
 
     const sort_queries = extractSortParams();
 
     sortQuery(filteredData, sort_queries);
+
+    filteredData.then((array) => {
+      console.log(array.map(item => 
+        item.frontmatter.playing_time
+      ));
+    })
+
     }
 )
