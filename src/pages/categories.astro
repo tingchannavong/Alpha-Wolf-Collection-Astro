@@ -6,52 +6,58 @@ import CategoryCard from "../components/category-card.astro";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/alpha_style.css">
-    <title>Categories</title>
+    <title>Services</title>
     <script src="../scripts/filter.ts"></script>
 </head>
 <MainLayout>
     <body>
         <section id="categories-section" class="container">
             <div class="categories">
-                <h2>Categories</h2>
-                <p>There are many board game categories to choose from:</p>
+                <h2>Services</h2>
+                <p>There are many board game services to choose from:</p>
                 <div class="grid-container">
-                    <a id="cat_1" href="/filter?category=Abstract+Strategy">
+                    <a id="cat_1" href="">
                         <CategoryCard
-                        title = "Abstract Strategy"
+                        title = "Boardgame Cafe"
                         img = "/strat-icon.png"
-                        description = {10}/>
+                        description = {1}/>
                     </a>
+                    <a id="cat_2" href="">
                     <CategoryCard
-                        title = "Bluffing Games"
+                        title = "Boardgame Sale"
                         img = "/strat-icon.png"
                         description = {10}
                     />
+                    </a>
+                    <a id="cat_3" href="">
                     <CategoryCard
-                        title = "Cooperative Games"
+                        title = "Boardgame Rental"
                         img = "/strat-icon.png"
                         description = {4}
                     />
+                    </a>
+                    <a id="cat_4" href="">
                     <CategoryCard
-                        title = "Party Games"
+                        title = "Private Hosting"
                         img = "/strat-icon.png"
                         description = {6}
                     />
+                    </a>
+                    <a id="cat_5" href="">
                     <CategoryCard
-                        title = "Creative Games"
+                        title = "Public Events"
                         img = "/strat-icon.png"
                         description = {6}
                     />
+                    </a>
+                    <a id="cat_6" href="">
                     <CategoryCard
-                        title = "Beginner-Friendly Games"
+                        title = "Corporate Team Building"
                         img = "/strat-icon.png"
                         description = {11}
                     />
+                    </a>
                      <!-- Repeat the category div for other categories -->
-                </div>
-                <div class="see-more">
-                    <!-- Link to categories page -->
-                    <a href="#">See more</a>
                 </div>
               </div>
             </section>
