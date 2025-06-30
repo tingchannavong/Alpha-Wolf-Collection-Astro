@@ -3,7 +3,7 @@ import requests
 import xml.etree.ElementTree as ET
 import os
 import re
-from bs4 import BeautifulSoup #Did not work
+# from bs4 import BeautifulSoup #Did not work
 
 def get_board_game_info_by_id(board_game, bgg_game_id, image_folder='board_game_images'):
     """Fetch board game information from BoardGameGeek by knowing id.
@@ -144,7 +144,7 @@ def get_board_game_info(board_game, image_folder='board_game_images'):
         print(f"Error fetching information for {board_game}: {e}")
 
 def find_first_sentence(text):
-    """A functino that finds and returns only the first sentence in a given text."""
+    """A function that finds and returns only the first sentence in a given text."""
     match = re.search(r"^[^.]*\.", text)
     if match:
         return match.group()

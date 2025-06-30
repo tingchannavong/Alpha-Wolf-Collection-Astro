@@ -2,8 +2,8 @@
 
 import ezsheets
 from bgg_info import replace_spaces_in_filepath, replace_many, find_first_sentence, get_board_game_info_by_id, get_board_game_info
-from create_markdowns import bulk_create_mds
 from sheet_fetch_game3_id import loop_sheet_find_game
+from create_markdowns import bulk_create_mds
 
 def connect_to_sheet(sheet_id, sheet_title):
     """Connect to your specific google sheet and select the sheet title you want to work with." 
@@ -17,10 +17,6 @@ def connect_to_sheet(sheet_id, sheet_title):
     # Create game sheet object
     sheet = sheet_obj[sheet_title]
     return sheet
-
-sheet_id = '1a-TIrVEULIaBvgeQDHj51CDNaIySzU27A-vkL05GQMw'
-sheet_title = 'Game'
-sheet = connect_to_sheet(sheet_id, sheet_title)
 
 def loop_col_find_replace(column, replacements):
     """Loop through all column and perform find & replace certain parts of text on the cell."""
@@ -73,14 +69,14 @@ def loop_range_fnr_1s(sheet, row_from, row_to):
     print("All operations completed.")
 
 # Games to fetch info and create markdowns
-new_game = {
-        85: ('Twice as Clever', 269210),
-        86: ("That's pretty clever", 244522),
-        }
+manual_search = {
+        91: ("Betakkuma's Fart & Furious", 376651), 
+        92: ('Art Society', None),	
+}
 
 # sample replacements dictionary
 replacements_dict = {
-     "<br/>": " ",
+    "<br/>": " ",
     "&quot;": " ",
     "&mdash;": " ",
     "&ldquo;": " ",
@@ -90,15 +86,28 @@ replacements_dict = {
     "&rsquo;": " "
 }
 
+sheet_obj = ezsheets.Spreadsheet('1a-TIrVEULIaBvgeQDHj51CDNaIySzU27A-vkL05GQMw') # sheet ID between d/ and /edit
+    
+# Create game sheet object
+sheet = sheet_obj['Game']
+
 # Set Image Folder
-image_folder = r"C:\Users\Macbook pro\Desktop\AWsite\public"
+# image_folder = r"C:\Users\Macbook pro\Desktop\AWsite\public"
+image_folder = r"C:\Users\Macbook pro\Desktop\AWsite\python-backend\bgg_images"
 
 # Set markdown save folder
 output_folder = r"C:\Users\Macbook pro\Desktop\AWsite\src\pages\boardgames"
 
 # EXAMPLE USAGE
-# loop_sheet_find_game(sheet, image_folder, new_game)
+# 1. Get game infor via API w/ loop_sheet_find_game(sheet, image_folder, manual_search)
+# 2. Fix text and get short description w/ loop_range_fnr_1s(sheet, 91, 92)
+# 3. Fix file path name w/ replace_spaces_in_filepath(sheet, "G", 91, 92)
+# 4. Bulk create markdowns w/ bulk_create_mds(sheet, 89, 92, output_folder)
 
-# loop_range_fnr_1s(sheet, 85, 87)
+# loop_sheet_find_game(sheet, image_folder, manual_search)
 
-bulk_create_mds(sheet, 3, 89, output_folder)
+# loop_range_fnr_1s(sheet, 91, 92)
+
+# replace_spaces_in_filepath(sheet, "G", 91, 92)
+
+bulk_create_mds(sheet, 3, 93, output_folder)
