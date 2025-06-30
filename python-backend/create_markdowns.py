@@ -32,6 +32,7 @@ def bulk_create_mds(sheet, from_row, to_row, output_folder):
         min_players = sheet[f'P{row}'] or 'Not specified'
         max_players = sheet[f'Q{row}'] or 'Not specified'
         location = sheet[f'R{row}'] or 'Not specified' 
+        box_size = sheet[f'U{row}'] or 'Not specified' 
 
         # Format the markdown content
         markdown_content = f"""---
@@ -44,6 +45,7 @@ location: "{location}"
 playing_time: {int(playing_time)}
 min_players: {int(min_players)}
 max_players: {int(max_players)}
+box_size: "{box_size}"
 ---
 # {title}
 
@@ -54,6 +56,8 @@ max_players: {int(max_players)}
 ### Playing Time: {playing_time} minutes
 
 ### Players: {min_players} - {max_players}
+
+### Box size: {box_size} 
 
 ### Location: {location}
 
@@ -119,5 +123,3 @@ def validate_length(text, max_length):
 # update_markdown_from_sheet(sheet, 3, 90)
 
 output_folder = r"C:\Users\Macbook pro\Desktop\AWsite\src\pages\boardgames"
-
-bulk_create_mds(sheet, 3, 90, output_folder)
