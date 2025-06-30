@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 60
 min_players: 4
 max_players: 4
+box_size: "S"
 ---
 # Tichu
 
@@ -18,6 +19,8 @@ Tichu took much of its rules and mechanics from Zheng Fen. It is a partnership c
 ### Playing Time: 60 minutes
 
 ### Players: 4 - 4
+
+### Box size: S 
 
 ### Location: Lak6
 

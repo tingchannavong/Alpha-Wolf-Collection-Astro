@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 20
 min_players: 2
 max_players: 6
+box_size: "S"
 ---
 # Cockroach poker
 
@@ -18,6 +19,8 @@ Cockroach Poker is a reverse set collection game that has nothing to do with pok
 ### Playing Time: 20 minutes
 
 ### Players: 2 - 6
+
+### Box size: S 
 
 ### Location: MakerBox Lao
 

@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 30
 min_players: 2
 max_players: 8
+box_size: "S"
 ---
 # Taco Cat Goat Cheese Pizza
 
@@ -18,6 +19,8 @@ Taco Cat Goat Cheese Pizza is filled to the brim with hand-slapping mayhem! As i
 ### Playing Time: 30 minutes
 
 ### Players: 2 - 8
+
+### Box size: S 
 
 ### Location: Lak6
 

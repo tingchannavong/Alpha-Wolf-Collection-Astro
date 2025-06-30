@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 60
 min_players: 3
 max_players: 5
+box_size: "XL"
 ---
 # Chinatown
 
@@ -18,6 +19,8 @@ This is a negotiation game in the truest sense of the word. In it, players acqui
 ### Playing Time: 60 minutes
 
 ### Players: 3 - 5
+
+### Box size: XL 
 
 ### Location: Lak6
 

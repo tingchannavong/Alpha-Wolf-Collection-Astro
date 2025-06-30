@@ -8,6 +8,7 @@ location: "LNT"
 playing_time: 15
 min_players: 2
 max_players: 6
+box_size: "S"
 ---
 # Coup
 
@@ -18,6 +19,8 @@ You are head of a family in an Italian city-state, a city run by a weak and corr
 ### Playing Time: 15 minutes
 
 ### Players: 2 - 6
+
+### Box size: S 
 
 ### Location: LNT
 

@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 30
 min_players: 3
 max_players: 6
+box_size: "M"
 ---
 # For Sale
 
@@ -18,6 +19,8 @@ For Sale is a quick, fun game nominally about buying and selling real estate. Du
 ### Playing Time: 30 minutes
 
 ### Players: 3 - 6
+
+### Box size: M 
 
 ### Location: Lak6
 

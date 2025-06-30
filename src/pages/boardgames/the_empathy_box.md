@@ -8,6 +8,7 @@ location: "MakerBox Lao, Lak6"
 playing_time: 180
 min_players: 2
 max_players: 10
+box_size: "M"
 ---
 # The Empathy Box
 
@@ -18,6 +19,8 @@ Create a space for active listening, honest sharing and deep connection with you
 ### Playing Time: 180 minutes
 
 ### Players: 2 - 10
+
+### Box size: M 
 
 ### Location: MakerBox Lao, Lak6
 

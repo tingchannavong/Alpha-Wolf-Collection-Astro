@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 30
 min_players: 2
 max_players: 8
+box_size: "XL"
 ---
 # Camel Up
 
@@ -18,6 +19,8 @@ In Camel Up, up to eight players bet on five racing camels, trying to suss out w
 ### Playing Time: 30 minutes
 
 ### Players: 2 - 8
+
+### Box size: XL 
 
 ### Location: Lak6
 

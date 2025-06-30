@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 30
 min_players: 4
 max_players: 30
+box_size: "M"
 ---
 # Cards Against Humanity
 
@@ -18,6 +19,8 @@ max_players: 30
 ### Playing Time: 30 minutes
 
 ### Players: 4 - 30
+
+### Box size: M 
 
 ### Location: Lak6
 

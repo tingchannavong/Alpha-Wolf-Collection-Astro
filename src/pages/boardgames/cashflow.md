@@ -1,13 +1,14 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Cashflow"
-description: "Cashflow 101 is a game designed by investor, businessman, and self-help author Robert Kiyosaki to serve as a tool for learning basic financial strategies and accounting principles."
+description: "Cashflow is a game for learning basic financial strategies and accounting principles."
 image: "/Cashflow_101.jpg"
 category: "Economic, Educational, Math, Number"
 location: "Lak6"
 playing_time: 180
 min_players: 2
 max_players: 6
+box_size: "XL"
 ---
 # Cashflow
 
@@ -18,6 +19,8 @@ Cashflow 101 is a serious game designed by investor, businessman, and self-help 
 ### Playing Time: 180 minutes
 
 ### Players: 2 - 6
+
+### Box size: XL 
 
 ### Location: Lak6
 

@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 20
 min_players: 2
 max_players: 4
+box_size: "M"
 ---
 # Jumping Pirates
 
@@ -18,6 +19,8 @@ Take turns to slide your swords into the barrel. But be careful as one wrong mov
 ### Playing Time: 20 minutes
 
 ### Players: 2 - 4
+
+### Box size: M 
 
 ### Location: Lak6
 

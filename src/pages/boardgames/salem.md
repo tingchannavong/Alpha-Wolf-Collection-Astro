@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 180
 min_players: 3
 max_players: 7
+box_size: "M"
 ---
 # Salem
 
@@ -18,6 +19,8 @@ The year is 1692. In an atmosphere of pessimism and charged paranoia, the citize
 ### Playing Time: 180 minutes
 
 ### Players: 3 - 7
+
+### Box size: M 
 
 ### Location: Lak6
 

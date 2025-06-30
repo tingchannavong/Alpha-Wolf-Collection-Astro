@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 10
 min_players: 2
 max_players: 8
+box_size: "S"
 ---
 # Taco Cat Goat Cheese Pizza On The Flip Side
 
@@ -18,6 +19,8 @@ Taco Cat Goat Cheese Pizza: On The Flipside  Taco Cat Goat Cheese Pizza is back 
 ### Playing Time: 10 minutes
 
 ### Players: 2 - 8
+
+### Box size: S 
 
 ### Location: Lak6
 

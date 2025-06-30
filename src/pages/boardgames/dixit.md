@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 30
 min_players: 3
 max_players: 8
+box_size: "L"
 ---
 # Dixit
 
@@ -18,6 +19,8 @@ Each turn in Dixit, one player is the storyteller, chooses one of the six cards 
 ### Playing Time: 30 minutes
 
 ### Players: 3 - 8
+
+### Box size: L 
 
 ### Location: Lak6
 

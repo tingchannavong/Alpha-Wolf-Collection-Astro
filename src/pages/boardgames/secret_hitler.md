@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 45
 min_players: 5
 max_players: 10
+box_size: "XL"
 ---
 # Secret Hitler
 
@@ -18,6 +19,8 @@ Secret Hitler is a dramatic game of political intrigue and betrayal set in 1930s
 ### Playing Time: 45 minutes
 
 ### Players: 5 - 10
+
+### Box size: XL 
 
 ### Location: Lak6
 

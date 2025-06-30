@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 30
 min_players: 4
 max_players: 10
+box_size: "L"
 ---
 # Apples to Apples
 
@@ -18,6 +19,8 @@ The party game Apples to Apples consists of two decks of cards: Things and Descr
 ### Playing Time: 30 minutes
 
 ### Players: 4 - 10
+
+### Box size: L 
 
 ### Location: MakerBox Lao
 

@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 15
 min_players: 3
 max_players: 6
+box_size: "S"
 ---
 # Dixit Jinx
 
@@ -18,6 +19,8 @@ Jinx is a new Game in the Dixit family. Unlike the original game, the drawings a
 ### Playing Time: 15 minutes
 
 ### Players: 3 - 6
+
+### Box size: S 
 
 ### Location: Lak6
 

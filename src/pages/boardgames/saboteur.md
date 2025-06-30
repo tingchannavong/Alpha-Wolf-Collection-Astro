@@ -8,6 +8,7 @@ location: "MakerBox Lao, Lak6"
 playing_time: 30
 min_players: 3
 max_players: 10
+box_size: "M"
 ---
 # Saboteur
 
@@ -18,6 +19,8 @@ Players take on the role of dwarves. As miners, they are in a mine, hunting for 
 ### Playing Time: 30 minutes
 
 ### Players: 3 - 10
+
+### Box size: M 
 
 ### Location: MakerBox Lao, Lak6
 

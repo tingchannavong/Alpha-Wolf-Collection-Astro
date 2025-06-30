@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 60
 min_players: 2
 max_players: 2
+box_size: "L"
 ---
 # Xiang Qi
 
@@ -18,6 +19,8 @@ XiangQi is one of the most played board games in the world. Translated loosely a
 ### Playing Time: 60 minutes
 
 ### Players: 2 - 2
+
+### Box size: L 
 
 ### Location: Lak6
 

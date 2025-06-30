@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 15
 min_players: 2
 max_players: 8
+box_size: "S"
 ---
 # Spot it! Animals
 
@@ -18,6 +19,8 @@ Spot it!, a.k.a. Dobble, is a simple pattern recognition game in which players t
 ### Playing Time: 15 minutes
 
 ### Players: 2 - 8
+
+### Box size: S 
 
 ### Location: MakerBox Lao
 

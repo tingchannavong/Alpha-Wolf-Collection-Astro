@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 25
 min_players: 2
 max_players: 5
+box_size: "S"
 ---
 # Hanabi
 
@@ -18,6 +19,8 @@ Hanabi named for the Japanese word for fireworks is a cooperative game in which 
 ### Playing Time: 25 minutes
 
 ### Players: 2 - 5
+
+### Box size: S 
 
 ### Location: MakerBox Lao
 

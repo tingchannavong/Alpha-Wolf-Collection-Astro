@@ -8,6 +8,7 @@ location: "LNT"
 playing_time: 10
 min_players: 1
 max_players: 5
+box_size: "M"
 ---
 # Fuse
 
@@ -18,6 +19,8 @@ Intruders have made their way onto your ship, and their goal is total destructio
 ### Playing Time: 10 minutes
 
 ### Players: 1 - 5
+
+### Box size: M 
 
 ### Location: LNT
 

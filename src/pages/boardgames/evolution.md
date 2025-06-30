@@ -8,6 +8,7 @@ location: "Nongnieng"
 playing_time: 60
 min_players: 2
 max_players: 6
+box_size: "M"
 ---
 # Evolution
 
@@ -18,6 +19,8 @@ In Evolution, players adapt their species in a dynamic ecosystem where food is s
 ### Playing Time: 60 minutes
 
 ### Players: 2 - 6
+
+### Box size: M 
 
 ### Location: Nongnieng
 

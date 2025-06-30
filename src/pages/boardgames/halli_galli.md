@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 10
 min_players: 2
 max_players: 6
+box_size: "M"
 ---
 # Halli Galli
 
@@ -18,6 +19,8 @@ Halli Galli is a speed action game in which players watch for sets of exactly fi
 ### Playing Time: 10 minutes
 
 ### Players: 2 - 6
+
+### Box size: M 
 
 ### Location: MakerBox Lao
 

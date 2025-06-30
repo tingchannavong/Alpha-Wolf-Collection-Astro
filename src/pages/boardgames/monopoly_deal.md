@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 15
 min_players: 2
 max_players: 3
+box_size: "S"
 ---
 # Monopoly Deal
 
@@ -18,6 +19,8 @@ From the back of the box:  Fast-dealing, card-stealing fun! Enjoy the rollercoas
 ### Playing Time: 15 minutes
 
 ### Players: 2 - 3
+
+### Box size: S 
 
 ### Location: MakerBox Lao
 

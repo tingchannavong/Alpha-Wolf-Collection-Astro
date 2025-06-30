@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 15
 min_players: 2
 max_players: 5
+box_size: "M"
 ---
 # Exploding Kittens
 
@@ -18,6 +19,8 @@ Exploding Kittens is a kitty-powered version of Russian Roulette. Players take t
 ### Playing Time: 15 minutes
 
 ### Players: 2 - 5
+
+### Box size: M 
 
 ### Location: MakerBox Lao
 

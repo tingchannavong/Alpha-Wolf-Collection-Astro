@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 120
 min_players: 1
 max_players: 4
+box_size: "M"
 ---
 # Exit The Game – Dead Man on the Orient Express
 
@@ -18,6 +19,8 @@ Exit: The Game &ndash; Dead Man on the Orient Express is a puzzle game modeled a
 ### Playing Time: 120 minutes
 
 ### Players: 1 - 4
+
+### Box size: M 
 
 ### Location: Lak6
 

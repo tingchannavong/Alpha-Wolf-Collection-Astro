@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 20
 min_players: 2
 max_players: 2
+box_size: "L"
 ---
 # Who Is It
 
@@ -18,6 +19,8 @@ The mystery face game where you flip over a collection of faces with different c
 ### Playing Time: 20 minutes
 
 ### Players: 2 - 2
+
+### Box size: L 
 
 ### Location: MakerBox Lao
 

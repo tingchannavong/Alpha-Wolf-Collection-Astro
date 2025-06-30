@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 20
 min_players: 2
 max_players: 8
+box_size: "M"
 ---
 # Sushi Go Party!
 
@@ -18,6 +19,8 @@ Sushi Go Party! expands Sushi Go! with a party platter of mega maki, super sashi
 ### Playing Time: 20 minutes
 
 ### Players: 2 - 8
+
+### Box size: M 
 
 ### Location: MakerBox Lao
 

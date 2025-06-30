@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 30
 min_players: 2
 max_players: 5
+box_size: "M"
 ---
 # Pandemic Contagion
 
@@ -18,6 +19,8 @@ After many years of trying to defeat the diseases that threaten mankind & existe
 ### Playing Time: 30 minutes
 
 ### Players: 2 - 5
+
+### Box size: M 
 
 ### Location: MakerBox Lao
 

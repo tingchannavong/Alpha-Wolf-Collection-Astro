@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 20
 min_players: 2
 max_players: 5
+box_size: "M"
 ---
 # Exploding Kittens NSFW Deck
 
@@ -18,6 +19,8 @@ Originally an expansion for Exploding Kittens, the most successful Kickstarer pr
 ### Playing Time: 20 minutes
 
 ### Players: 2 - 5
+
+### Box size: M 
 
 ### Location: MakerBox Lao
 

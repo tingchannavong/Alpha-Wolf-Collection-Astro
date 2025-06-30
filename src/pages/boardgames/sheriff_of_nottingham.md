@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 60
 min_players: 3
 max_players: 5
+box_size: "L"
 ---
 # Sheriff of Nottingham
 
@@ -18,6 +19,8 @@ Prince John is coming to Nottingham! Players, in the role of merchants, see this
 ### Playing Time: 60 minutes
 
 ### Players: 3 - 5
+
+### Box size: L 
 
 ### Location: Lak6
 

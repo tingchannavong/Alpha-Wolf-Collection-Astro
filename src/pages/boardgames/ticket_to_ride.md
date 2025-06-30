@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 60
 min_players: 2
 max_players: 5
+box_size: "L"
 ---
 # Ticket to Ride
 
@@ -18,6 +19,8 @@ With elegantly simple gameplay, Ticket to Ride can be learned in under 15 minute
 ### Playing Time: 60 minutes
 
 ### Players: 2 - 5
+
+### Box size: L 
 
 ### Location: MakerBox Lao
 

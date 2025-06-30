@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 60
 min_players: 2
 max_players: 6
+box_size: "L"
 ---
 # Ticket to Ride Map Asia
 
@@ -18,6 +19,8 @@ Days of Wonder's Ticket to Ride Map Collection is a series of expansions for Ala
 ### Playing Time: 60 minutes
 
 ### Players: 2 - 6
+
+### Box size: L 
 
 ### Location: MakerBox Lao
 

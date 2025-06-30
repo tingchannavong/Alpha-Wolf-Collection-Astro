@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 60
 min_players: 1
 max_players: 6
+box_size: "L"
 ---
 # Tiny Towns
 
@@ -18,6 +19,8 @@ You are the mayor of a tiny town in the forest in which the smaller creatures of
 ### Playing Time: 60 minutes
 
 ### Players: 1 - 6
+
+### Box size: L 
 
 ### Location: Lak6
 

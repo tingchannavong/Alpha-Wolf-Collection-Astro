@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 45
 min_players: 3
 max_players: 8
+box_size: "M"
 ---
 # Decrypto
 
@@ -18,6 +19,8 @@ Players compete in two teams in Decrypto, with each trying to correctly interpre
 ### Playing Time: 45 minutes
 
 ### Players: 3 - 8
+
+### Box size: M 
 
 ### Location: Lak6
 

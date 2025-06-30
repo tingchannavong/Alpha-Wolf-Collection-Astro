@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 30
 min_players: 3
 max_players: 7
+box_size: "L"
 ---
 # 7 Wonders
 
@@ -24,6 +25,8 @@ Each card is played immediately after being drafted, so you'll know which cards 
 ### Playing Time: 30 minutes
 
 ### Players: 3 - 7
+
+### Box size: L 
 
 ### Location: MakerBox Lao
 

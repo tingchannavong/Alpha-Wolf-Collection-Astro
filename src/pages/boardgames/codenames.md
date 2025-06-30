@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 15
 min_players: 2
 max_players: 8
+box_size: "M"
 ---
 # Codenames
 
@@ -18,6 +19,8 @@ Two rival spymasters know the secret identities of 25 agents. Their teammates kn
 ### Playing Time: 15 minutes
 
 ### Players: 2 - 8
+
+### Box size: M 
 
 ### Location: Lak6
 

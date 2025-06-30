@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 45
 min_players: 2
 max_players: 4
+box_size: "XL"
 ---
 # Pandemic
 
@@ -18,6 +19,8 @@ In Pandemic, several virulent diseases have broken out simultaneously all over t
 ### Playing Time: 45 minutes
 
 ### Players: 2 - 4
+
+### Box size: XL 
 
 ### Location: MakerBox Lao
 

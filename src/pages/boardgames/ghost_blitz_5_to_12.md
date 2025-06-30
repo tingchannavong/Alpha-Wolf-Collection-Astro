@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 20
 min_players: 2
 max_players: 8
+box_size: "M"
 ---
 # Ghost Blitz 5 to 12
 
@@ -18,6 +19,8 @@ The quick-playing reaction game Geisterblitz takes on new shape   and includes n
 ### Playing Time: 20 minutes
 
 ### Players: 2 - 8
+
+### Box size: M 
 
 ### Location: MakerBox Lao
 

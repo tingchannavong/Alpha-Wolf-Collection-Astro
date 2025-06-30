@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 15
 min_players: 2
 max_players: 8
+box_size: "M"
 ---
 # Codenames Pictures
 
@@ -18,6 +19,8 @@ What are these strange symbols on the map? They are code for locations where spi
 ### Playing Time: 15 minutes
 
 ### Players: 2 - 8
+
+### Box size: M 
 
 ### Location: MakerBox Lao
 

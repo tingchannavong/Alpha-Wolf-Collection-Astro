@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 30
 min_players: 3
 max_players: 99
+box_size: "M"
 ---
 # If you had to...
 
@@ -18,6 +19,8 @@ Convince the judge your card is the worst and win a point.
 ### Playing Time: 30 minutes
 
 ### Players: 3 - 99
+
+### Box size: M 
 
 ### Location: Lak6
 

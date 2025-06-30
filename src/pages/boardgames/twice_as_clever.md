@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 30
 min_players: 1
 max_players: 4
+box_size: "M"
 ---
 # Twice As Clever
 
@@ -18,6 +19,8 @@ Doppelt so clever follows the model of 2018's Ganz schön clever. Each turn the 
 ### Playing Time: 30 minutes
 
 ### Players: 1 - 4
+
+### Box size: M 
 
 ### Location: Lak6
 

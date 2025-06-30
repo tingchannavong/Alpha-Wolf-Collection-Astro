@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 45
 min_players: 2
 max_players: 5
+box_size: "M"
 ---
 # Carcassonne
 
@@ -18,6 +19,8 @@ Carcassonne is a tile-placement game in which the players draw and place a tile 
 ### Playing Time: 45 minutes
 
 ### Players: 2 - 5
+
+### Box size: M 
 
 ### Location: Lak6
 

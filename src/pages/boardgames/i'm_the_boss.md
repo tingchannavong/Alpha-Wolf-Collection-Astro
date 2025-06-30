@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 45
 min_players: 3
 max_players: 6
+box_size: "XL"
 ---
 # I'm the Boss
 
@@ -18,6 +19,8 @@ I'm the Boss!: The Card Game, a version of Sid Sackson's classic negotiation gam
 ### Playing Time: 45 minutes
 
 ### Players: 3 - 6
+
+### Box size: XL 
 
 ### Location: MakerBox Lao
 

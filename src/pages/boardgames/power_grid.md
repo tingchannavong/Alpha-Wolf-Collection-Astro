@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 120
 min_players: 2
 max_players: 6
+box_size: "XL"
 ---
 # Power Grid
 
@@ -18,6 +19,8 @@ Power Grid is the updated release of the Friedemann Friese crayon game Funkensch
 ### Playing Time: 120 minutes
 
 ### Players: 2 - 6
+
+### Box size: XL 
 
 ### Location: Lak6
 

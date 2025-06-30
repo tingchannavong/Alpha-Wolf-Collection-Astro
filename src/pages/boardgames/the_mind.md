@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 20
 min_players: 2
 max_players: 4
+box_size: "S"
 ---
 # The Mind
 
@@ -18,6 +19,8 @@ The Mind is more than just a game. It's an experiment, a journey, a team experie
 ### Playing Time: 20 minutes
 
 ### Players: 2 - 4
+
+### Box size: S 
 
 ### Location: MakerBox Lao
 

@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 20
 min_players: 4
 max_players: 10
+box_size: "L"
 ---
 # Taboo
 
@@ -18,6 +19,8 @@ In the party game Taboo, you're trying to give clues to your teammates so that t
 ### Playing Time: 20 minutes
 
 ### Players: 4 - 10
+
+### Box size: L 
 
 ### Location: Lak6
 

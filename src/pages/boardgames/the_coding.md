@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 25
 min_players: 2
 max_players: 4
+box_size: "S"
 ---
 # The Coding
 
@@ -18,6 +19,8 @@ The Coding is a deduction game where victory is acquired by intelligently outsma
 ### Playing Time: 25 minutes
 
 ### Players: 2 - 4
+
+### Box size: S 
 
 ### Location: MakerBox Lao
 

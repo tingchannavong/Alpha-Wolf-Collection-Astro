@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 60
 min_players: 3
 max_players: 8
+box_size: "M"
 ---
 # Truth or Drink The Card Game
 
@@ -18,6 +19,8 @@ A simple modular drinking card game by Cut.com, spun-off from their web-series T
 ### Playing Time: 60 minutes
 
 ### Players: 3 - 8
+
+### Box size: M 
 
 ### Location: Lak6
 

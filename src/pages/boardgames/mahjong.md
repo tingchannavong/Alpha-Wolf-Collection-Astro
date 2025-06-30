@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 120
 min_players: 3
 max_players: 4
+box_size: "S"
 ---
 # Mahjong
 
@@ -18,6 +19,8 @@ Mah-Jong (Chinese 麻將/麻将 game of the sparrow) is a traditional Chinese ga
 ### Playing Time: 120 minutes
 
 ### Players: 3 - 4
+
+### Box size: S 
 
 ### Location: Lak6
 

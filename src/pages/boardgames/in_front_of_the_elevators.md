@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 40
 min_players: 2
 max_players: 4
+box_size: "S"
 ---
 # In Front of the Elevators
 
@@ -18,6 +19,8 @@ In Front of the Elevators (エレベータ前で) is a card game in which you co
 ### Playing Time: 40 minutes
 
 ### Players: 2 - 4
+
+### Box size: S 
 
 ### Location: Lak6
 

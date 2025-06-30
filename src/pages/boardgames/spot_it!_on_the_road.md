@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 15
 min_players: 2
 max_players: 8
+box_size: "S"
 ---
 # Spot it! On the road
 
@@ -18,6 +19,8 @@ Spot it! On the Road uses the same game play as Spot it!, a simple pattern recog
 ### Playing Time: 15 minutes
 
 ### Players: 2 - 8
+
+### Box size: S 
 
 ### Location: Lak6
 

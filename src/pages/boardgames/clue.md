@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 45
 min_players: 2
 max_players: 6
+box_size: "L"
 ---
 # Clue
 
@@ -18,6 +19,8 @@ The classic detective game!  In Clue, players move from room to room in a mansio
 ### Playing Time: 45 minutes
 
 ### Players: 2 - 6
+
+### Box size: L 
 
 ### Location: MakerBox Lao
 

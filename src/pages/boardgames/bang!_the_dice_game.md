@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 15
 min_players: 3
 max_players: 8
+box_size: "M"
 ---
 # BANG! The Dice Game
 
@@ -18,6 +19,8 @@ In the U.S. wild west, the eternal battle between the law and the outlaws keeps 
 ### Playing Time: 15 minutes
 
 ### Players: 3 - 8
+
+### Box size: M 
 
 ### Location: Lak6
 

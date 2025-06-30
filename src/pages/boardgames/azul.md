@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 45
 min_players: 2
 max_players: 4
+box_size: "L"
 ---
 # Azul
 
@@ -18,6 +19,8 @@ Introduced by the Moors, azulejos (originally white and blue ceramic tiles) were
 ### Playing Time: 45 minutes
 
 ### Players: 2 - 4
+
+### Box size: L 
 
 ### Location: Lak6
 

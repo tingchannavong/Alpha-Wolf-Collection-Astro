@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 90
 min_players: 2
 max_players: 4
+box_size: "XL"
 ---
 # Root
 
@@ -18,6 +19,8 @@ Root is a game of adventure and war in which 2 to 4 (1 to 6 with the 'Riverfolk'
 ### Playing Time: 90 minutes
 
 ### Players: 2 - 4
+
+### Box size: XL 
 
 ### Location: MakerBox Lao
 

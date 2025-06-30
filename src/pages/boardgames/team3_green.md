@@ -8,6 +8,7 @@ location: "WHO"
 playing_time: 30
 min_players: 3
 max_players: 6
+box_size: "M"
 ---
 # TEAM3 GREEN
 
@@ -18,6 +19,8 @@ Three monkeys have started a construction company, and the building blueprints a
 ### Playing Time: 30 minutes
 
 ### Players: 3 - 6
+
+### Box size: M 
 
 ### Location: WHO
 

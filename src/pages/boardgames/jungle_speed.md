@@ -8,6 +8,7 @@ location: "MakerBox Lao, Lak6"
 playing_time: 10
 min_players: 2
 max_players: 10
+box_size: "M"
 ---
 # Jungle Speed
 
@@ -18,6 +19,8 @@ In Jungle Speed, you must rely on your keen sense of observation and quick refle
 ### Playing Time: 10 minutes
 
 ### Players: 2 - 10
+
+### Box size: M 
 
 ### Location: MakerBox Lao, Lak6
 

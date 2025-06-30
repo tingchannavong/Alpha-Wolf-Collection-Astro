@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 30
 min_players: 5
 max_players: 75
+box_size: "M"
 ---
 # Ultimate Werewolf
 
@@ -18,6 +19,8 @@ Ultimate Werewolf is an interactive game of deduction for two teams: Villagers a
 ### Playing Time: 30 minutes
 
 ### Players: 5 - 75
+
+### Box size: M 
 
 ### Location: MakerBox Lao
 

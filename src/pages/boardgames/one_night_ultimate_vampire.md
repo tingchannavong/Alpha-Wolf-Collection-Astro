@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 10
 min_players: 3
 max_players: 10
+box_size: "M"
 ---
 # One Night Ultimate Vampire
 
@@ -18,6 +19,8 @@ No moderator, no elimination, no werewolves.  In One Night Ultimate Vampire, the
 ### Playing Time: 10 minutes
 
 ### Players: 3 - 10
+
+### Box size: M 
 
 ### Location: MakerBox Lao
 

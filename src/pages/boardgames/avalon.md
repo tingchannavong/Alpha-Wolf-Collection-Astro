@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 30
 min_players: 5
 max_players: 10
+box_size: "M"
 ---
 # Avalon
 
@@ -18,6 +19,8 @@ The Resistance: Avalon pits the forces of Good and Evil in a battle to control t
 ### Playing Time: 30 minutes
 
 ### Players: 5 - 10
+
+### Box size: M 
 
 ### Location: MakerBox Lao
 

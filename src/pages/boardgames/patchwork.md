@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 30
 min_players: 2
 max_players: 2
+box_size: "M"
 ---
 # Patchwork
 
@@ -18,6 +19,8 @@ In Patchwork, two players compete to build the most aesthetic (and high-scoring)
 ### Playing Time: 30 minutes
 
 ### Players: 2 - 2
+
+### Box size: M 
 
 ### Location: Lak6
 

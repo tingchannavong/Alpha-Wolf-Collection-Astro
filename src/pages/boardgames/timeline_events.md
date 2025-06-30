@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 15
 min_players: 2
 max_players: 8
+box_size: "S"
 ---
 # Timeline Events
 
@@ -18,6 +19,8 @@ Timeline: Events is a card game played using 55 cards. Each card depicts a histo
 ### Playing Time: 15 minutes
 
 ### Players: 2 - 8
+
+### Box size: S 
 
 ### Location: Lak6
 

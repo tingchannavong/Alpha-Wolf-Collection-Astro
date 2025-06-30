@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 30
 min_players: 2
 max_players: 12
+box_size: "L"
 ---
 # Sequence
 
@@ -18,6 +19,8 @@ Sequence is a board and card game. The board shows all the cards (except for the
 ### Playing Time: 30 minutes
 
 ### Players: 2 - 12
+
+### Box size: L 
 
 ### Location: MakerBox Lao
 

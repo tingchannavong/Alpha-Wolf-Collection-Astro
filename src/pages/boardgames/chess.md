@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 0
 min_players: 2
 max_players: 2
+box_size: "M"
 ---
 # Chess
 
@@ -18,6 +19,8 @@ Chess is a two-player, abstract strategy board game that represents medieval war
 ### Playing Time: 0 minutes
 
 ### Players: 2 - 2
+
+### Box size: M 
 
 ### Location: Lak6
 

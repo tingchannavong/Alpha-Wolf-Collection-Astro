@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 15
 min_players: 2
 max_players: 8
+box_size: "S"
 ---
 # Spot it Holidays
 
@@ -20,6 +21,8 @@ Five challenging ways to play for hours of frenzied fun Develops focus, visual p
 ### Playing Time: 15 minutes
 
 ### Players: 2 - 8
+
+### Box size: S 
 
 ### Location: MakerBox Lao
 

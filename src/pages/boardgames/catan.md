@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 120
 min_players: 3
 max_players: 4
+box_size: "L"
 ---
 # Catan
 
@@ -18,6 +19,8 @@ In CATAN (formerly The Settlers of Catan), players try to be the dominant force 
 ### Playing Time: 120 minutes
 
 ### Players: 3 - 4
+
+### Box size: L 
 
 ### Location: Lak6
 

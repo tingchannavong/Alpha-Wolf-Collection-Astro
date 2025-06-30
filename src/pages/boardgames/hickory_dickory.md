@@ -8,6 +8,7 @@ location: "Nongnieng"
 playing_time: 120
 min_players: 1
 max_players: 4
+box_size: "L"
 ---
 # Hickory Dickory
 
@@ -18,6 +19,8 @@ In Hickory Dickory, players control a team of mice competing in a royal scavenge
 ### Playing Time: 120 minutes
 
 ### Players: 1 - 4
+
+### Box size: L 
 
 ### Location: Nongnieng
 

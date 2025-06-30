@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 15
 min_players: 2
 max_players: 6
+box_size: "M"
 ---
 # OrganATTACK!
 
@@ -18,6 +19,8 @@ Organ ATTACK! blends medically accurate terminology with immature potty humor.  
 ### Playing Time: 15 minutes
 
 ### Players: 2 - 6
+
+### Box size: M 
 
 ### Location: MakerBox Lao
 

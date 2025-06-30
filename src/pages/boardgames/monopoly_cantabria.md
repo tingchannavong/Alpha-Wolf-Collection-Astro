@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 180
 min_players: 2
 max_players: 6
+box_size: "XL"
 ---
 # Monopoly Cantabria
 
@@ -18,6 +19,8 @@ Discover the essence of Cantabria in this amazing edition of Monopoly.  Cantabri
 ### Playing Time: 180 minutes
 
 ### Players: 2 - 6
+
+### Box size: XL 
 
 ### Location: MakerBox Lao
 

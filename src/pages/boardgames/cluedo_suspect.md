@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 15
 min_players: 3
 max_players: 4
+box_size: "S"
 ---
 # Cluedo Suspect
 
@@ -18,6 +19,8 @@ This is a fast-playing stripped down version of the classic boardgame, Clue. Bas
 ### Playing Time: 15 minutes
 
 ### Players: 3 - 4
+
+### Box size: S 
 
 ### Location: MakerBox Lao
 

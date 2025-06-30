@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 15
 min_players: 1
 max_players: 8
+box_size: "L"
 ---
 # Magic Maze
 
@@ -18,6 +19,8 @@ Description from the publisher:  After being stripped of all their possessions, 
 ### Playing Time: 15 minutes
 
 ### Players: 1 - 8
+
+### Box size: L 
 
 ### Location: Lak6
 

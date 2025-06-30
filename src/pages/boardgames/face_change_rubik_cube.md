@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 20
 min_players: 2
 max_players: 4
+box_size: "M"
 ---
 # Face Change Rubik Cube
 
@@ -20,6 +21,8 @@ Good Social Game: The sturdy packaging box makes this toy portable. Kids can pla
 ### Playing Time: 20 minutes
 
 ### Players: 2 - 4
+
+### Box size: M 
 
 ### Location: Lak6
 

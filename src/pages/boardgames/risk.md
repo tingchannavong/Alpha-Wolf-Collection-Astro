@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 120
 min_players: 2
 max_players: 6
+box_size: "XL"
 ---
 # Risk
 
@@ -18,6 +19,8 @@ Possibly the most popular, mass market war game.  The goal is conquest of the wo
 ### Playing Time: 120 minutes
 
 ### Players: 2 - 6
+
+### Box size: XL 
 
 ### Location: MakerBox Lao
 

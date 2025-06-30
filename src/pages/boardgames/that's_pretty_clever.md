@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 30
 min_players: 1
 max_players: 4
+box_size: "M"
 ---
 # That's Pretty Clever
 
@@ -18,6 +19,8 @@ Choose your dice cleverly in Ganz sch&ouml;n clever (German for  That's Pretty C
 ### Playing Time: 30 minutes
 
 ### Players: 1 - 4
+
+### Box size: M 
 
 ### Location: Lak6
 

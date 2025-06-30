@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 15
 min_players: 2
 max_players: 6
+box_size: "S"
 ---
 # Timeline Classic
 
@@ -18,6 +19,8 @@ Timeline: Classic is a card game played using 55 cards. While other versions of 
 ### Playing Time: 15 minutes
 
 ### Players: 2 - 6
+
+### Box size: S 
 
 ### Location: Lak6
 

@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 15
 min_players: 2
 max_players: 5
+box_size: "S"
 ---
 # Misty
 
@@ -18,6 +19,8 @@ It's raining outside. The windows are misty, but covered in drawings. Players re
 ### Playing Time: 15 minutes
 
 ### Players: 2 - 5
+
+### Box size: S 
 
 ### Location: MakerBox Lao
 

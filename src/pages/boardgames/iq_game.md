@@ -8,6 +8,7 @@ location: "MakerBox Lao"
 playing_time: 15
 min_players: 1
 max_players: 2
+box_size: "S"
 ---
 # IQ Game
 
@@ -21,6 +22,8 @@ When solved, all puzzle pieces will fit on the game board without any holes unco
 ### Playing Time: 15 minutes
 
 ### Players: 1 - 2
+
+### Box size: S 
 
 ### Location: MakerBox Lao
 

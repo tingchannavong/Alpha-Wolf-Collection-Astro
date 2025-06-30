@@ -8,6 +8,7 @@ location: "Lak6"
 playing_time: 30
 min_players: 2
 max_players: 4
+box_size: "L"
 ---
 # Splendor
 
@@ -18,6 +19,8 @@ Splendor is a game of chip-collecting and card development. Players are merchant
 ### Playing Time: 30 minutes
 
 ### Players: 2 - 4
+
+### Box size: L 
 
 ### Location: Lak6
 
