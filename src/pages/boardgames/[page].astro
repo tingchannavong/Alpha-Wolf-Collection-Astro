@@ -28,7 +28,7 @@ const firstPath = pathname[1];
     <body>
         <section id="all-games-section" class="container">
             <h2>All Board Games</h2>
-            <p>These are all the board games in Alpha Wolf's collection and their designated location. </p>
+            <p>These are all the board games in Alpha Wolf's collection. </p>
             <!-- Section for sort / filter functions -->
             <div class="sort-filter-container">
                 <FilterCard/>  
@@ -53,7 +53,7 @@ const firstPath = pathname[1];
             </div>
         </section>
         <!-- Pagination Section -->
-        <section class="pagination-section container">
+        <section class="pagination-section">
             <!-- Dropdown for number of games per page -->
             <div class="show-results">
                 <label for="show">Show:</label>
@@ -65,7 +65,7 @@ const firstPath = pathname[1];
                 {page.url.first ? <a href={page.url.first}> First Page</a>: null}
             </div>
             {allGames.length > 10 ? (
-                <div>
+                <div class="page-number">
                   <Pagination 
                     length={page.lastPage} 
                     currentUrl={page.url.current} 

@@ -330,9 +330,10 @@ select:hover {
 /* Pagination Section */
 .pagination-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     margin-top: 30px;
+    margin-bottom: 5%;
 }
 
 .show-results {
@@ -823,7 +824,6 @@ button:hover {
     /* ^Footer Section */
     .footer {
         background-color: #121f40;
-        /* padding-right: 10%; */
     }
 
     .footer-nav {
@@ -839,28 +839,74 @@ button:hover {
     }
 
     .container {
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border-style: hidden;
-    overflow: auto; /* Or overflow: scroll; */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;
-    flex: 1 0 auto;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-style: hidden;
+        overflow: auto; /* Or overflow: scroll; */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;
+        flex: 1 0 auto;
     }
 
     .contact-container {
         display: flex;
         flex-direction: column;
         width: 100%;
-        border-style: ridge;
     }
 
     .contact-left-view{
         width: 100%;
         margin-top: 5%;
     }
+
+    .follow-right-view { 
+        width:  100%;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+    }
+
+    /* Row for social media */
+    .form-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .form-row h3{
+        width: 20%;
+        color: #601214;
+    }
+    .social-icon{
+        width: 50px;
+        height: 50px;
+    }
+    .social-link {
+        width: 50%;
+        text-align: left;
+        color: #601214;
+        padding: auto;
+        margin: auto;
+    }
+
+    .map-location {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .game-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .page-number {
+        display: block;
+        margin: 0 auto;
+    }
+
+
 
 }
 
