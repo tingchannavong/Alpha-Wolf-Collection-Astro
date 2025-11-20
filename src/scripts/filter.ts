@@ -289,6 +289,12 @@ playersSort.addEventListener("change", (event) => {
 
 // event listener when a page finishes loading
 window.addEventListener("DOMContentLoaded", () => {
+  const path = window.location.pathname;
+
+  if (path.match(/^\/boardgames\/\d+$/) || path === "/boardgames/1") {
+        return; 
+    } else {
+
   // Handle filters first 
     const catParams = new URLSearchParams(window.location.search).get("category");
     const locParams = new URLSearchParams(window.location.search).get("location");
@@ -315,5 +321,6 @@ window.addEventListener("DOMContentLoaded", () => {
     const sort_queries = extractSortParams();
 
     sortQuery(filteredData, sort_queries);
+      }
 
 });
