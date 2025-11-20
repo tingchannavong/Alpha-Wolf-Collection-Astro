@@ -1,12 +1,14 @@
 ---
 import Search from "../components/search-bar.astro";
 ---
-<header>
+</div>
     <div class="flex-container">
-        <div><img src="/logo.png" alt="Alpha Wolf Vientiane BoardGame Club" style="width:200px;height:90px;" class="logo"></div>
-        <div class="nav-bar"><nav>
-            <ul>
-                <li><a href="/" >Home</a></li>
+        <div class="logo-container">
+            <img src="/logo.png" alt="Alpha Wolf Vientiane BoardGame Club" style="width:200px;height:90px;" class="logo">
+        </div>
+        <div class="nav-block"><nav>
+            <ul id="my_links" class="nav-bar">
+                <li><a href="/">Home</a></li>
                 <li><a href="/boardgames/1" target="_blank">Board Games</a></li>
                 <li><a href="/categories">Services</a></li>
                 <li><a href="/about" >About us</a></li>
@@ -17,7 +19,8 @@ import Search from "../components/search-bar.astro";
             <Search/>
         </div>
             <!-- <div><a href="#" class="login-btn">Log in</a></div> -->
-        </div>
+    </div>
+</div>
 </header>
 
 <body>
@@ -25,15 +28,14 @@ import Search from "../components/search-bar.astro";
 </body>
 
 <footer class="footer">
-    <div class="footer-logo">
-        <img src="/logo.png" alt="Alpha Wolves Logo">
-    </div>
     <nav class="footer-nav">
-    	<li><a href="/">Home</a></li>
-        <li><a href="/boardgames/1" target="_blank">Board Games</a></li>
-        <li><a href="/categories">Services</a></li>
-        <li><a href="/about">About us</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/boardgames/1" target="_blank">Board Games</a></li>
+            <li><a href="/categories">Services</a></li>
+            <li><a href="/about">About us</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
     </nav>
 </footer>
 
@@ -41,3 +43,14 @@ import Search from "../components/search-bar.astro";
     <p class="copyright">© Copyright Happy Media. All Rights Reserved</p>
 </div>
 
+<!-- Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon -->
+<script>
+    function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+        }
+</script>

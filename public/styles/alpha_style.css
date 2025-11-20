@@ -1,3 +1,7 @@
+html {
+    height: 100%;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,305 +11,19 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    color: #121f40; /*blue*/
-    height: 100%;
+    color: #121f40; 
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-.contact-container {
-    display: flex;
-    width: 100%;
-}
-/*Right side follow us sytle*/
-.follow-right-view {
-    width: 50%;
-    padding-left: 60px;
-}
-/* Row for social media */
-.form-row {
-    display: flex;
-    gap: 15px;
-}
-.form-row h3{
-    width: 20%;
-    color: #601214;
-    padding-left: 5px;
-}
-.social-icon{
-    width: 50px;
-    height: 50px;
-}
-.social-link {
-    width: 50%;
-    text-align: left;
-    color: #feebbb;
-    padding: auto;
-    margin: auto;
-}
-.social-link:hover {
-    color: #0000EE;
+    max-width: 100%;
 }
 
-.contact-left-view{
-    width: 50%;
-    padding-right: 20px;
-}
-/* Title */
-.feedback-title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #00204a;
-    margin-bottom: 20px;
-    margin-top: 0px;
-}
-
-/* Form Layout */
-.feedback-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-/* Input Fields */
-.input-field {
-    background-color: #fde7c6;
-    border: none;
-    border-radius: 8px;
-    padding: 15px;
-    font-family: "Arial";
-    font-size: 1rem;
-    color: #333;
-    width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Full-width fields */
-.full-width {
-    width: 100%;
-}
-
-/* Textarea Field */
-.textarea-field {
-    height: 150px;
-    resize: none;
-}
-
-/* Submit Button */
-.submit-button {
-    background-color: #00204a;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    padding: 15px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    width: 106%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.submit-button:hover {
-    background-color: #601214;
-    color: white;
-}
-/*Game details style section*/
-.image-flex-container {
-    display: flex;
-    width: 45%;
-    height: 600px;
-    flex-direction: column;
-}
-.image-left-section {
-    width: 100%;
-    height: 70%;
-    border-radius: 8px;
-}
-.main-game-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-.game-gallery {
-    display: inline-grid;
-    justify-content: space-between;
-    padding: 1px 1px;
-    margin: auto;
-    grid-template-columns: auto auto auto auto;
-    height: 20%;
-}
-.game-images {
-    border-style: solid;
-    border-radius: 5px;
-    margin: 5px 5px 5px 2px;
-
-}
-.game-right-section {
-    width: 50%;
-    height: 100%;
-    margin: 0px;
-    padding-top: 0px;
-    padding-left: 15px;
-}
-.game-right-section p {
-   text-align: justify;
-}
-.how-to-play {
-    margin: 0;
-    padding: 0;
-    background-color: #601214; /*brown*/
-}
-.how-to-play h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #feebbb;
-}
-.carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.carousel-images {
-  width: 80%;
-  max-width: 600px;
-  height: auto;
-}
-
-.carousel img {
-  width: 100%;
-  display: none;
-}
-
-.carousel img.active {
-  display: block;
-}
-
-.prev-box {
-    width: 10%;
-    margin-left: 0;
-    left: 0;
-}
-
-.next-box {
-    width: 10%;
-    right: 0;
-    margin-right: 0;
-}
-
-button.prev, button.next {
-  background-color: #00204a;
-  color: white;
-  border: none;
-  padding: 10px;
-  font-size: 2em;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-}
-
-/*button.prev {
-  left: 0;
-  margin-left: 0;
-}
-
-button.next {
-  right: 0;
-  margin-right: 0;
-}*/
-
-button:hover {
-  background-color: #f9d361;
-  color: #00204a;
-}
-
-/* Page Counter (Dots) */
-.page-counter {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  padding-bottom: 20px;
-}
-
-.page-counter .dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 5px;
-  background-color: #ccc;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-.page-counter .dot.active {
-  background-color: #00204a;
-}
-
-/* my try on instruction part*/
-.instruction-flex {
-    display: flex;
-}
-.instruction-img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
-    width: 80%;
-    border: ridge;
-}
-.prev-next-btn {
-    background-color: #121f40;
-    color: #feebbb;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-.button-loc{
-    align-items: center;
-    justify-content: center;
-    border: solid;
-}
-/*start of about us image wrap*/
-.float-image {
-            float: left;
-            margin-right: 30px;
-            margin-bottom: 5px;
-            max-width: 300px;
-            border-radius: 8px;
-            border-style: solid;
-        }
-
-.image-text-wrap::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-.abous-us {
-    border-style: solid;
-    text-align: justify;
-}
-/*FLEXBOX for the HEADER section*/
+/*FLEXBOX for the ^HEADER section*/
 .flex-container {
     display: flex;
-    width: 80%;
-    margin: 0 auto;
-}
-/*CONTAINER for CATEGORIES / ALL GAMES section*/
-.container {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border-style: hidden;
-    overflow: auto; /* Or overflow: scroll; */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;
-    flex: 1 0 auto;
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: space-evenly;
 }
 
 header {
@@ -313,13 +31,19 @@ header {
     padding: 20px 0;
 }
 .logo {
-    width: 150px;
-    float: left;
+    width: 100%;
 }
+
 nav {
     margin: auto;
     text-align: center;
-    width: 550px;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 nav ul {
     list-style-type: none;
@@ -328,6 +52,7 @@ nav ul li {
     display: inline;
     margin-left: 20px;
     padding: 5px;
+    /* border-style: solid; */
 }
 nav ul li a {
     text-decoration: none;
@@ -339,14 +64,12 @@ nav ul li a:hover {
     color: #121f40;
     font-style: bold;
 }
-.nav-bar {
-    flex-grow: 1;
-    margin-right: 50px;
-}
+
 /*Search for boardgame in the header*/
 .search-bar {
-    float: right;
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .search-bar input {
     padding: 5px;
@@ -378,19 +101,34 @@ nav ul li a:hover {
     text-decoration: none;
     border: 1px solid;
 }
-/*CONTAINER for the WELCOME section*/
+
+/*^WELCOME section*/
 .welcome-container {
     display: flex;
-    width: 80%;
-    height: 590px;
+    flex-direction: row;
+    max-width: 80%;
+    height: 90vh;
     margin: 0 auto;
+    border-bottom: 5px solid black;
 }
+
 /*First thing ppl see on homepage*/
 .left-split-view {
-    margin: 150px 25px 240px 0px;
-    width: 40%;
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 25px 50px 0px;
+    width: 50%;
     padding-right: 20px;
+    justify-content: center;  /*horizontal alignment*/
+    /* align-items: center;  for vertical alignment*/
+}
+.right-split-view {
+    margin: 0px 0px 50px 15px;
+    max-width: 100%;
+}
+.cover-image {
+    max-width: 100%;
+    max-height: 100%;
 }
 .subtitle {
     font-family: "Times New Roman, Arial";
@@ -409,11 +147,25 @@ nav ul li a:hover {
     margin-top: 10px;
     margin-left: 1px;
 }
-/*grid container for categories by 3 columns*/
+
+/*^CONTAINER for CATEGORIES / ALL GAMES sections*/
+.container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-style: hidden;
+    overflow: auto; /* Or overflow: scroll; */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    flex: 1 0 auto;
+}
+
+/*^CATEGORIES section grid container by 3 columns*/
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  max-height: 1200px;
+  height: auto;
 }
 /*category item*/
 .category {
@@ -451,9 +203,7 @@ nav ul li a:hover {
     margin-top: 20px;
 }
 
-/* POPULAR Section */
-
-/* Sort and Filter Container Styling */
+/* ^Sort and Filter Container Styling All Games Page */
 .sort-filter-container {
     display: flex;
     flex-wrap: wrap;
@@ -491,60 +241,7 @@ select:hover {
     border-color: #601214;
 }
 
-/* Responsive for small screens */
-@media (max-width: 768px) {
-    .sort-filter-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .sort, .filter {
-        margin-bottom: 10px;
-    }
-
-    label {
-        margin-bottom: 5px;
-    }
-}
-/* Events Styling at About Us page*/
-.event-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px;
-}
-.event-details {
-    flex-grow: 1;
-}
-.event-image {
-    float: left;
-    width: 150px;
-    height: auto;
-    margin-right: 20px;
-    border-radius: 10px;
-}
-.event-title {
-    display: inline-block;
-    font-size: 1.5rem;
-    color: #121f40;
-    margin-bottom: 5px;
-    vertical-align: middle;
-}
-
-.event-description {
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-.event-category {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.event-location {
-    color: #666;
-}
-/* All Games Styling */
+/* ^All Games Styling */
 .grid-list {
     display: grid;
     grid-template-columns: 1fr;
@@ -686,178 +383,7 @@ select:hover {
     color: white;
 }
 
-/* Footer Section */
-.footer {
-    background-color: #121f40;
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.footer-logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.footer-logo img {
-    width: 80px;
-    height: auto;
-}
-
-.footer-nav {
-    width: 100%;
-    margin: 10px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-.footer-nav a {
-    text-decoration: none;
-    text-align: center;
-    color: #f7b01a;
-    font-size: 1.2rem;
-    font-family: "Times";
-}
-
-.footer-nav a:hover {
-    color: white;
-}
-
-.copyright-section {
-    height: 20px;
-    margin: 0;
-    background-color: #f7b01a;
-}
-.copyright {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: black;
-    text-align: center;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .game-item {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .pagination-section {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .footer-nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7b01a; /*yellow*/
-    color: #121f40; /*blue*/
-}
-.contact-container {
-    display: flex;
-    width: 100%;
-}
-/*Right side follow us sytle*/
-.follow-right-view {
-    width: 50%;
-    padding-left: 60px;
-}
-/* Row for social media */
-.form-row {
-    display: flex;
-    gap: 15px;
-}
-.form-row h3{
-    width: 20%;
-    color: #601214;
-    padding-left: 5px;
-}
-.social-icon{
-    width: 50px;
-    height: 50px;
-}
-.social-link {
-    width: 50%;
-    text-align: left;
-    color: #feebbb;
-    padding: auto;
-    margin: auto;
-}
-.social-link:hover {
-    color: #0000EE;
-}
-
-.contact-left-view{
-    width: 50%;
-    padding-right: 20px;
-}
-/* Title */
-.feedback-title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #00204a;
-    margin-bottom: 20px;
-    margin-top: 0px;
-}
-
-/* Form Layout */
-.feedback-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-/* Input Fields */
-.input-field {
-    background-color: #fde7c6;
-    border: none;
-    border-radius: 8px;
-    padding: 15px;
-    font-family: "Arial";
-    font-size: 1rem;
-    color: #333;
-    width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Full-width fields */
-.full-width {
-    width: 100%;
-}
-
-/* Textarea Field */
-.textarea-field {
-    height: 150px;
-    resize: none;
-}
-
-/* Submit Button */
-.submit-button {
-    background-color: #00204a;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    padding: 15px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    width: 106%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.submit-button:hover {
-    background-color: #601214;
-    color: white;
-}
-/*Game details style section*/
+/*^GAME DETAILS style section*/
 .image-flex-container {
     display: flex;
     width: 45%;
@@ -899,6 +425,7 @@ body {
 .game-right-section p {
    text-align: justify;
 }
+
 .how-to-play {
     margin: 0;
     padding: 0;
@@ -1019,7 +546,8 @@ button:hover {
     justify-content: center;
     border: solid;
 }
-/*start of about us image wrap*/
+
+/*^ABOUT US section image wrap*/
 .float-image {
             float: left;
             margin-right: 30px;
@@ -1038,215 +566,8 @@ button:hover {
     border-style: solid;
     text-align: justify;
 }
-/*FLEXBOX for the HEADER section*/
-.flex-container {
-    display: flex;
-    width: 80%;
-    margin: 0 auto;
-}
-/*CONTAINER for CATEGORIES / ALL GAMES section*/
-.container {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border-style: hidden;
-}
 
-header {
-    background-color: #f7b01a;
-    padding: 20px 0;
-}
-.logo {
-    width: 150px;
-    float: left;
-}
-nav {
-    margin: auto;
-    text-align: center;
-    width: 550px;
-}
-nav ul {
-    list-style-type: none;
-}
-nav ul li {
-    display: inline;
-    margin-left: 20px;
-    padding: 5px;
-}
-nav ul li a {
-    text-decoration: none;
-    color: #121f40;
-    font-style: bold;
-}
-nav ul li a:hover {
-    border-bottom: 2px solid;
-    color: #121f40;
-    font-style: bold;
-}
-/*Search for boardgame in the header*/
-.search-bar {
-    float: right;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-.search-bar input {
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-.login-btn {
-    background-color: #121f40;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    float: right;
-    margin-top: 10px;
-    margin-left: 20px;
-}
-.back-btn {
-    background-color: #f7b01a;
-    color: #121f40;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-.back-btn:hover {
-    background-color: #f7b01a;
-    color: #121f40;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    border: 1px solid;
-}
-/*CONTAINER for the WELCOME section*/
-.welcome-container {
-    display: flex;
-    width: 80%;
-    height: 590px;
-    margin: 0 auto;
-}
-/*First thing ppl see on homepage*/
-.left-split-view {
-    margin: 150px 25px 240px 0px;
-    width: 40%;
-    height: auto;
-    padding-right: 20px;
-}
-.subtitle {
-    font-family: "Times New Roman, Arial";
-    font-size: 12px;
-    font-style: italic;
-    color:blue;
-    text-decoration-line: underline;
-}
-.started-btn {
-    background-color: #121f40;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    float: left;
-    margin-top: 10px;
-    margin-left: 1px;
-}
-/*grid container for categories by 3 columns*/
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  max-height: 1200px;
-}
-/*category item*/
-.category {
-    border-radius: 10px;
-    border: solid #121f40;
-    padding: 20px;
-    width: 75%;
-    height: 20%;
-    margin: auto;
-    transition: transform 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #601214;
-    color: #feebbb;
-}
-.category:hover{
-    transform: scale(1.05); /* Slightly enlarges the box on hover */
-}
-.category h3 {
-    font-size: 14px;
-    margin: 0;
-}
-.category span {
-    font-size: 12px;
-    font-weight: bold;
-}
-.category-icon {
-    width: 30px;
-    vertical-align: middle;
-    margin-right: 10px;
-}
-.see-more {
-    text-align: right;
-    margin-top: 20px;
-}
-
-/* POPULAR Section */
-
-/* Sort and Filter Container Styling */
-.sort-filter-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-radius: 5px;
-    margin: 5px auto;
-}
-
-.sort, .filter {
-    display: flex;
-    align-items: center;
-}
-
-label {
-    font-weight: bold;
-    color: #121f40;
-    margin-right: 10px;
-}
-
-select {
-    padding: 10px;
-    border: 2px solid #121f40;
-    border-radius: 5px;
-    background-color: #feebbb;
-    font-size: 1rem;
-    color: #333;
-    cursor: pointer;
-    transition: border-color 0.3s ease;
-}
-
-select:hover {
-    border-color: #601214;
-}
-
-/* Responsive for small screens */
-@media (max-width: 768px) {
-    .sort-filter-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .sort, .filter {
-        margin-bottom: 10px;
-    }
-
-    label {
-        margin-bottom: 5px;
-    }
-}
-/* Events Styling at About Us page*/
+/* ^Events Styling at About Us page*/
 .event-item {
     display: flex;
     justify-content: space-between;
@@ -1284,148 +605,102 @@ select:hover {
 .event-location {
     color: #666;
 }
-/* All Games Styling */
-.grid-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    max-height: 1200px;
-}
 
-.game-item {
+/*^CONTACT section style*/
+.contact-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 15px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border-style: solid;
-    max-width: 100%;
+    width: 100%;
 }
 
-.game-image-container {
-    flex-shrink: 0;
-    max-width: 150px;
-    }
-
-.game-image {
-    width: 150px;
-    height: auto;
-    margin-right: 20px;
-    border-radius: 10px;
+/*Right side follow us sytle*/
+.follow-right-view { 
+    width: 50%;
+    padding-left: 60px;
 }
-/*consider using grid-row universal format*/
-.game-details {
-    flex-grow: 1;
-    max-width: 400px; /* Restrict the width of the details */
-    overflow: hidden;
-    margin-right: 15px; /* Add space between details and "Read more" button */
+/* Row for social media */
+.form-row {
+    display: flex;
+    gap: 15px;
 }
-
-.game-title {
-    font-size: 1.5rem;
-    color: #121f40;
-    margin-bottom: 5px;
+.form-row h3{
+    width: 20%;
+    color: #601214;
+    padding-left: 5px;
 }
-
-.game-description {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    margin-right: 15px;
+.social-icon{
+    width: 50px;
+    height: 50px;
+}
+.social-link {
+    width: 50%;
     text-align: left;
+    color: #feebbb;
+    padding: auto;
+    margin: auto;
+}
+.social-link:hover {
+    color: #0000EE;
 }
 
-.game-category {
+.contact-left-view{
+    width: 50%;
+    padding-right: 20px;
+}
+
+.feedback-title {
+    font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 5px;
+    color: #00204a;
+    margin-bottom: 20px;
+    margin-top: 0px;
 }
 
-.game-location {
-    color: #666;
-}
-/*consider using grid-row*/
-.game-meta { 
-    flex-shrink: 0;
-    text-align: right;
-    min-width: 150px; /* Ensure uniform width for the button container */
+
+.feedback-form {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.game-meta p {
-    margin: 5px 0;
-    text-align: right;
-}
-.game-read-more {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #121f40;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-.game-read-more:hover {
-    background-color: black;
-}
-/* Not used at the moment game views, likes etc.*/
-.game-views, .game-likes {
-    font-size: 0.9rem;
-    color: #121f40;
-}
-
-/* Pagination Section */
-.pagination-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.show-results {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.show-results select {
-    padding: 5px;
+.input-field {
+    background-color: #fde7c6;
     border: none;
-    border-radius: 5px;
-}
-
-.pagination {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.pagination-btn {
-    color: #121f40;
-    background-color: #f7b01a; 
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 8px;
+    padding: 15px;
+    font-family: "Arial";
     font-size: 1rem;
+    color: #333;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.pagination-btn-next a:link {
-    background-color: #121f40;
-    color: white;
+.full-width {
+    width: 100%;
+}
+
+.textarea-field {
+    height: 150px;
+    resize: none;
+}
+
+.submit-button {
+    background-color: #00204a;
+    color: #ffffff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 1.2rem;
     cursor: pointer;
-    font-size: 1rem;
+    width: 106%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.pagination-btn a:hover, .pagination-btn-next a:hover {
-    background-color: #121f40;
+.submit-button:hover {
+    background-color: #601214;
     color: white;
 }
 
-/* Footer Section */
+/* ^Footer Section */
 .footer {
     background-color: #121f40;
     color: white;
@@ -1478,20 +753,114 @@ select:hover {
     text-align: center;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .game-item {
+.map-location {
+    width: 80%;
+}
+
+/* Responsive Designs here */
+@media screen and (max-width: 431px) {
+
+    .flex-container {
+        display: flex;
         flex-direction: column;
-        text-align: center;
+        width: 100vh;
+        justify-content: space-between;
+        margin: 0 auto;
     }
 
-    .pagination-section {
+    .logo-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo {
+        max-width: 100%;
+        margin: 5% 5% 5% 5%;
+    }
+
+    .search-bar {
+        margin-left: 5%;
+        margin-top: 5%;
+        
+    }
+
+    .welcome-container {
+        display: flex;
         flex-direction: column;
-        gap: 20px;
+        max-width: 100%;
+        height: 80%;
+        margin: 0 auto;
+    }
+
+    .left-split-view {
+        display: flex;
+        flex-direction: column;
+        max-width: 100vh;
+        margin-left: 5%;
+        justify-content: center;  /* for horizontal alignment*/
+        align-items: center;  
+    }
+
+    .right-split-view {
+        margin: 0 0 0 0;
+    }
+
+     .nav-block {
+        background-color: #121f40;
+    }
+    .nav-bar {
+        display: flex;
+        flex-direction: column;
+        padding-right: 5%;
+    }
+
+    nav ul li a {
+        text-decoration: underline;
+        color: white;
+        font-style: bold;
+    }
+
+    /* ^Footer Section */
+    .footer {
+        background-color: #121f40;
+        /* padding-right: 10%; */
     }
 
     .footer-nav {
+        display: flex;
         flex-direction: column;
-        gap: 10px;
     }
+
+    .footer-nav ul li a {
+        text-decoration: underline;
+        color: #f7b01a;
+        font-size: 1.2rem;
+        font-family: "Times";
+    }
+
+    .container {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-style: hidden;
+    overflow: auto; /* Or overflow: scroll; */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    flex: 1 0 auto;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-style: ridge;
+    }
+
+    .contact-left-view{
+        width: 100%;
+        margin-top: 5%;
+    }
+
 }
+

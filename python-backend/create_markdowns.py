@@ -123,3 +123,5 @@ def validate_length(text, max_length):
 # update_markdown_from_sheet(sheet, 3, 90)
 
 output_folder = r"C:\Users\Macbook pro\Desktop\AWsite\src\pages\boardgames"
+
+# bulk_create_mds(sheet, 90, 91, output_folder)
