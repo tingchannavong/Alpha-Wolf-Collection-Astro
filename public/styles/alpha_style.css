@@ -906,6 +906,13 @@ button:hover {
         margin: 0 auto;
     }
 
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
 
 
 }
