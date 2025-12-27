@@ -1,0 +1,25 @@
+DOCUMENTATION FOR ALPHA WOLF ASTRO SITE:
+
+STEPS TO ADD NEW GAME
+
+# 1. Get game infor via API 
+w/ loop_sheet_find_game(sheet, image_folder, manual_search)
+
+# 2. Fix text and get short description 
+w/ loop_range_fnr_1s(sheet, 91, 92)
+
+# 3. Fix file path name 
+w/ replace_spaces_in_filepath(sheet, "G", 91, 92)
+
+# 4. Bulk create markdowns 
+w/ bulk_create_mds(sheet, 89, 92, output_folder)
+
+npm run dev
+
+http://localhost:4321/
+
+npm run build
+
+
+
+
