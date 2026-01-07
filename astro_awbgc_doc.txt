@@ -1,5 +1,12 @@
 DOCUMENTATION FOR ALPHA WOLF ASTRO SITE:
 
+Set up in new computer >>
+In root:
+1. download nvm: node version manager
+2. download node.js
+In project folder:
+1. npm install
+
 STEPS TO ADD NEW GAME
 
 # 1. Get game infor via API 
