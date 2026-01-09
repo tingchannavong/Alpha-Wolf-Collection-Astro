@@ -1,11 +1,26 @@
 DOCUMENTATION FOR ALPHA WOLF ASTRO SITE:
 
-Set up in new computer >>
+STEPS SET UP ASTRO PROJECT IN NEW COMPUTER >>
 In root:
-1. download nvm: node version manager
-2. download node.js
+	1. download nvm: node version manager
+	2. download node.js
+	3.  DONE!
+
 In project folder:
-1. npm install
+	1. npm install
+	2. DONE!
+
+STEPS TO AUTHORIZE EZSHEETS:
+	1. Authorize Google sheet and google drive API in google cloud console
+		- https://console.developers.google.com/apis/library/sheets.googleapis.com/
+		- https://console.developers.google.com/apis/library/drive.googleapis.com/
+	2. If re-auth, delete credentials.json, & 2 pickle files
+	3. In existing google cloud project (or new), go to Branding page & create app for external audience.
+	4. Go to Audience page, add test user's email.
+	5. Go to clients, create (+) OAuth client ID for desktop app & download json file.
+	6. Copy json file to put in your project folder and rename as "credentials.json".
+	7. Run the python project & log in to ur google account when prompted, this will auto create the  2 new pickle files.
+	8. DONE!
 
 STEPS TO ADD NEW GAME
 
@@ -21,11 +36,11 @@ w/ replace_spaces_in_filepath(sheet, "G", 91, 92)
 # 4. Bulk create markdowns 
 w/ bulk_create_mds(sheet, 89, 92, output_folder)
 
-npm run dev
+npm run dev - for testing
 
 http://localhost:4321/
 
-npm run build
+npm run build - to create list /dist file
 
 
 

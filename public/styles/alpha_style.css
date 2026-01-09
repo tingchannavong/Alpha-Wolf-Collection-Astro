@@ -52,7 +52,6 @@ nav ul li {
     display: inline;
     margin-left: 20px;
     padding: 5px;
-    /* border-style: solid; */
 }
 nav ul li a {
     text-decoration: none;
@@ -912,8 +911,5 @@ button:hover {
         height: auto;
         gap: 10px;
     }
-
-
-
 }
 
