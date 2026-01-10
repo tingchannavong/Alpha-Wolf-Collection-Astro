@@ -57,3 +57,233 @@
 <div class="copyright-section">
     <p class="copyright">© Copyright Happy Media. All Rights Reserved</p>
 </div>
+
+<style is:global>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7b01a; /*yellow*/
+    color: #121f40; /*blue*/
+}
+
+/*FLEXBOX for the ^HEADER section*/
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: space-evenly;
+}
+
+header {
+    background-color: #f7b01a;
+    padding: 20px 0;
+}
+.logo {
+    width: 100%;
+}
+
+nav {
+    margin: auto;
+    text-align: center;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+nav ul {
+    list-style-type: none;
+}
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+    padding: 5px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #121f40;
+    font-style: bold;
+}
+nav ul li a:hover {
+    border-bottom: 2px solid;
+    color: #121f40;
+    font-style: bold;
+}
+
+/*Search for boardgame in the header*/
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-bar input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.login-btn {
+    background-color: #121f40;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    float: right;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.back-btn {
+    background-color: #f7b01a;
+    color: #121f40;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.back-btn:hover {
+    background-color: #f7b01a;
+    color: #121f40;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid;
+}
+
+/*^CONTAINER for CATEGORIES / ALL GAMES sections*/
+.container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-style: hidden;
+    overflow: auto; /* Or overflow: scroll; */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    flex: 1 0 auto;
+}
+/* ^Footer Section */
+.footer {
+    background-color: #121f40;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    width: 80px;
+    height: auto;
+}
+
+.footer-nav {
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    text-align: center;
+    color: #f7b01a;
+    font-size: 1.2rem;
+    font-family: "Times";
+}
+
+.footer-nav a:hover {
+    color: white;
+}
+
+.copyright-section {
+    height: 20px;
+    margin: 0;
+    background-color: #f7b01a;
+}
+.copyright {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: black;
+    text-align: center;
+}
+
+/* Responsive Designs here */
+@media screen and (max-width: 431px) {
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        width: 100vh;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    /* header section */
+    .logo-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo {
+        max-width: 100%;
+        margin: 5% 5% 5% 5%;
+    }
+
+    .search-bar {
+        margin-left: 5%;
+        margin-top: 5%;
+        
+    }
+
+    .nav-block {
+        background-color: #121f40;
+    }
+    .nav-bar {
+        display: flex;
+        flex-direction: column;
+        padding-right: 5%;
+    }
+
+    nav ul li a {
+        text-decoration: underline;
+        color: white;
+        font-style: bold;
+    }
+
+    /* ^Footer Section */
+    .footer {
+        background-color: #121f40;
+    }
+
+    .footer-nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-nav ul li a {
+        text-decoration: underline;
+        color: #f7b01a;
+        font-size: 1.2rem;
+        font-family: "Times";
+    }
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-style: hidden;
+        overflow: auto; /* Or overflow: scroll; */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;
+        flex: 1 0 auto;
+    }
+}
+
+</style>
