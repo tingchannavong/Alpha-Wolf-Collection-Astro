@@ -177,7 +177,6 @@ nav ul li a:hover {
     transition: transform 0.3s ease;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     background-color: #601214;
     color: #feebbb;
 }
@@ -194,8 +193,7 @@ nav ul li a:hover {
 }
 .category-icon {
     width: 30px;
-    vertical-align: middle;
-    margin-right: 10px;
+    margin-right: 10px;;
 }
 .see-more {
     text-align: right;
