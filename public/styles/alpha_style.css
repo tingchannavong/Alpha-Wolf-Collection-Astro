@@ -803,7 +803,7 @@ button:hover {
         margin: 0 0 0 0;
     }
 
-     .nav-block {
+    .nav-block {
         background-color: #121f40;
     }
     .nav-bar {
@@ -909,5 +909,13 @@ button:hover {
         height: auto;
         gap: 10px;
     }
+
+    .carousel-container {
+    display: flex; 
+    flex-shrink: 0;
+    overflow-x: auto;
+    scroll-snap-type:mandatory;
+    }
+
 }
 
