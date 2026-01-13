@@ -1,0 +1,53 @@
+---
+import MainLayout from "../../layouts/main-layout.astro";
+const allGames = await Astro.glob("./*.md");
+
+export async function getStaticPaths({ paginate }) {
+    const allGames = await Astro.glob("./*.md");
+
+    return paginate(allGames, { pageSize : 10});
+}
+
+const { manual } = Astro.props;
+const pathname = new URL(Astro.request.url).pathname.split('/');
+const firstPath = pathname[1];
+
+---
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/alpha_style.css">
+    <title>Instruction</title>
+</head>
+
+<MainLayout>
+    <body>
+        <section id="all-games-section" class="container">
+            <h2>All Board Games</h2>
+            <p>These are all the board games in Alpha Wolf's collection. </p>
+            <!-- Section for sort / filter functions -->
+            <div class="sort-filter-container">
+                <FilterCard/>  
+            </div>
+            <!-- Game list starts here -->
+            <div class="grid-list">
+                <!-- Render paginated game items -->
+                {page.data.map((game) => (
+                    <Card
+                        title={game.frontmatter.title}
+                        body={game.frontmatter.description}
+                        href={game.url}
+                        img={game.frontmatter.image}
+                        category={game.frontmatter.category}
+                        location={game.frontmatter.location}
+                        min_players={game.frontmatter.min_players}
+                        max_players={game.frontmatter.max_players}
+                        playing_time={game.frontmatter.playing_time}
+                        box_size={game.frontmatter.box_size}
+                    />
+                ))}
+            </div>
+        </section>
+    </body>
+    
+</MainLayout>
