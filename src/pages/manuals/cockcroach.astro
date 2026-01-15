@@ -1,0 +1,26 @@
+---
+import MainLayout from "../../layouts/main-layout.astro";
+const { page } = Astro.props;
+---
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/alpha_style.css">
+    <title></title>
+</head>
+
+<MainLayout>
+    <body>
+        <div class="container">
+            <div class="carousel-wrapper">
+            <div class="gallery">
+                <img src="/manual/mono1.png" alt="" class="gallery-img">
+                <img src="/manual/mono2.png" alt="" class="gallery-img">
+            </div>    
+            </div> 
+            <nav class="lil-nav"></nav>
+        </div>
+    </body>
+</MainLayout>
+   
