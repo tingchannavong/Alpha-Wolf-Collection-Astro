@@ -8,6 +8,8 @@ export async function getStaticPaths({ paginate }) {
     return paginate(allGames, { pageSize : 10});
 }
 
+const { page } = Astro.props;
+
 const { manual } = Astro.props;
 const pathname = new URL(Astro.request.url).pathname.split('/');
 const firstPath = pathname[1];
