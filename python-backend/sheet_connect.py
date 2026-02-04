@@ -90,8 +90,8 @@ search = get_row_games_id(sheet, 93, 110)
 
 loop_sheet_find_game(sheet, image_folder, search)
 
-loop_range_fnr_1s(sheet, 93, 110)
+# loop_range_fnr_1s(sheet, 93, 110)
 
-replace_spaces_in_filepath(sheet, "G", 93, 110)
+# replace_spaces_in_filepath(sheet, "G", 93, 110)
 
 # bulk_create_mds(sheet, 3, 93, output_folder)

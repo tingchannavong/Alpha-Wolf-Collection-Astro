@@ -25,12 +25,13 @@ def get_board_game_info_by_id(board_game, bgg_game_id, image_folder='board_game_
     
     try:
         # Use the game ID to fetch detailed information
-        detail_url = f'https://www.boardgamegeek.com/xmlapi/boardgame/{game_id}?stats=1'
+        detail_url = f'https://boardgamegeek.com/xmlapi2/thing?id={game_id}&stats=1'
         response = requests.get(detail_url, headers=headers)
         response.raise_for_status()
         
         # Parse the response XML
         root = ET.fromstring(response.content)
+        print(root)
 
         # Extract the desired information
         description_elem = root.find('.//description')
@@ -40,16 +41,19 @@ def get_board_game_info_by_id(board_game, bgg_game_id, image_folder='board_game_
         image_url = image_elem.text if image_elem is not None else None
         
         playing_time_elem = root.find('.//playingtime')
-        playing_time = playing_time_elem.text if playing_time_elem is not None else "Not specified"
+        playing_time = playing_time_elem.get('value') if playing_time_elem is not None else "Not specified"
         
         min_players_elem = root.find('.//minplayers')
-        min_players = min_players_elem.text if min_players_elem is not None else "Not specified"
+        min_players = min_players_elem.get('value') if min_players_elem is not None else "Not specified"
         
         max_players_elem = root.find('.//maxplayers')
-        max_players = max_players_elem.text if max_players_elem is not None else "Not specified"
+        max_players = max_players_elem.get('value') if max_players_elem is not None else "Not specified"
         
-        categories_elems = root.findall('.//boardgamecategory')
-        categories = ', '.join(category.text for category in categories_elems) if categories_elems else "Not specified"
+        categories_elems = root.findall(".//link[@type='boardgamecategory']")
+        categories = ', '.join(cat.get('value') for cat in categories_elems) if categories_elems else "Not specified"
+
+        min_age_elem = root.find('.//minage')
+        min_age = min_age_elem.get('value') if min_age_elem is not None else "Not specified"
         
         # Download and save the image to the specified folder
         if image_url:
@@ -72,6 +76,7 @@ def get_board_game_info_by_id(board_game, bgg_game_id, image_folder='board_game_
             'Minimum Players': min_players,
             'Maximum Players': max_players,
             'Categories': categories,
+            'Age' : min_age,
             'Image URL': img_url #filepath saved locally in /public
         }
     except Exception as e:
@@ -79,9 +84,8 @@ def get_board_game_info_by_id(board_game, bgg_game_id, image_folder='board_game_
         return None
     
 def get_board_game_info(board_game, image_folder='board_game_images'):
-
     """Fetch board game information from BoardGameGeek"""
-    search_url = f'https://www.boardgamegeek.com/xmlapi/search?search={board_game}&exact=1'
+    search_url = f'https://boardgamegeek.com/xmlapi2/search?query={board_game}&exact=1'
     
     try:
         response = requests.get(search_url, headers=headers)
@@ -91,18 +95,18 @@ def get_board_game_info(board_game, image_folder='board_game_images'):
         root = ET.fromstring(response.content)
         
         # Get the first search result (assuming it's the most relevant)
-        boardgame = root.find('.//boardgame')
+        boardgame = root.find('.//item')
         if boardgame is None:
             print(f"No information found for {board_game}.")
             return None
         
-        game_id = boardgame.attrib.get('objectid')
+        game_id = boardgame.attrib.get('id')
         if not game_id:
             print(f"No game ID found for {board_game}.")
             return None
         
         # Use the game ID to fetch detailed information
-        detail_url = f'https://www.boardgamegeek.com/xmlapi/boardgame/{game_id}?stats=1'
+        detail_url = f'https://boardgamegeek.com/xmlapi2/thing?id={game_id}&stats=1'
         response = requests.get(detail_url, headers=headers)
         response.raise_for_status()
         
@@ -117,17 +121,20 @@ def get_board_game_info(board_game, image_folder='board_game_images'):
         image_url = image_elem.text if image_elem is not None else None
         
         playing_time_elem = root.find('.//playingtime')
-        playing_time = playing_time_elem.text if playing_time_elem is not None else "Not specified"
+        playing_time = playing_time_elem.get('value') if playing_time_elem is not None else "Not specified"
         
         min_players_elem = root.find('.//minplayers')
-        min_players = min_players_elem.text if min_players_elem is not None else "Not specified"
+        min_players = min_players_elem.get('value') if min_players_elem is not None else "Not specified"
         
         max_players_elem = root.find('.//maxplayers')
-        max_players = max_players_elem.text if max_players_elem is not None else "Not specified"
+        max_players = max_players_elem.get('value') if max_players_elem is not None else "Not specified"
         
-        categories_elems = root.findall('.//boardgamecategory')
-        categories = ', '.join(category.text for category in categories_elems) if categories_elems else "Not specified"
-        
+        categories_elems = root.findall(".//link[@type='boardgamecategory']")
+        categories = ', '.join(cat.get('value') for cat in categories_elems) if categories_elems else "Not specified"
+
+        min_age_elem = root.find('.//minage')
+        min_age = min_age_elem.get('value') if min_age_elem is not None else "Not specified"
+
         # Download and save the image to the specified folder
         if image_url:
             if not os.path.exists(image_folder):
@@ -149,6 +156,7 @@ def get_board_game_info(board_game, image_folder='board_game_images'):
             'Minimum Players': min_players,
             'Maximum Players': max_players,
             'Categories': categories,
+            'Age' : min_age,
             'Image URL': img_url #filepath saved locally in /public
         }
     except Exception as e:
@@ -236,5 +244,9 @@ def replace_spaces_in_filepath(sheet, col, from_row, to_row):
                 print(f"No spaces in filename for row {row}, no change needed.")
 
 # Example usage
+image_folder = r"C:\Users\Macbook pro\Desktop\AWsite\python-backend\bgg_images"
+# get_board_game_info_by_id('thegame', 173090, image_folder='board_game_images')
+# get_board_game_info('Tokaido', image_folder='board_game_images')
+
 # folder_path = r"C:\Users\Macbook pro\Desktop\AWsite\public"
 # replace_spaces_in_filenames(folder_path)
