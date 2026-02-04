@@ -3,7 +3,18 @@ import requests
 import xml.etree.ElementTree as ET
 import os
 import re
+from dotenv import load_dotenv
 # from bs4 import BeautifulSoup #Did not work
+
+load_dotenv()
+
+token = os.getenv("BOARDGAMEGEEK_API_TOKEN")
+if not token:
+    raise RuntimeError('BGG API is not set')
+
+headers = {
+    "Authorization" : f"Bearer {token}"
+}
 
 def get_board_game_info_by_id(board_game, bgg_game_id, image_folder='board_game_images'):
     """Fetch board game information from BoardGameGeek by knowing id.
@@ -15,7 +26,7 @@ def get_board_game_info_by_id(board_game, bgg_game_id, image_folder='board_game_
     try:
         # Use the game ID to fetch detailed information
         detail_url = f'https://www.boardgamegeek.com/xmlapi/boardgame/{game_id}?stats=1'
-        response = requests.get(detail_url)
+        response = requests.get(detail_url, headers=headers)
         response.raise_for_status()
         
         # Parse the response XML
@@ -73,7 +84,7 @@ def get_board_game_info(board_game, image_folder='board_game_images'):
     search_url = f'https://www.boardgamegeek.com/xmlapi/search?search={board_game}&exact=1'
     
     try:
-        response = requests.get(search_url)
+        response = requests.get(search_url, headers=headers)
         response.raise_for_status()
         
         # Parse the response XML
@@ -92,7 +103,7 @@ def get_board_game_info(board_game, image_folder='board_game_images'):
         
         # Use the game ID to fetch detailed information
         detail_url = f'https://www.boardgamegeek.com/xmlapi/boardgame/{game_id}?stats=1'
-        response = requests.get(detail_url)
+        response = requests.get(detail_url, headers=headers)
         response.raise_for_status()
         
         # Parse the response XML
