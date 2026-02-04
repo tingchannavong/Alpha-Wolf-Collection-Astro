@@ -29,7 +29,7 @@ STEPS TO AUTHORIZE EZSHEETS:
 	8. Run the python project & log in to ur google account when prompted, this will auto create the 2 new pickle files.
 	9. DONE!
 
-STEPS TO ADD NEW GAME
+STEPS TO ADD NEW GAME VIA sheet_connect.py
 
 # 0. create games object/dictionary
 w/ get_row_games_id(sheet, start, end)

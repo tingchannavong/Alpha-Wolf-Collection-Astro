@@ -1,5 +1,4 @@
 # A program to connect to google sheets and operate on different tasks
-
 import ezsheets
 from bgg_info import replace_spaces_in_filepath, replace_many, find_first_sentence, get_board_game_info_by_id, get_board_game_info
 from fetch_gameids import loop_sheet_find_game, get_row_games_id
@@ -79,19 +78,14 @@ sheet_obj = ezsheets.Spreadsheet('1a-TIrVEULIaBvgeQDHj51CDNaIySzU27A-vkL05GQMw')
 # Create game sheet object
 sheet = sheet_obj['Game']
 
-# Set Image Folder
+# 1. Set Image Folder
 # image_folder = r"C:\Users\Macbook pro\Desktop\AWsite\public"
 image_folder = r"C:\Users\Macbook pro\Desktop\AWsite\python-backend\bgg_images"
 
-# Set markdown save folder
+# 2. Set markdown save folder
 output_folder = r"C:\Users\Macbook pro\Desktop\AWsite\src\pages\boardgames"
 
-# EXAMPLE USAGE
-# 1. Get game infor via API w/ loop_sheet_find_game(sheet, image_folder, manual_search)
-# 2. Fix text and get short description w/ loop_range_fnr_1s(sheet, 91, 92)
-# 3. Fix file path name w/ replace_spaces_in_filepath(sheet, "G", 91, 92)
-# 4. Bulk create markdowns w/ bulk_create_mds(sheet, 89, 92, output_folder)
-
+# 3. EXAMPLE USAGE
 search = get_row_games_id(sheet, 93, 110)
 
 loop_sheet_find_game(sheet, image_folder, search)
