@@ -2,7 +2,7 @@
 
 import ezsheets
 from bgg_info import replace_spaces_in_filepath, replace_many, find_first_sentence, get_board_game_info_by_id, get_board_game_info
-from sheet_fetch_game3_id import loop_sheet_find_game
+from fetch_gameids import loop_sheet_find_game, get_row_games_id
 from create_markdowns import bulk_create_mds
 
 def loop_col_find_replace(column, replacements):
@@ -92,10 +92,12 @@ output_folder = r"C:\Users\Macbook pro\Desktop\AWsite\src\pages\boardgames"
 # 3. Fix file path name w/ replace_spaces_in_filepath(sheet, "G", 91, 92)
 # 4. Bulk create markdowns w/ bulk_create_mds(sheet, 89, 92, output_folder)
 
-# loop_sheet_find_game(sheet, image_folder, manual_search)
+search = get_row_games_id(sheet, 93, 110)
 
-# loop_range_fnr_1s(sheet, 91, 92)
+loop_sheet_find_game(sheet, image_folder, search)
 
-# replace_spaces_in_filepath(sheet, "G", 91, 92)
+loop_range_fnr_1s(sheet, 93, 110)
 
-bulk_create_mds(sheet, 3, 93, output_folder)
+replace_spaces_in_filepath(sheet, "G", 93, 110)
+
+# bulk_create_mds(sheet, 3, 93, output_folder)

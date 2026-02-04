@@ -32,6 +32,7 @@ STEPS TO AUTHORIZE EZSHEETS:
 STEPS TO ADD NEW GAME
 
 # 0. create games object/dictionary
+w/ get_row_games_id(sheet, start, end)
 
 # 1. Get game infor via API 
 w/ loop_sheet_find_game(sheet, image_folder, games_dict)
