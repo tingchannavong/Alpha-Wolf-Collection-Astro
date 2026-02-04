@@ -5,19 +5,6 @@ from bgg_info import replace_spaces_in_filepath, replace_many, find_first_senten
 from sheet_fetch_game3_id import loop_sheet_find_game
 from create_markdowns import bulk_create_mds
 
-def connect_to_sheet(sheet_id, sheet_title):
-    """Connect to your specific google sheet and select the sheet title you want to work with." 
-      Args:
-        sheet_id: The sheet ID is between d/ and /edit in the url.
-        sheet_title: The literal string title of your sheet.
-        Returns sheet object for you to work with."""
-    # Make a request to google sheet API provided your ID
-    sheet_obj = ezsheets.Spreadsheet(sheet_id) 
-    
-    # Create game sheet object
-    sheet = sheet_obj[sheet_title]
-    return sheet
-
 def loop_col_find_replace(column, replacements):
     """Loop through all column and perform find & replace certain parts of text on the cell."""
 
@@ -86,6 +73,7 @@ replacements_dict = {
     "&rsquo;": " "
 }
 
+# Connect to sheet
 sheet_obj = ezsheets.Spreadsheet('1a-TIrVEULIaBvgeQDHj51CDNaIySzU27A-vkL05GQMw') # sheet ID between d/ and /edit
     
 # Create game sheet object

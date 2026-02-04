@@ -16,16 +16,18 @@ In project folder:
 	5. DONE!
 
 STEPS TO AUTHORIZE EZSHEETS:
-	1. Authorize Google sheet and google drive API in google cloud console
+	1. Enable API of Google sheet && google drive in google cloud console
 		- https://console.developers.google.com/apis/library/sheets.googleapis.com/
 		- https://console.developers.google.com/apis/library/drive.googleapis.com/
-	2. If re-auth, delete credentials.json, & 2 pickle files
-	3. In existing google cloud project (or new), go to Branding page & create app for external audience.
-	4. Go to Audience page, add test user's email.
-	5. Go to clients, create (+) OAuth client ID for desktop app & download json file.
-	6. Copy json file to put in your project folder and rename as "credentials.json".
-	7. Run the python project & log in to ur google account when prompted, this will auto create the  2 new pickle files.
-	8. DONE!
+	2. If re-authorize, delete credentials.json, & 2 pickle files
+	3. In existing google cloud project Ex: BGG-Geek (or new), go to OAuth consent screen tab under API & services.
+		Manage OAuth consent below: 
+	4. Go to Branding page & create app for external audience.
+	5. Go to Audience page, add test user's email.
+	6. Go to clients, create (+) OAuth client ID for desktop app & download json file.
+	7. Copy json file to put in your project folder and rename as "credentials-sheet.json".
+	8. Run the python project & log in to ur google account when prompted, this will auto create the 2 new pickle files.
+	9. DONE!
 
 STEPS TO ADD NEW GAME
 
