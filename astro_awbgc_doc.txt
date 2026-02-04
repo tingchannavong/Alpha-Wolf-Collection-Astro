@@ -8,7 +8,12 @@ In root:
 
 In project folder:
 	1. npm install
-	2. DONE!
+	2. create venv: python3 -m venv venv
+	3. activate venv
+		In mac: source venv/bin/activate
+		In wins: .venv\Scripts\activate
+	4. pip install EZSHEETS
+	5. DONE!
 
 STEPS TO AUTHORIZE EZSHEETS:
 	1. Authorize Google sheet and google drive API in google cloud console
@@ -24,8 +29,10 @@ STEPS TO AUTHORIZE EZSHEETS:
 
 STEPS TO ADD NEW GAME
 
+# 0. create games object/dictionary
+
 # 1. Get game infor via API 
-w/ loop_sheet_find_game(sheet, image_folder, manual_search)
+w/ loop_sheet_find_game(sheet, image_folder, games_dict)
 
 # 2. Fix text and get short description 
 w/ loop_range_fnr_1s(sheet, 91, 92)
