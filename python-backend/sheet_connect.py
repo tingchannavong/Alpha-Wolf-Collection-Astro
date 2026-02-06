@@ -79,10 +79,10 @@ sheet = sheet_obj['Game']
 
 # 1. Set Image Folder
 # image_folder = r"C:\Users\Macbook pro\Desktop\AWsite\public"
-image_folder = r"C:\Users\Macbook pro\Desktop\AWsite\python-backend\bgg_images"
+image_folder = r"/Users/macbook/Desktop/Alpha-Wolf-Collection-Astro/python-backend/bgg-images"
 
 # 2. Set markdown save folder
-output_folder = r"C:\Users\Macbook pro\Desktop\AWsite\src\pages\boardgames"
+output_folder = r""
 
 # 3. EXAMPLE USAGE
 search = {93: ('Tokaido', None), 94: ('Colt Express', None), 95: ('Hugsa: Guardians of the Community', None), 96: ('Patchwork Doodle', None), 97: ('Tibo', None), 98: ('Sleeping Queens', None), 99: ('Throw Throw Burrito', None), 100: ('Imploding Kittens', None), 101: ('Survive: Escape from Atlantis!', None), 102: ('Santa Cookie Elf Candy Snowman', None), 103: ('The Game', '173090'), 104: ('The Game of Life', None), 105: ("Rory's Story Cubes", None), 106: ('Mr. Jack', None), 107: ('Jenga', None), 108: ('Katamino', None), 109: ('Mr. Jack New York', None), 110: ("We're not really strangers", None)}
