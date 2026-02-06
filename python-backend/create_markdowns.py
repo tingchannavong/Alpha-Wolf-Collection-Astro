@@ -1,22 +1,4 @@
-import ezsheets
 import os
-
-def connect_to_sheet(sheet_id, sheet_title):
-    """Connect to your specific google sheet and select the sheet title you want to work with." 
-      Args:
-        sheet_id: The sheet ID is between d/ and /edit in the url.
-        sheet_title: The literal string title of your sheet.
-        Returns sheet object for you to work with."""
-    # Make a request to google sheet API provided your ID
-    sheet_obj = ezsheets.Spreadsheet(sheet_id) 
-    
-    # Create game sheet object
-    sheet = sheet_obj[sheet_title]
-    return sheet
-
-sheet_id = '1a-TIrVEULIaBvgeQDHj51CDNaIySzU27A-vkL05GQMw'
-sheet_title = 'Game'
-sheet = connect_to_sheet(sheet_id, sheet_title)
 
 def bulk_create_mds(sheet, from_row, to_row, output_folder):
     """Function to create markdown files in bulk taking information from google spreadsheet."""
@@ -47,6 +29,8 @@ min_players: {int(min_players)}
 max_players: {int(max_players)}
 box_size: "{box_size}"
 ---
+<link rel="stylesheet" href="../../../public/styles/alpha_style.css">
+
 # {title}
 
 {description}
@@ -58,8 +42,6 @@ box_size: "{box_size}"
 ### Players: {min_players} - {max_players}
 
 ### Box size: {box_size} 
-
-### Location: {location}
 
 <img src="{image_url}" alt="{title} Image" width="500" style="display: block; margin: 0 auto">
 
