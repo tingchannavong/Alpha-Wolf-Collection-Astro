@@ -77,7 +77,7 @@ sheet = sheet_obj['Game']
 image_folder = r"/Users/macbook/Desktop/Alpha-Wolf-Collection-Astro/python-backend/bgg-images"
 
 # 2. Set markdown save folder
-output_folder = r""
+output_folder = r"/Users/macbook/Desktop/Alpha-Wolf-Collection-Astro/src/pages/boardgames"
 
 # search_sample = {109: ('Mr. Jack New York', None), 110: ('Die Fiesen 7', None)}
 # Games to fetch info and create markdowns
@@ -94,4 +94,4 @@ manual_search = {
 
 # replace_spaces_in_filepath(sheet, "G", 93, 110)
 
-bulk_create_mds(sheet, 3, 93, output_folder)
+# bulk_create_mds(sheet, 109, 110, output_folder)
