@@ -56,8 +56,7 @@ def loop_range_fnr_1s(sheet, row_from, row_to):
 
 # Games to fetch info and create markdowns
 manual_search = {
-        91: ("Betakkuma's Fart & Furious", 376651), 
-        92: ('Art Society', None),	
+        'row-number': ("Game name", '6-digit-id'), 
 }
 
 # sample replacements dictionary
@@ -86,8 +85,9 @@ image_folder = r"C:\Users\Macbook pro\Desktop\AWsite\python-backend\bgg_images"
 output_folder = r"C:\Users\Macbook pro\Desktop\AWsite\src\pages\boardgames"
 
 # 3. EXAMPLE USAGE
-search = get_row_games_id(sheet, 93, 110)
+search = {93: ('Tokaido', None), 94: ('Colt Express', None), 95: ('Hugsa: Guardians of the Community', None), 96: ('Patchwork Doodle', None), 97: ('Tibo', None), 98: ('Sleeping Queens', None), 99: ('Throw Throw Burrito', None), 100: ('Imploding Kittens', None), 101: ('Survive: Escape from Atlantis!', None), 102: ('Santa Cookie Elf Candy Snowman', None), 103: ('The Game', '173090'), 104: ('The Game of Life', None), 105: ("Rory's Story Cubes", None), 106: ('Mr. Jack', None), 107: ('Jenga', None), 108: ('Katamino', None), 109: ('Mr. Jack New York', None), 110: ("We're not really strangers", None)}
 
+# get_row_games_id(sheet, 93, 110)
 loop_sheet_find_game(sheet, image_folder, search)
 
 # loop_range_fnr_1s(sheet, 93, 110)
