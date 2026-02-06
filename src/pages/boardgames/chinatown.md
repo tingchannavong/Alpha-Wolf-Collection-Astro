@@ -4,12 +4,13 @@ title: "Chinatown"
 description: "This is a negotiation game in the truest sense of the word."
 image: "/Chinatown.jpg"
 category: "City Building, Economic, Negotiation"
-location: "Lak6"
 playing_time: 60
 min_players: 3
 max_players: 5
 box_size: "XL"
 ---
+<link rel="stylesheet" href="../../../public/styles/alpha_style.css">
+
 # Chinatown
 
 This is a negotiation game in the truest sense of the word. In it, players acquire ownership of sections of city blocks then place tiles, representing businesses, onto the block-sections.  At the end of each turn, each tile you've laid gives you some sort of payout, but completed businesses (formed of three to six connected tiles of the same type) pay quite a bit better.  All these resources are dealt to the players randomly, however, so players must trade to get matching businesses and adjacent locations.  This game is #2 in the Alea big box series.  
@@ -21,8 +22,6 @@ This is a negotiation game in the truest sense of the word. In it, players acqui
 ### Players: 3 - 5
 
 ### Box size: XL 
-
-### Location: Lak6
 
 <img src="/Chinatown.jpg" alt="Chinatown Image" width="500" style="display: block; margin: 0 auto">
 

@@ -4,12 +4,13 @@ title: "Who Is It"
 description: "The mystery game where you flip over a collection of faces with different color hair, eye color, hats, glasses.."
 image: "/Who_Is_It.jpg"
 category: "Children's Game, Deduction, Movies / TV / Radio theme"
-location: "MakerBox Lao"
 playing_time: 20
 min_players: 2
 max_players: 2
 box_size: "L"
 ---
+<link rel="stylesheet" href="../../../public/styles/alpha_style.css">
+
 # Who Is It
 
 The mystery face game where you flip over a collection of faces with different color hair, eye color, hair, hats, glasses etc.  to deduce who the secret person is that your opponent has chosen. You flip over the hooked tiles as you narrow your choices by asking characteristic questions.  
@@ -21,8 +22,6 @@ The mystery face game where you flip over a collection of faces with different c
 ### Players: 2 - 2
 
 ### Box size: L 
-
-### Location: MakerBox Lao
 
 <img src="/Who_Is_It.jpg" alt="Who Is It Image" width="500" style="display: block; margin: 0 auto">
 

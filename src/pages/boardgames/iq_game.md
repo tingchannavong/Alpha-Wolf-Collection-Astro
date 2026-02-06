@@ -4,12 +4,13 @@ title: "IQ Game"
 description: "Fit all the 3D-puzzle pieces on the game board in such a way that it turns into a (flat) 2D-image."
 image: "/iq-game.jpg"
 category: "Puzzle"
-location: "MakerBox Lao"
 playing_time: 15
 min_players: 1
 max_players: 2
 box_size: "S"
 ---
+<link rel="stylesheet" href="../../../public/styles/alpha_style.css">
+
 # IQ Game
 
 Fit all the 3D-puzzle pieces on the game board in such a way that it turns into a (flat) 2D-image.
@@ -24,8 +25,6 @@ When solved, all puzzle pieces will fit on the game board without any holes unco
 ### Players: 1 - 2
 
 ### Box size: S 
-
-### Location: MakerBox Lao
 
 <img src="/iq-game.jpg" alt="IQ Game Image" width="500" style="display: block; margin: 0 auto">
 
