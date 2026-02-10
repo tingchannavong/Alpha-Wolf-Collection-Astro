@@ -9,6 +9,7 @@ playing_time: 20
 min_players: 2
 max_players: 6
 box_size: "S"
+manuals: ["/manual-pics/cock1.jpg", "/manual-pics/cock2.jpg"]
 ---
 # Cockroach poker
 
@@ -25,5 +26,3 @@ Cockroach Poker is a reverse set collection game that has nothing to do with pok
 ### Location: MakerBox Lao
 
 <img src="/Cockroach_poker.jpg" alt="Cockroach poker Image" width="500" style="display: block; margin: 0 auto">
-
-    
