@@ -308,6 +308,7 @@ select:hover {
 }
 .game-read-more {
     display: inline-block;
+    width: 80px;
     padding: 10px 15px;
     background-color: #121f40;
     color: white;
