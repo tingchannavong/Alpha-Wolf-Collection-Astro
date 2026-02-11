@@ -16,7 +16,7 @@ const allGames = await Astro.glob(`../boardgames/*.md`);
 
 const currentGame = allGames.find( game => {
     const filename = game.url.split('/').pop();
-    return filename === id;
+    return filename.trim() === id.trim();
 });
 
 const manuals = currentGame?.frontmatter?.manuals || [];
