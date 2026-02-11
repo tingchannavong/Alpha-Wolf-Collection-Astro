@@ -68,6 +68,10 @@ function displaySearchResults(results): void {
         const game = result.item;
         const listItem = document.createElement('ul');
 
+        // Get game title from url with empty string at the end
+        const linkArray = game.url.split('/');
+        const title = linkArray.splice(-2, 1);
+
         listItem.innerHTML = `
         <div class="game-item">
             <div class="game-image-container">
@@ -88,6 +92,11 @@ function displaySearchResults(results): void {
             </div>
             <div class="game-meta">
                 <a href="${game.url}" class="game-read-more">Read more</a>
+                ${ 
+                    game.frontmatter.manuals
+                    ? `<a href="/rules/${title}" class="game-read-more">Rules</a>`
+                    : ""
+                }
             </div>
         </div>
         `;

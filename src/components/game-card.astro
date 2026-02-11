@@ -39,7 +39,7 @@ const { href, title, body, img, category, location, playing_time, min_players, m
         <a href={href} class="game-read-more">Read more</a>
         {
             manuals 
-            ? <a href={`manuals/${href.split('/').pop()}`} class="game-read-more">Rules</a>
+            ? <a href={`/rules/${href.split('/').pop()}`} class="game-read-more">Rules</a>
             : <span></span>
         }
         
