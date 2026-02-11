@@ -1,0 +1,63 @@
+
+---
+import MainLayout from "../../layouts/main-layout.astro";
+import ManualCard from "../../components/manual-card.astro";
+
+export function getStaticPaths() {
+    return [
+        { params: { id: 'one' } },
+        { params: { id: 'two' } },
+         { params: { id: 'cockroach_poker' } },
+    ];
+}
+
+const { id } = Astro.params;
+const allGames = await Astro.glob(`../boardgames/*.md`);
+
+const currentGame = allGames.find( game => {
+    const filename = game.url.split('/').pop();
+    return filename === id;
+});
+
+const manuals = currentGame?.frontmatter?.manuals || [];
+
+---
+
+<!-- console.log(`Found: ${typeof allGames}`);
+allGames.forEach( game => {
+const name = game.url.split('/').pop()
+console.log(name)} ); -->
+
+<!-- console.log(`Found: ${JSON.stringify(allGames)}`); -->
+<!-- console.log(manuals); -->
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/alpha_style.css">
+    <title>Instruction </title>
+</head>
+    <MainLayout>
+    <body>
+        <section id="all-games-section" class="container">
+            <button>Back</button>
+            <button>Read More</button>
+            <div class="container">
+                <div class="carousel-wrapper">
+                <div class="gallery">
+                    {
+                    manuals.map( img_url =>  <ManualCard image={img_url}></ManualCard>)
+                    }
+                </div>    
+                </div> 
+                <nav class="lil-nav"></nav>
+            </div>
+        </section>
+    </body>
+    
+</MainLayout>
+</html> 
+
+
+

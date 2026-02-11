@@ -1,0 +1,50 @@
+---
+import MainLayout from "../../layouts/main-layout.astro";
+import ManualCard from "../../components/manual-card.astro";
+
+export async function getStaticPaths() {
+    const allGames = await Astro.glob(`../boardgames/*.md`);
+    console.log(allGames);
+  
+    return allGames.map( (game) => {
+        const name = game.file.split('/').pop().replace('.md','');
+
+        return {
+            params: { game: name }
+        }
+    });
+}
+const Games = await Astro.glob(`../boardgames/*.md`);
+
+const { game } = Astro.params;
+
+const currentGame = Games.find(game => game.file.split('/').pop().replace('.md', '') === manual);
+const manuals = currentGame?.frontmatter.manuals || [];
+
+---
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/alpha_style.css">
+    <title>Instruction {game}</title>
+</head>
+
+<MainLayout>
+    <body>
+        <section id="all-games-section" class="container">
+            <h2>{currentGame.frontmatter.title}</h2>
+            <div class="container">
+                <div class="carousel-wrapper">
+                <div class="gallery">
+                    {
+                    manuals.map( img_url =>  <ManualCard image={img_url}></ManualCard>)
+                    }
+                </div>    
+                </div> 
+                <nav class="lil-nav"></nav>
+            </div>
+        </section>
+    </body>
+    
+</MainLayout>
+

@@ -9,7 +9,7 @@ playing_time: 20
 min_players: 2
 max_players: 6
 box_size: "S"
-manuals: ["/manual-pics/cock1.jpg", "/manual-pics/cock2.jpg"]
+manuals: ["/manual-pics/cock1.png", "/manual-pics/cock2.png"]
 ---
 # Cockroach poker
 
