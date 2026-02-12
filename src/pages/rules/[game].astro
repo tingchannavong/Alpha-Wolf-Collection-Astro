@@ -23,6 +23,7 @@ const currentGame = gamesList.find( each => {
 });
 
 const manuals = currentGame?.frontmatter?.manuals || [];
+
 ---
 <head>
     <meta charset="UTF-8">
@@ -34,8 +35,8 @@ const manuals = currentGame?.frontmatter?.manuals || [];
 <MainLayout>
     <body>
         <section id="all-games-section" class="container">
-            <button>Back</button>
-            <button>Read More</button>
+            <button id="back_button" class="back-btn">← Back</button>
+            <button id="read-more-btn" data-game={JSON.stringify(currentGame)} class="back-btn">Read More</button>
             <div class="container">
                 <div class="carousel-wrapper">
                 <div class="gallery">
@@ -48,4 +49,17 @@ const manuals = currentGame?.frontmatter?.manuals || [];
             </div>
         </section>
     </body>
+       <script>
+        const backButton = document.querySelector("#back_button");
+        const readButton = document.getElementById("read-more-btn");
+        const currentGame = JSON.parse(readButton.dataset.game);
+    
+        if (backButton) {
+            backButton.addEventListener("click", () => {
+                // Navigate back in history
+                history.back();
+            });
+        }
+        readButton.addEventListener("click", () => window.location.href = `${currentGame.url}`);
+    </script>
 </MainLayout>

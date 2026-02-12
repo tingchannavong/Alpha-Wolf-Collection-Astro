@@ -300,7 +300,9 @@ select:hover {
 }
 /*consider using grid-row*/
 .game-meta {
-    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .game-meta p {
@@ -314,6 +316,7 @@ select:hover {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    text-align: center;
 }
 .game-read-more:hover {
     background-color: black;
