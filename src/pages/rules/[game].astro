@@ -37,19 +37,26 @@ const manuals = currentGame?.frontmatter?.manuals || [];
         <section id="all-games-section" class="container">
             <button id="back_button" class="back-btn">← Back</button>
             <button id="read-more-btn" data-game={JSON.stringify(currentGame)} class="back-btn">Read More</button>
-            <div class="container">
+            <div class="carousel-container">
+                <button class="gallery-btn">Left</button>
                 <div class="carousel-wrapper">
-                <div class="gallery">
-                    {
-                    manuals.map( img_url =>  <ManualCard image={img_url}></ManualCard>)
-                    }
-                </div>    
+                    <div class="gallery">
+                        {
+                        manuals.map( img_url =>  <ManualCard image={img_url}></ManualCard>)
+                        }
+                    </div>    
                 </div> 
-                <nav class="lil-nav"></nav>
+                 <button>Right</button>
+            </div>
+            <div class="lil-nav">
+                <div class="bubble"></div>
+                <div class="bubble active"></div>
             </div>
         </section>
+
     </body>
        <script>
+        const galleryBubbles = document.querySelector(".lil-nav");
         const backButton = document.querySelector("#back_button");
         const readButton = document.getElementById("read-more-btn");
         const currentGame = JSON.parse(readButton.dataset.game);
@@ -61,5 +68,10 @@ const manuals = currentGame?.frontmatter?.manuals || [];
             });
         }
         readButton.addEventListener("click", () => window.location.href = `${currentGame.url}`);
+
+        if (currentGame.frontmatter.manuals) {
+            // create elements of bubbles
+            // loop through the manuals array
+        }
     </script>
 </MainLayout>

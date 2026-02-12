@@ -375,7 +375,7 @@ select:hover {
 }
 /* New from pagination suggestion */
 .pagination .active{
-    background-color: #0070f3;
+    background-color: #121f40;
     color: white;
 }
 
@@ -590,23 +590,48 @@ select:hover {
 }
 
  /* new carousel code */
+ .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    background-color: lightpink;
+    margin-top: 10px;
+}
+
+.gallery-btn {
+    height: 30px;
+}
  .carousel-wrapper {
     width: 300px;
     display: flex;
     margin-inline: auto;
  }
- .gallery{
+ .gallery {
     display: flex;
-     scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
     overflow-x: auto;
     width: 100%;
+    border: 2px solid black;
  }
  .gallery-img {
     width: 300px;
     height: auto;
     scroll-snap-align: center;
-    border: 2px dashed black;
 
+ }
+  .lil-nav {
+    display: flex;
+    width: 300px;
+    background-color: blue; 
+    margin: 5px auto;
+ }
+  .bubble {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white; 
+    margin: 0 auto;
  }
 /* Responsive Designs here */
 @media screen and (max-width: 431px) {
@@ -763,12 +788,12 @@ select:hover {
         gap: 10px;
     }
 
-    .carousel-container {
+    /* .carousel-container {
     display: flex; 
     flex-shrink: 0;
     overflow-x: auto;
     scroll-snap-type:mandatory;
-    }
+    } */
 
 }
 
