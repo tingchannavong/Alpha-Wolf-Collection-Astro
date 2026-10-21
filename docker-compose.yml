@@ -1,6 +1,6 @@
 services:
   frontend:
-    image: ghcr.io/tingchannavong/alphawolf:${IMAGE_TAG:-latest}
+    image: ghcr.io/tingchannavong/alphawolf-collection:${IMAGE_TAG:-latest}
     container_name: boardgames-frontend
     networks:
       - web
