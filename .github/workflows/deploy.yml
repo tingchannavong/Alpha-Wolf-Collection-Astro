@@ -1,0 +1,49 @@
+name: CI/CD for Alpha Wolf
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-push:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN}}
+
+      - uses: docker/build-push-action@v6
+        with:
+            push: true
+            tags: |
+                ghcr.io/${{ github.repository }}:${{ github.sha }}
+                ghcr.io/${{ github.repository }}:latest
+  
+  deploy:
+    needs: build-push
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: SSH into droplet and redeploy
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.DROPLET_HOST }}
+          username: ${{ secrets.DROPLET_USER }}
+          key: ${{ secrets.DROPLET_SSH_KEY }}
+          script: |
+            cd ./alpha &&
+            export IMAGE_TAG=${{ github.sha }} &&
+            docker compose pull &&
+            docker compose up -d &&
+            docker image prune -af
+        

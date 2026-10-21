@@ -4,39 +4,28 @@
 
 import ezsheets
 from bgg_info import get_board_game_info_by_id, get_board_game_info, replace_spaces_in_filepath
-# from sheet_connect import loop_range_fnr_1s
-# from create_markdowns import bulk_create_mds
 
 # Dictionary to store missing games for future fetch
 # key pair value is row: (game_name, game_id)
-missing_games = {
-        89: ('Forbidden Island', None),
-        9: ('Ticket to Ride: Asia Map', 106637), 
-        16: ('Pop-up Pirate', 9004), 
-        19: ('The Resistance: Avalon', 128882),
-        21: ('Decrypto', 225694),  
-        33: ('Dead Man on the Orient Express', 226522), 
-        49: ('Who Is It', 4143), 
-        62: ('Coup', 131357), 
-        84: ('Evolution', 155703),
-        34: ('Carcassonne', None),
-        36: ('Cashflow 101', None), 
-    }
-
-manual_search = {
-        89: ('Forbidden Island', None),
-        90: ('Escape Room: The Game', None), 
-        91: ("Betakkuma's Fart & Furious", None), 
-        92: ('Art Society', None),	
-}
-
-new_game = {
+new_games = {
         85: ('Twice as Clever', 269210),
         86: ("That's pretty clever", 244522),
         }
 
+def get_row_games_id(sheet, start, end):
+    """Takes in start and end row of the sheet. Loop through a games sheet get the name and row and create games dictionary for search next step."""
+    print("Creating the game dictionary...")
+    len = end - start
+    games_dict = {}
+    for i in range(len+1):
+        games_dict[start] = (sheet[f'B{start}'], sheet[f'C{start}'] if sheet[f'C{start}'] else None)
+        start += 1
+    print("Completed creating game dictionary below!")
+    print(games_dict)
+    return games_dict
+
 def loop_sheet_find_game(sheet, img_folder, games_array):
-    """Loop through a games array with row number and name, fetch BGG API to find info and 
+    """Loop through a games dictionary with row number and name, fetch BGG API to find info and 
     write to googlesheet Game sheet page."""
     image_folder = img_folder
     # Loop through the missing games and fetch information with ID (if provided)
@@ -69,12 +58,8 @@ sheet_obj = ezsheets.Spreadsheet('1a-TIrVEULIaBvgeQDHj51CDNaIySzU27A-vkL05GQMw')
 # Create game sheet object
 sheet = sheet_obj['Game']
 
-# EXAMPLE USAGE
 image_folder = r"C:\Users\Macbook pro\Desktop\AWsite\python-backend\bgg_images"
-
-# loop_sheet_find_game(sheet, image_folder, manual_search)
-
-
-
-
-
+             
+# EXAMPLE USAGE
+# get_row_games_id(sheet, 93, 110)
+# loop_sheet_find_game(sheet, image_folder, test)

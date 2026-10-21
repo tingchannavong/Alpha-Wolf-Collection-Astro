@@ -4,12 +4,13 @@ title: "7 Wonders"
 description: "You are the leader of one of the 7 great cities of the Ancient World."
 image: "/7_Wonders.jpg"
 category: "Card Game, Economic"
-location: "MakerBox Lao"
 playing_time: 30
 min_players: 3
 max_players: 7
 box_size: "L"
 ---
+<link rel="stylesheet" href="../../../public/styles/alpha_style.css">
+
 # 7 Wonders
 
 You are the leader of one of the 7 great cities of the Ancient World. Gather resources, develop commercial routes, and affirm your military supremacy. Build your city and erect an architectural wonder which will transcend future times.  
@@ -27,8 +28,6 @@ Each card is played immediately after being drafted, so you'll know which cards 
 ### Players: 3 - 7
 
 ### Box size: L 
-
-### Location: MakerBox Lao
 
 <img src="/7_Wonders.jpg" alt="7 Wonders Image" width="500" style="display: block; margin: 0 auto">
 

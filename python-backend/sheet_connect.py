@@ -1,22 +1,8 @@
 # A program to connect to google sheets and operate on different tasks
-
 import ezsheets
 from bgg_info import replace_spaces_in_filepath, replace_many, find_first_sentence, get_board_game_info_by_id, get_board_game_info
-from sheet_fetch_game3_id import loop_sheet_find_game
+from fetch_gameids import loop_sheet_find_game, get_row_games_id
 from create_markdowns import bulk_create_mds
-
-def connect_to_sheet(sheet_id, sheet_title):
-    """Connect to your specific google sheet and select the sheet title you want to work with." 
-      Args:
-        sheet_id: The sheet ID is between d/ and /edit in the url.
-        sheet_title: The literal string title of your sheet.
-        Returns sheet object for you to work with."""
-    # Make a request to google sheet API provided your ID
-    sheet_obj = ezsheets.Spreadsheet(sheet_id) 
-    
-    # Create game sheet object
-    sheet = sheet_obj[sheet_title]
-    return sheet
 
 def loop_col_find_replace(column, replacements):
     """Loop through all column and perform find & replace certain parts of text on the cell."""
@@ -68,12 +54,6 @@ def loop_range_fnr_1s(sheet, row_from, row_to):
         
     print("All operations completed.")
 
-# Games to fetch info and create markdowns
-manual_search = {
-        91: ("Betakkuma's Fart & Furious", 376651), 
-        92: ('Art Society', None),	
-}
-
 # sample replacements dictionary
 replacements_dict = {
     "<br/>": " ",
@@ -86,28 +66,32 @@ replacements_dict = {
     "&rsquo;": " "
 }
 
+# Connect to sheet
 sheet_obj = ezsheets.Spreadsheet('1a-TIrVEULIaBvgeQDHj51CDNaIySzU27A-vkL05GQMw') # sheet ID between d/ and /edit
     
 # Create game sheet object
 sheet = sheet_obj['Game']
 
-# Set Image Folder
+# 1. Set Image Folder
 # image_folder = r"C:\Users\Macbook pro\Desktop\AWsite\public"
-image_folder = r"C:\Users\Macbook pro\Desktop\AWsite\python-backend\bgg_images"
+image_folder = r"/Users/macbook/Desktop/Alpha-Wolf-Collection-Astro/python-backend/bgg-images"
 
-# Set markdown save folder
-output_folder = r"C:\Users\Macbook pro\Desktop\AWsite\src\pages\boardgames"
+# 2. Set markdown save folder
+output_folder = r"/Users/macbook/Desktop/Alpha-Wolf-Collection-Astro/src/pages/boardgames"
 
-# EXAMPLE USAGE
-# 1. Get game infor via API w/ loop_sheet_find_game(sheet, image_folder, manual_search)
-# 2. Fix text and get short description w/ loop_range_fnr_1s(sheet, 91, 92)
-# 3. Fix file path name w/ replace_spaces_in_filepath(sheet, "G", 91, 92)
-# 4. Bulk create markdowns w/ bulk_create_mds(sheet, 89, 92, output_folder)
+# search_sample = {109: ('Mr. Jack New York', None), 110: ('Die Fiesen 7', None)}
+# Games to fetch info and create markdowns
+manual_search = {
+        'row-number': ("Game name", '6-digit-id'), 
+}
 
-# loop_sheet_find_game(sheet, image_folder, manual_search)
+# 3. EXAMPLE USAGE
+# get_row_games_id(sheet, 93, 110)
 
-# loop_range_fnr_1s(sheet, 91, 92)
+# loop_sheet_find_game(sheet, image_folder, search)
 
-# replace_spaces_in_filepath(sheet, "G", 91, 92)
+# loop_range_fnr_1s(sheet, 93, 108)
 
-bulk_create_mds(sheet, 3, 93, output_folder)
+# replace_spaces_in_filepath(sheet, "G", 93, 110)
+
+# bulk_create_mds(sheet, 109, 110, output_folder)

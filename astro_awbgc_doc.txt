@@ -8,24 +8,34 @@ In root:
 
 In project folder:
 	1. npm install
-	2. DONE!
+	2. create venv: python3 -m venv venv
+	3. activate venv
+		In mac: source venv/bin/activate
+		In wins: .venv\Scripts\activate
+	4. pip install EZSHEETS
+	5. DONE!
 
 STEPS TO AUTHORIZE EZSHEETS:
-	1. Authorize Google sheet and google drive API in google cloud console
+	1. Enable API of Google sheet && google drive in google cloud console
 		- https://console.developers.google.com/apis/library/sheets.googleapis.com/
 		- https://console.developers.google.com/apis/library/drive.googleapis.com/
-	2. If re-auth, delete credentials.json, & 2 pickle files
-	3. In existing google cloud project (or new), go to Branding page & create app for external audience.
-	4. Go to Audience page, add test user's email.
-	5. Go to clients, create (+) OAuth client ID for desktop app & download json file.
-	6. Copy json file to put in your project folder and rename as "credentials.json".
-	7. Run the python project & log in to ur google account when prompted, this will auto create the  2 new pickle files.
-	8. DONE!
+	2. If re-authorize, delete credentials.json, & 2 pickle files
+	3. In existing google cloud project Ex: BGG-Geek (or new), go to OAuth consent screen tab under API & services.
+		Manage OAuth consent below: 
+	4. Go to Branding page & create app for external audience.
+	5. Go to Audience page, add test user's email.
+	6. Go to clients, create (+) OAuth client ID for desktop app & download json file.
+	7. Copy json file to put in your project folder and rename as "credentials-sheet.json".
+	8. Run the python project & log in to ur google account when prompted, this will auto create the 2 new pickle files.
+	9. DONE!
 
-STEPS TO ADD NEW GAME
+STEPS TO ADD NEW GAME VIA sheet_connect.py
+
+# 0. create games object/dictionary
+w/ get_row_games_id(sheet, start, end)
 
 # 1. Get game infor via API 
-w/ loop_sheet_find_game(sheet, image_folder, manual_search)
+w/ loop_sheet_find_game(sheet, image_folder, games_dict)
 
 # 2. Fix text and get short description 
 w/ loop_range_fnr_1s(sheet, 91, 92)
