@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Rory's Story Cubes"
-description: "Each jumbo 1" cube has 6 images or icons, with a total of 54 all-different hand-inlaid images that can be mixed in over 10 million ways."
+description: "Each jumbo 1 cube has 6 images or icons, with a total of 54 all-different hand-inlaid images that can be mixed in over 10 million ways."
 image: "/rory's_story_cubes.jpg"
 category: "Children's Game, Dice"
 playing_time: 20

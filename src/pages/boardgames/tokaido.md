@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Tokaido"
-description: "In Tokaido, each player is a traveler crossing the "East sea road", one of the most magnificent roads of Japan."
+description: "In Tokaido, each player is a traveler crossing the 'East sea road', one of the most magnificent roads of Japan."
 image: "/tokaido.jpg"
 category: "Travel"
 playing_time: 45

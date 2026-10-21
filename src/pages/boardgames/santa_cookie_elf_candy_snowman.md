@@ -1,9 +1,7 @@
 ---
 layout: ../../layouts/game-layout.astro
 title: "Santa Cookie Elf Candy Snowman"
-description: "Are you ready for some Holiday Mayhem?! Dolphin Hat Games is pleased to announce we've added a little Ho-Ho-Ho to your family night festivities! This is the Christmas themed edition of our wildly popular hand-slapping party game, Taco Cat Goat Cheese Pizza!
-
-The premise of these games is simple - say the next word in the pattern (in this version, "Santa, cookie, elf, candy, snowman") and at the same time flip a card from your personal deck."
+description: "This is the Christmas themed edition of our wildly popular hand-slapping party game and at the same time flip a card from your personal deck."
 image: "/santa_cookie_elf_candy_snowman.jpg"
 category: "Action / Dexterity, Card Game, Humor, Party Game, Real-time"
 playing_time: 10
